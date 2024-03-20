@@ -14,10 +14,12 @@
 		<span class="tooltip">Здравей, @User.Identity?.Name!</span>
     </li>
     <li>
-	    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" type="submit" class="nav-link btn btn-link text-dark">
+		<form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+	    <button type="submit" class="nav-link btn btn-link text-dark">
 		    <i class='bx bx-chat'></i>
 		    <span class="links_name">Изход</span>
-	    </a>
+            </button>
+        </form>
 	    <span class="tooltip">Изход</span>
     </li>
 }
