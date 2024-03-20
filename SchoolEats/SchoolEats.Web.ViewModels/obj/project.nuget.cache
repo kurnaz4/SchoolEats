@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Wr3vx4yx4g+1wtH2hoRSdxdN571Yk1zxeCTT9lNmauJnQok0zOypITefDMA3R1g6+N7cicG2jwH2/bsxrkYiw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

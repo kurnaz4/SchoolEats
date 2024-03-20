@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "/FTVkpUdcUc5vcWxean45xkQ6okFoea+D6CO6E7RsFukxmyFuwsbGzz85zCXI3uPQZpovVkj8vQu7YkGVBOTGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}

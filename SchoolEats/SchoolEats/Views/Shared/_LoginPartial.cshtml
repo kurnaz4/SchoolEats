@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using SchoolEats.Data.Models
+@inject SignInManager<SchoolEatsUser> SignInManager
+@inject UserManager<SchoolEatsUser> UserManager
+<link rel="stylesheet" href="~/css/stail.css" asp-append-version="true" />
+@* <ul class="navbar-nav"> *@
+@if (SignInManager.IsSignedIn(User))
+{
+    <li>
+	    <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+		    <i class='bx bx-chat'></i>
+		    <span class="links_name">Здравей, @User.Identity?.Name!</span>
+	    </a>
+		<span class="tooltip">Здравей, @User.Identity?.Name!</span>
+    </li>
+    <li>
+	    <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" type="submit" class="nav-link btn btn-link text-dark">
+		    <i class='bx bx-chat'></i>
+		    <span class="links_name">Изход</span>
+	    </a>
+	    <span class="tooltip">Изход</span>
+    </li>
+}
+else
+{
+    <li>
+	    <a asp-area="Identity" asp-page="/Account/Register">
+		    <i class='bx bx-chat'></i>
+		    <span class="links_name">Регистрация</span>
+	    </a>
+	    <span class="tooltip">Регистрация</span>
+    </li>
+    <li>
+	    <a asp-area="Identity" asp-page="/Account/Login">
+		    <i class='bx bx-chat'></i>
+		    <span class="links_name">Вход</span>
+	    </a>
+	    <span class="tooltip">Вход</span>
+    </li>
+}
+@* </ul> *@
