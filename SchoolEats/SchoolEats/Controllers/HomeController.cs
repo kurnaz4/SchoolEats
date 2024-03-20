@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using SchoolEats.Areas.Identity.Pages.Account;
 using SchoolEats.Models;
 using System.Diagnostics;
 
@@ -15,7 +16,7 @@ namespace SchoolEats.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return LocalRedirect("/Identity/Account/Login");
         }
       
         public IActionResult Privacy()

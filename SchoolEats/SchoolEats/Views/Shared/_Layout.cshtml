@@ -1,15 +1,19 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using SchoolEats.Data.Models
+@inject SignInManager<SchoolEatsUser> SignInManager;
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SchoolEats</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/stail.css" asp-append-version="true" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+	@if(SignInManager.IsSignedIn(this.User))
+	{
 	<div class="app-sidebar background-user">
 	<div class="logo-details">
 		<div class="logo_name">SchoolEats</div>
@@ -44,7 +48,7 @@
 			<span class="tooltip">История на поръчки</span>
 		</li>
 		<li>
-			<a href="#">
+			<a asp-action="Settings" asp-controller="SuperUser">
 				<i class='bx bx-cog'></i>
 				<span class="links_name">Настройки</span>
 			</a>
@@ -66,7 +70,8 @@
 			<i class='bx bx-log-out' id="log_out"></i>
 		</li>
 	</ul>
-</div>
+        </div>
+}
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
