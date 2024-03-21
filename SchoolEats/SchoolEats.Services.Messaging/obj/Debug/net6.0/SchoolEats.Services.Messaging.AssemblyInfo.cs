@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolEats.Services.Messaging")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79051b02584ec5dc2093c863074a971a2470829d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad02a9e2417703fa713ee66a9e85a4203122e58a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolEats.Services.Messaging")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolEats.Services.Messaging")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
