@@ -4,7 +4,7 @@
 	using static Common.ValidationConstants.Dish;
 	public class Dish
 	{
-		public Dish()
+        public Dish()
 		{
 			this.Id = Guid.NewGuid();
 		}

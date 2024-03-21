@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\wwwroot\\js\\products\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\wwwroot\\js\\products\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\views\\superuser\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\views\\superuser\\products.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats.data.models\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|solutionrelative:schooleats.data.models\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\wwwroot\\js\\products\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\wwwroot\\js\\products\\products.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\wwwroot\\js\\products\\secondproducts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -35,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\controllers\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\views\\superuser\\settings.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats.data.models\\schooleats.data.models.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -91,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{A70537AF-BB49-477F-9560-B9DCE81EBA88}|SchoolEats\\SchoolEats.csproj|solutionrelative:schooleats\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats.data.models\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|solutionrelative:schooleats.data.models\\dish.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|c:\\users\\user\\desktop\\schooleats1\\schooleats\\schooleats\\schooleats.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01AF3D72-F1CC-4A91-A9A7-591467317D9E}|SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj|solutionrelative:schooleats.data.models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -118,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,111 +122,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SecondProducts.js",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
-              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
-              "RelativeToolTip": "SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-21T11:07:56.848Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Products.js",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
-              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\js\\Products\\Products.js",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
-              "RelativeToolTip": "SchoolEats\\wwwroot\\js\\Products\\Products.js",
-              "ViewState": "AQIAABEAAAAAAAAAAAAxwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-03-21T11:05:00.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Products.css",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
-              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\css\\Products\\Products.css",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
-              "RelativeToolTip": "SchoolEats\\wwwroot\\css\\Products\\Products.css",
-              "ViewState": "AQIAAMcAAAAAAAAAAAAAAM4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-21T11:04:42.611Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Login\\Register.cshtml",
-              "RelativeDocumentMoniker": "SchoolEats\\Views\\Login\\Register.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Login\\Register.cshtml",
-              "RelativeToolTip": "SchoolEats\\Views\\Login\\Register.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-21T08:50:35.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T19:50:34.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T20:19:41.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAcwFgAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T19:50:30.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Products.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\SuperUser\\Products.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Views\\SuperUser\\Products.cshtml",
               "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\SuperUser\\Products.cshtml",
               "RelativeToolTip": "SchoolEats\\Views\\SuperUser\\Products.cshtml",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAAANEAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-20T20:39:52.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-20T19:50:34.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "bootstrap-grid.css",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
               "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
@@ -238,25 +156,11 @@
               "RelativeToolTip": "SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-21T10:08:13.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-21T10:08:13.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Controllers\\Login.cs",
-              "RelativeDocumentMoniker": "SchoolEats\\Controllers\\Login.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Controllers\\Login.cs",
-              "RelativeToolTip": "SchoolEats\\Controllers\\Login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T08:51:57.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Loginn.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Login\\Loginn.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Views\\Login\\Loginn.cshtml",
@@ -264,24 +168,121 @@
               "RelativeToolTip": "SchoolEats\\Views\\Login\\Loginn.cshtml",
               "ViewState": "AQIAABUAAAAAAAAAAAAAAC4AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T19:50:53.846Z",
+              "WhenOpened": "2024-03-20T19:50:53.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dish.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\Dish.cs",
+              "RelativeDocumentMoniker": "SchoolEats.Data.Models\\Dish.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\Dish.cs",
+              "RelativeToolTip": "SchoolEats.Data.Models\\Dish.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T20:37:29.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Program.cs",
+              "RelativeDocumentMoniker": "SchoolEats\\Program.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Program.cs",
+              "RelativeToolTip": "SchoolEats\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T17:50:44.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAcwFgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T19:50:30.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "SchoolEats\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-20T20:19:41.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Register.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "RelativeToolTip": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAMAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-20T20:31:29.384Z"
+              "WhenOpened": "2024-03-20T20:31:29.384Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 10,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Login\\Register.cshtml",
+              "RelativeDocumentMoniker": "SchoolEats\\Views\\Login\\Register.cshtml",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\Login\\Register.cshtml",
+              "RelativeToolTip": "SchoolEats\\Views\\Login\\Register.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-21T08:50:35.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Products.css",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
+              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\css\\Products\\Products.css",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
+              "RelativeToolTip": "SchoolEats\\wwwroot\\css\\Products\\Products.css",
+              "ViewState": "AQIAAMcAAAAAAAAAAAAAAM4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-21T11:04:42.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Products.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
+              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\js\\Products\\Products.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
+              "RelativeToolTip": "SchoolEats\\wwwroot\\js\\Products\\Products.js",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-03-21T11:05:00.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SecondProducts.js",
+              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
+              "RelativeDocumentMoniker": "SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
+              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
+              "RelativeToolTip": "SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-03-21T11:07:56.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\SuperUser\\Index.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Views\\SuperUser\\Index.cshtml",
@@ -293,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "SchoolEats\\Controllers\\HomeController.cs",
@@ -305,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\Category.cs",
               "RelativeDocumentMoniker": "SchoolEats.Data.Models\\Category.cs",
@@ -314,18 +315,6 @@
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-20T20:37:28.395Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Dish.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\Dish.cs",
-              "RelativeDocumentMoniker": "SchoolEats.Data.Models\\Dish.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\Dish.cs",
-              "RelativeToolTip": "SchoolEats.Data.Models\\Dish.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T20:37:29.146Z"
             },
             {
               "$type": "Document",
@@ -341,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Settings.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\SuperUser\\Settings.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Views\\SuperUser\\Settings.cshtml",
@@ -365,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
@@ -377,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "SchoolEats\\Views\\_ViewStart.cshtml",
@@ -446,18 +435,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-03-20T18:04:31.497Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Program.cs",
-              "RelativeDocumentMoniker": "SchoolEats\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\Program.cs",
-              "RelativeToolTip": "SchoolEats\\Program.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAA0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T17:50:44.979Z"
             }
           ]
         }

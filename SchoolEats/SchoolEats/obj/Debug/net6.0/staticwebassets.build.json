@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "PPHYl06OftaHbR/sE/IJgVLzg6GI4BxAhIdJ78LKRWM=",
+=======
+  "Hash": "B2aXWFG/1FyVvY3Xc9NctE64YjwbTkskStHgbam43rY=",
+>>>>>>> e28202f0a0dd1c47114bcadf51181983a58885b4
   "Source": "SchoolEats",
   "BasePath": "_content/SchoolEats",
   "Mode": "Default",
@@ -1214,6 +1218,7 @@
       "OriginalItemSpec": "wwwroot\\css\\LoginStyle\\Login.css"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
       "SourceId": "SchoolEats",
       "SourceType": "Discovered",
@@ -1237,6 +1242,12 @@
       "SourceId": "SchoolEats",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\A.css",
+      "SourceId": "SchoolEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+>>>>>>> e28202f0a0dd1c47114bcadf51181983a58885b4
       "BasePath": "_content/SchoolEats",
       "RelativePath": "css/shit/A.css",
       "AssetKind": "All",
@@ -1404,6 +1415,7 @@
       "OriginalItemSpec": "wwwroot\\js\\Products\\Products.js"
     },
     {
+<<<<<<< HEAD
       "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
       "SourceId": "SchoolEats",
       "SourceType": "Discovered",
@@ -1427,6 +1439,12 @@
       "SourceId": "SchoolEats",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+=======
+      "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\sidebar.js",
+      "SourceId": "SchoolEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+>>>>>>> e28202f0a0dd1c47114bcadf51181983a58885b4
       "BasePath": "_content/SchoolEats",
       "RelativePath": "js/sidebar.js",
       "AssetKind": "All",

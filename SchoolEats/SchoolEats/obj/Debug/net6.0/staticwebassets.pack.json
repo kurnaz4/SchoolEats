@@ -9,10 +9,13 @@
       "PackagePath": "staticwebassets\\css\\LoginStyle\\Login.css"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Products\\Products.css",
       "PackagePath": "staticwebassets\\css\\Products\\Products.css"
     },
     {
+=======
+>>>>>>> e28202f0a0dd1c47114bcadf51181983a58885b4
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Style\\style.css",
       "PackagePath": "staticwebassets\\css\\Style\\style.css"
     },
@@ -49,10 +52,13 @@
       "PackagePath": "staticwebassets\\js\\Products\\Products.js"
     },
     {
+<<<<<<< HEAD
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\SecondProducts.js",
       "PackagePath": "staticwebassets\\js\\Products\\SecondProducts.js"
     },
     {
+=======
+>>>>>>> e28202f0a0dd1c47114bcadf51181983a58885b4
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\sidebar.js",
       "PackagePath": "staticwebassets\\js\\sidebar.js"
     },
