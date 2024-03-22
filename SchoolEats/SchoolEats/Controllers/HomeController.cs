@@ -16,7 +16,12 @@ namespace SchoolEats.Controllers
 
         public IActionResult Index()
         {
-            return LocalRedirect("/Identity/Account/Login");
+	        if (!this.User.Identity.IsAuthenticated)
+	        {
+				return LocalRedirect("/Identity/Account/Login");
+	        }
+
+            return View();
         }
       
         public IActionResult Privacy()

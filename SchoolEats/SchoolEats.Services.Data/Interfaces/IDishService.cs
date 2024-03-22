@@ -6,5 +6,6 @@
 	{
 		Task<List<AllDishesViewModel>> GetAllDishesAsync();
 
+		Task<DishDetailsViewModel> GetDishForDetailsByDishIdAsync(Guid dishId);
 	}
 }

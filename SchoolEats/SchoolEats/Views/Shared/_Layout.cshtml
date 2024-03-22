@@ -41,7 +41,7 @@
 			<span class="tooltip">Налични продукти</span>
 		</li>
 		<li>
-			<a href="#">
+			<a asp-controller="Purchase" asp-action="All">
 				<i class='bx bx-chat'></i>
 				<span class="links_name">История на поръчки</span>
 			</a>
@@ -55,19 +55,18 @@
 			<span class="tooltip">Настройки</span>
 		</li>
 
-		@* Tova ti e login register and log out *@
-			<partial name="_LoginPartial" />
-		@* Tova ti e login register and log out *@
-
 		<li class="profile">
 			<div class="profile-details">
-				<img src="default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="profileImg">
 				<div class="name_job">
-					<div class="name">Мартин</div>
+					<div class="name">@User.Identity.Name</div>
 					<div class="job">Ученик</div>
 				</div>
 			</div>
-			<i class='bx bx-log-out' id="log_out"></i>
+			<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
+				<button type="submit">
+					<i class='bx bx-log-out' id="log_out"></i>
+				</button>
+			</form>
 		</li>
 	</ul>
         </div>

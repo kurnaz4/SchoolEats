@@ -3,6 +3,7 @@
 	using Interfaces;
 	using Microsoft.EntityFrameworkCore;
 	using SchoolEats.Data;
+	using SchoolEats.Data.Models;
 	using Web.ViewModels.Dish;
 
 	public class DishService : IDishService
@@ -31,6 +32,28 @@
 				})
 				.ToListAsync();
 			return all;
+		}
+
+		public async Task<DishDetailsViewModel> GetDishForDetailsByDishIdAsync(Guid dishId)
+		{
+			var dish = await this.dbContext
+				.Dishes
+				.Where(x => x.IsActive && x.Id == dishId)
+				.Select(d => new DishDetailsViewModel()
+				{
+					Id = d.Id,
+					Name = d.Name,
+					Description = d.Description,
+					CreatedOn = d.CreatedOn,
+					Grams = d.Grams,
+					ImageUrl = d.ImageUrl,
+					IsAllergenic = d.IsAllergenic,
+					Price = d.Price,
+					Quantity = d.Quantity,
+				})
+				.FirstAsync();
+
+			return dish;
 		}
 	}
 }
