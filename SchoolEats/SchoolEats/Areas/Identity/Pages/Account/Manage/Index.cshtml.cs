@@ -12,14 +12,16 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace SchoolEats.Areas.Identity.Pages.Account.Manage
 {
-    public class IndexModel : PageModel
+	using Data.Models;
+
+	public class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<SchoolEatsUser> _userManager;
+        private readonly SignInManager<SchoolEatsUser> _signInManager;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<SchoolEatsUser> userManager,
+            SignInManager<SchoolEatsUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -60,7 +62,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
-        private async Task LoadAsync(IdentityUser user)
+        private async Task LoadAsync(SchoolEatsUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);

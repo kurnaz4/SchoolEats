@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using SchoolEats.Data;
 using SchoolEats.Data.Models;
+using SchoolEats.Services.Data;
+using SchoolEats.Services.Data.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +16,9 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<SchoolEatsUser>(options => options.SignIn.RequireConfirmedAccount = false)
 	.AddRoles<IdentityRole<Guid>>()
     .AddEntityFrameworkStores<SchoolEatsDbContext>();
+
+builder.Services.AddTransient<SchoolEatsDbContext>();
+builder.Services.AddScoped<IDishService, DishService>();
 
 builder.Services.AddControllersWithViews();
 

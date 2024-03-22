@@ -1,12 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace SchoolEats.Controllers
+﻿namespace SchoolEats.Controllers
 {
-    public class DishController : Controller
+	using Services.Data.Interfaces;
+	using Microsoft.AspNetCore.Mvc;
+
+
+
+	public class DishController : Controller
     {
-        public IActionResult All()
+        private readonly IDishService dishService;
+	    public DishController(IDishService dishService)
+	    {
+		    this.dishService = dishService;
+	    }
+        public async Task<IActionResult> All()
         {
-            return View();
+	        var dishes = await this.dishService.GetAllDishesAsync();
+            return View(dishes);
         }
     }
 }

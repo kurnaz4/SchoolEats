@@ -9,68 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body class="">
-    <div class="app-sidebar background-admin">
-        <div class="logo-details">
-            <div class="logo_name">SchoolEats</div>
-            <i class='bx bx-menu' id="btn"></i>
-        </div>
-        <ul class="nav-list">
-            <li>
-                <i class='bx bx-search'></i>
-                <input type="text" placeholder="Потърси...">
-                <span class="tooltip">Потърси</span>
-            </li>
-            <li>
-                <a href="potrebitel.html">
-                    <i class='bx bx-pie-chart-alt-2'></i>
-                    <span class="links_name">Начална страница</span>
-                </a>
-                <span class="tooltip">Начална страница</span>
-            </li>
-
-            <li>
-                <a asp-controller="Dish" asp-action="All">
-                    <i class='bx bx-cart-alt'></i>
-                    <span class="links_name">Налични продукти</span>
-                </a>
-                <span class="tooltip">Налични продукти</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-chat'></i>
-                    <span class="links_name">История на поръчки</span>
-                </a>
-                <span class="tooltip">История на поръчки</span>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bx-cog'></i>
-                    <span class="links_name">Настройки</span>
-                </a>
-                <span class="tooltip">Настройки</span>
-            </li>
-
-            @* Tova ti e login register and log out *@
-            <partial name="_LoginPartial" />
-            @* Tova ti e login register and log out *@
-
-            <li class="profile">
-                <div class="profile-details">
-                    <img src="default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="profileImg">
-                    <div class="name_job">
-                        <div class="name">Мартин</div>
-                        <div class="job">Ученик</div>
-                    </div>
-                </div>
-                <i class='bx bx-log-out' id="log_out"></i>
-            </li>
-        </ul>
-    </div>
-
-
-    
-
-    <div class="container">
+<div class="container">
         <header>
             <h1>Your  Cart</h1>
             <div class="shopping">
@@ -79,9 +18,9 @@
             </div>
         </header>
 
-        <div class="list">
-        </div>
-    </div>
+	<div class="list">
+	</div>
+</div>
     <div class="card">
         <h1>Card</h1>
         <ul class="listCard">
@@ -94,26 +33,5 @@
 
     <script src="~/js/Products/Products.js"></script>
 
-    <script>
-        let sidebar = document.querySelector(".sidebar");
-        let closeBtn = document.querySelector("#btn");
-        let searchBtn = document.querySelector(".bx-search");
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-            menuBtnChange();
-        });
-        searchBtn.addEventListener("click", () => {
-            sidebar.classList.toggle("open");
-            menuBtnChange();
-        });
-
-        function menuBtnChange() {
-            if (sidebar.classList.contains("open")) {
-                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-            } else {
-                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-            }
-        }
-    </script>s
 </body>
 </html>

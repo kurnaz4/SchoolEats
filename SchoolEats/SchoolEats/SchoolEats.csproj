@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -21,6 +21,8 @@
     <ProjectReference Include="..\SchoolEats.Common\SchoolEats.Common.csproj" />
     <ProjectReference Include="..\SchoolEats.Data.Models\SchoolEats.Data.Models.csproj" />
     <ProjectReference Include="..\SchoolEats.Data\SchoolEats.Data.csproj" />
+    <ProjectReference Include="..\SchoolEats.Services.Data\SchoolEats.Services.Data.csproj" />
+    <ProjectReference Include="..\SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj" />
   </ItemGroup>
 
 </Project>
