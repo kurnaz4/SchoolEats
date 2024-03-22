@@ -66,16 +66,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaFxBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/History/All.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGlzdG9yeVxBbGwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Login/Loginn.cshtml]
@@ -84,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Login/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Purchase/All.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VcQWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/SchoolEats/SchoolEats/SchoolEats/SchoolEats/Views/Shared/Error.cshtml]

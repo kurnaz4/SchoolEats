@@ -19,7 +19,8 @@ builder.Services.AddDefaultIdentity<SchoolEatsUser>(options => options.SignIn.Re
 
 builder.Services.AddTransient<SchoolEatsDbContext>();
 builder.Services.AddScoped<IDishService, DishService>();
-
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

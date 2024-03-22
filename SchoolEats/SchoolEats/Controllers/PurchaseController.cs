@@ -2,7 +2,7 @@
 
 namespace SchoolEats.Controllers
 {
-    public class HistoryController : Controller
+    public class PurchaseController : Controller
     {
         public IActionResult All()
         {

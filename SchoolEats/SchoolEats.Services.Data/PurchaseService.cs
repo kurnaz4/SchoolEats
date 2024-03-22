@@ -1,0 +1,34 @@
+﻿namespace SchoolEats.Services.Data
+{
+	using Interfaces;
+	using Microsoft.EntityFrameworkCore;
+	using SchoolEats.Data;
+	using Web.ViewModels.Dish;
+
+	public class PurchaseService : IPurchaseService
+	{
+		private readonly SchoolEatsDbContext dbContext;
+		public PurchaseService(SchoolEatsDbContext dbContext)
+		{
+			this.dbContext = dbContext;
+		}
+		public async Task<List<AllDishesViewModel>> GetAllPurchasesByUserIdAsync(Guid userId)
+		{
+			return await this.dbContext
+				.Purchases
+				.Where(x => x.BuyerId == userId)
+				.Select(p => new AllDishesViewModel()
+				{
+					Id = p.Id,
+					Name = p.Dish.Name,
+					Description = p.Dish.Description,
+					Grams = p.Dish.Grams,
+					ImageUrl = p.Dish.ImageUrl,
+					IsAllergenic = p.Dish.IsAllergenic,
+					Price = p.Dish.Price,
+					Quantity = p.Dish.Quantity,
+				})
+				.ToListAsync();
+		}
+	}
+}

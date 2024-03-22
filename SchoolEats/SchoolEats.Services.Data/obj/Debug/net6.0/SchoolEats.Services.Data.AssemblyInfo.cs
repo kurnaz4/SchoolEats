@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolEats.Services.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b310bde1b063a915d8e374938c8a7b0ab78794b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5a0f3a4fb8afdaca0f975907b088d3b093ca4da")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolEats.Services.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolEats.Services.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
