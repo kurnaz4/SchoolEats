@@ -1,6 +1,7 @@
 ﻿namespace SchoolEats.Web.ViewModels.Category
 {
-    public class DishSelectCategory
+
+	public class DishSelectCategory
     {
 	    public int Id { get; set; }
 

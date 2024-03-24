@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.26.2" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.27" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.27" />
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.27" />
@@ -22,6 +23,7 @@
     <ProjectReference Include="..\SchoolEats.Data.Models\SchoolEats.Data.Models.csproj" />
     <ProjectReference Include="..\SchoolEats.Data\SchoolEats.Data.csproj" />
     <ProjectReference Include="..\SchoolEats.Services.Data\SchoolEats.Services.Data.csproj" />
+    <ProjectReference Include="..\SchoolEats.Web.Infrastructure\SchoolEats.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj" />
   </ItemGroup>
 

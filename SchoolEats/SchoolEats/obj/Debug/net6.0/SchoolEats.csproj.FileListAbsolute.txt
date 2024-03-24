@@ -233,3 +233,7 @@ D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Servi
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.ViewModels.dll
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Services.Data.pdb
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.ViewModels.pdb
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\CloudinaryDotNet.dll
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructure.dll
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructure.pdb

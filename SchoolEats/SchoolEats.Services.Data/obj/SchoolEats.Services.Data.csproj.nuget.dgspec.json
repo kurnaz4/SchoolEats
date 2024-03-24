@@ -448,7 +448,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
