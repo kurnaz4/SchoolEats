@@ -2,6 +2,7 @@
 {
 	using Services.Data.Interfaces;
 	using Microsoft.AspNetCore.Mvc;
+	using Web.Infrastructure.Extensions;
 	using Web.Infrastructure.Files;
 	using Web.Infrastructure.ImagesCloud;
 	using Web.ViewModels.Dish;
@@ -35,6 +36,8 @@
 		        return View(model);
             }
 
+	        model.UserId = this.User.GetId()!;
+
 	        try
 	        {
 		        string fileName = model.ProductImage.FileName;
@@ -45,17 +48,17 @@
 		        System.IO.File.Delete(fullPath);
 		        var correctImageUrl = cloudinarySetUp.GenerateImageUrl(fileName);
 		        model.ImagePath = correctImageUrl;
-				//implement adding in service
-		        
+
+		        //we should add categories first if we want to work this method
+		        await this.dishService.AddDishAsync(model);
 	        }
 	        catch (Exception e)
 	        {
 		        //TempData[WarningMessage] = Un exception occured!
-		        return View();
-
+		        return View(model);
 	        }
-			return RedirectToAction("Index", "Home");
 
+			return RedirectToAction("Index", "Home");
         }
     }
 }

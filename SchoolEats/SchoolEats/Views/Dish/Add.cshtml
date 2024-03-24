@@ -33,6 +33,11 @@
 			<span asp-validation-for="Quantity" class="text-danger fs-5"></span>
 		</div>
 		<div class="form-floating">
+			<input asp-for="Grams" class="form-control mt-3" type="text" placeholder="quantity" id="floatingGrams" />
+			<label asp-for="Grams" for="floatingGrams"></label>
+			<span asp-validation-for="Grams" class="text-danger fs-5"></span>
+		</div>
+		<div class="form-floating">
 			<input asp-for="IsAllergenic" class="form-check-input mt-3" type="checkbox" id="floatingAllergenic" />
 			<label asp-for="IsAllergenic" for="floatingAllergenic"></label>
 			<span asp-validation-for="IsAllergenic" class="text-danger fs-5"></span>

@@ -18,4 +18,8 @@
     <ProjectReference Include="..\SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
 </Project>

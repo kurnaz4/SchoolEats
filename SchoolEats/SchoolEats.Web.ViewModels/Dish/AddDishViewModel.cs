@@ -33,6 +33,9 @@ namespace SchoolEats.Web.ViewModels.Dish
 		[Required(ErrorMessage = ErrorMessages.RequiredField)]
 		public IFormFile ProductImage { get; set; } = null!;
 
+		[Display(Name = "Грамаж")]
+		[Range(GramsMinLength, GramsMaxLength, ErrorMessage = ErrorMessages.DishGramsLengthError)]
+		public int Grams { get; set; }
 
 		[Display(Name = "Количество")]
 		[Range(QuantityMinLength, QuantityMaxLength, ErrorMessage = ErrorMessages.DishQuantityLengthError)]
@@ -47,6 +50,7 @@ namespace SchoolEats.Web.ViewModels.Dish
 		[Display(Name = "Категории")]
 		public int CategoryId { get; set; }
 
+		public Guid UserId { get; set; }
 		public IEnumerable<DishSelectCategory> Categories { get; set; }
 	}
 }

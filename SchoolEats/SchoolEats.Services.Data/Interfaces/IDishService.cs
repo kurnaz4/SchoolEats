@@ -7,5 +7,7 @@
 		Task<List<AllDishesViewModel>> GetAllDishesAsync();
 
 		Task<DishDetailsViewModel> GetDishForDetailsByDishIdAsync(Guid dishId);
+
+		Task AddDishAsync(AddDishViewModel model);
 	}
 }

@@ -9,5 +9,6 @@
 		public const string InvalidValue = "Стойността {0} е невалидна!";
 		public const string DishQuantityLengthError = "Количеството трябва да бъде от {1} до {2}";
 		public const string DishPriceLengthError = "Цената трябва да бъде от {1} до {2}";
+		public const string DishGramsLengthError = "Грамажът трябва да бъде от {1} до {2}";
 	}
 }

@@ -55,5 +55,26 @@
 
 			return dish;
 		}
+
+		public async Task AddDishAsync(AddDishViewModel model)
+		{
+			Dish dishEntity = new Dish()
+			{
+				Name = model.Name,
+				Description = model.Description,
+				IsAllergenic = model.IsAllergenic,
+				ImageUrl = model.ImagePath,
+				Price = model.Price,
+				Quantity = model.Quantity,
+				CreatedOn = DateTime.Now.Date,
+				Grams = model.Grams,
+				IsActive = true,
+				UserId = model.UserId,
+				CategoryId = model.CategoryId,
+			};
+
+			await this.dbContext.AddAsync(dishEntity);
+			await this.dbContext.SaveChangesAsync();
+		}
 	}
 }

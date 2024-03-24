@@ -13,6 +13,9 @@
 			public const decimal PriceMaxLength = 100;
 			public const int QuantityMaxLength = 1000;
 			public const int QuantityMinLength = 1;
+			public const int GramsMaxLength = 5000;
+			public const int GramsMinLength = 1;
+
 		}
 
 		public static class Category
