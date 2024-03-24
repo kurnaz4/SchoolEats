@@ -17,7 +17,8 @@
 @* NotificationMessages *@
 </head>
 <body>
-<partial name="_NotificationsPartial"/>
+	<partial name="_NotificationsPartial" />
+<div class="d-flex justify-content-between flex-column">
 @if (SignInManager.IsSignedIn(this.User))
 {
 	<div class="app-sidebar background-user">
@@ -32,7 +33,7 @@
 				<span class="tooltip">Потърси</span>
 			</li>
 			<li>
-				<a href="potrebitel.html">
+				<a>
 					<i class='bx bx-pie-chart-alt-2'></i>
 					<span class="links_name">Начална страница</span>
 				</a>
@@ -77,12 +78,12 @@
 		</ul>
 	</div>
 }
-<div class="container">
+<div class="">
 	<main role="main" class="pb-3">
 		@RenderBody()
 	</main>
 </div>
-
+</div>
 <footer class="border-top footer text-muted">
 	<div class="container text-center">
 		<p>&copy; 2024 - SchoolEats all rights reserved!</p>

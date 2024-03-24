@@ -11,6 +11,7 @@
           "CloudinaryDotNet": "1.26.2",
           "Microsoft.AspNetCore.Identity.UI": "6.0.27",
           "Microsoft.EntityFrameworkCore": "6.0.27",
+          "Microsoft.EntityFrameworkCore.Design": "6.0.27",
           "Microsoft.Extensions.Identity.Stores": "6.0.27",
           "SchoolEats.Common": "1.0.0",
           "SchoolEats.Data": "1.0.0",
@@ -33,6 +34,14 @@
           "lib/netstandard2.0/CloudinaryDotNet.dll": {
             "assemblyVersion": "1.26.2.0",
             "fileVersion": "1.26.2.0"
+          }
+        }
+      },
+      "Humanizer.Core/2.8.26": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
+            "assemblyVersion": "2.8.0.0",
+            "fileVersion": "2.8.26.1919"
           }
         }
       },
@@ -186,6 +195,18 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/6.0.27": {},
+      "Microsoft.EntityFrameworkCore.Design/6.0.27": {
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.27"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+            "assemblyVersion": "6.0.27.0",
+            "fileVersion": "6.0.2724.6609"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/6.0.27": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.27",
@@ -1219,6 +1240,13 @@
       "path": "cloudinarydotnet/1.26.2",
       "hashPath": "cloudinarydotnet.1.26.2.nupkg.sha512"
     },
+    "Humanizer.Core/2.8.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "path": "humanizer.core/2.8.26",
+      "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.27": {
       "type": "package",
       "serviceable": true,
@@ -1302,6 +1330,13 @@
       "sha512": "sha512-T3c1wpLrkRKTJzeHWFLK09y3CPW9siGyNEqmiqcr7B6CTgaqIajKtXr3XRbIGU04BiO+KqVvcCYv+Zqh661gJA==",
       "path": "microsoft.entityframeworkcore.analyzers/6.0.27",
       "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.27.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-41YyTYAvw9HTCiMqISlUDwZSLNSgUeM4xqx1xOEb1pglithFh52PwYpovnf5A5ZIzsncnPbv9LaQebrClYigdA==",
+      "path": "microsoft.entityframeworkcore.design/6.0.27",
+      "hashPath": "microsoft.entityframeworkcore.design.6.0.27.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.27": {
       "type": "package",

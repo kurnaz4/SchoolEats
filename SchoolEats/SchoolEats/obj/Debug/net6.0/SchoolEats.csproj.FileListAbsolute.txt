@@ -237,3 +237,5 @@ D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\CloudinaryDotNet
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructure.dll
 D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructure.pdb
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\Humanizer.dll
+D:\SchoolEats\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

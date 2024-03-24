@@ -9,12 +9,16 @@
 	using static Common.NotificationMessagesConstants;
 	public class DishController : Controller
     {
+	    private readonly CloudinarySetUp cloudinarySetUp;
+
         private readonly IDishService dishService;
-        private readonly CloudinarySetUp cloudinarySetUp;
-	    public DishController(IDishService dishService)
+		private readonly ICategoryService categoryService;
+        
+	    public DishController(IDishService dishService, ICategoryService categoryService)
 	    {
-		    this.dishService = dishService;
 		    this.cloudinarySetUp = new CloudinarySetUp();
+		    this.dishService = dishService;
+			this.categoryService = categoryService;
 	    }
         public async Task<IActionResult> All()
         {
@@ -22,9 +26,10 @@
             return View(dishes);
         }
         [HttpGet]
-        public IActionResult Add()
+        public async Task<IActionResult> Add()
         {
             AddDishViewModel model = new AddDishViewModel();
+            model.Categories = await this.categoryService.AllCategoriesAsync();
             return View(model);
         }
 
@@ -34,7 +39,8 @@
 	        ModelState.Remove(nameof(model.ImagePath));
 	        if (!ModelState.IsValid)
 	        {
-		        return View(model);
+		         model.Categories = await this.categoryService.AllCategoriesAsync();
+		         return View(model);
             }
 
 	        string fullPath = String.Empty;
@@ -55,7 +61,7 @@
 	        }
 	        catch (Exception e)
 	        {
-		        TempData[ErrorMessage] = "Unexpected exception occurred!";
+		        TempData[ErrorMessage] = "Възникна неочаквана грешка";
 		        return View(model);
 	        }
 	        finally
@@ -65,7 +71,7 @@
 					System.IO.File.Delete(fullPath);
 		        }
 	        }
-
+	        TempData[SuccessMessage] = "Успешно добавихте нов продукт!";
 			return RedirectToAction("All", "Dish");
         }
     }
