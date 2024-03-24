@@ -6,7 +6,7 @@
 	using Web.Infrastructure.Files;
 	using Web.Infrastructure.ImagesCloud;
 	using Web.ViewModels.Dish;
-
+	using static Common.NotificationMessagesConstants;
 	public class DishController : Controller
     {
         private readonly IDishService dishService;
@@ -31,34 +31,42 @@
         [HttpPost]
         public async Task<IActionResult> Add(AddDishViewModel model)
         {
+	        ModelState.Remove(nameof(model.ImagePath));
 	        if (!ModelState.IsValid)
 	        {
 		        return View(model);
             }
 
-	        model.UserId = this.User.GetId()!;
-
+	        string fullPath = String.Empty;
+	        bool isFileCreated = false;
 	        try
 	        {
-		        string fileName = model.ProductImage.FileName;
+		        model.UserId = this.User.GetId()!;
+				string fileName = model.ProductImage.FileName;
 		        model.ImagePath = fileName;
 		        CreateFile.CreateImageFile(model);
-		        string fullPath = Path.GetFullPath(fileName);
+		        isFileCreated = true;
+		        fullPath = Path.GetFullPath(fileName);
 		        await cloudinarySetUp.UploadAsync(fullPath);
-		        System.IO.File.Delete(fullPath);
 		        var correctImageUrl = cloudinarySetUp.GenerateImageUrl(fileName);
 		        model.ImagePath = correctImageUrl;
-
-		        //we should add categories first if we want to work this method
+		        //we should add categories first if we want this method to work
 		        await this.dishService.AddDishAsync(model);
 	        }
 	        catch (Exception e)
 	        {
-		        //TempData[WarningMessage] = Un exception occured!
+		        TempData[ErrorMessage] = "Unexpected exception occurred!";
 		        return View(model);
 	        }
+	        finally
+	        {
+		        if (isFileCreated)
+		        {
+					System.IO.File.Delete(fullPath);
+		        }
+	        }
 
-			return RedirectToAction("Index", "Home");
+			return RedirectToAction("All", "Dish");
         }
     }
 }

@@ -29,7 +29,7 @@
 
 		public string GenerateImageUrl(string fileName)
 		{
-			var myTransformation = cloudinary.Api.UrlImgUp.Add("StoreApp");
+			var myTransformation = cloudinary.Api.UrlImgUp.Add("SchoolEats");
 
 			var generatedUrl = myTransformation.BuildUrl(fileName);
 

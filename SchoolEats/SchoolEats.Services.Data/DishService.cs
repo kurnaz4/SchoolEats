@@ -66,7 +66,7 @@
 				ImageUrl = model.ImagePath,
 				Price = model.Price,
 				Quantity = model.Quantity,
-				CreatedOn = DateTime.Now.Date,
+				CreatedOn = DateTime.Now,
 				Grams = model.Grams,
 				IsActive = true,
 				UserId = model.UserId,
