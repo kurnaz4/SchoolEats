@@ -1,6 +1,27 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using SchoolEats.Data.Models
 @inject SignInManager<SchoolEatsUser> SignInManager;
+@{
+	string name = User.Identity.Name;
+	string splittedName = string.Empty;
+	if (name != null)
+	{
+		bool isReady = false;
+		splittedName += name[0];
+		foreach (var character in name.Skip(1))
+		{
+
+			if (character.ToString() == character.ToString().ToUpper() && !isReady)
+			{
+				splittedName += " ";
+				isReady = true;
+			}
+			splittedName += character;
+		}
+	}
+	
+
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +86,7 @@
 			<li class="profile">
 				<div class="profile-details">
 					<div class="name_job">
-						<div class="name">@User.Identity.Name</div>
+						<div class="name">@splittedName</div>
 						<div class="job">Ученик</div>
 					</div>
 				</div>

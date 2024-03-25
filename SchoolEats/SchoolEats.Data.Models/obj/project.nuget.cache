@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Yr0CLtvfyIb3VGdmMtFJO79tjzOaFKPw7njuT44uHZ3hZRz7lPRyVYCLzth4KNHY6e6Gzjdr+QxcQdu2qwSkUQ==",
+  "dgSpecHash": "gKl+F+u+hJMVI57kuEYwiK/6PzINqoz4m1CtWS8uAguYcjSrPEvR9O0VupW10Y23fhC0SqMM2xX3GCgzp6LeBw==",
   "success": true,
-  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
+  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Georgi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Georgi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.27\\microsoft.aspnetcore.cryptography.internal.6.0.27.nupkg.sha512",

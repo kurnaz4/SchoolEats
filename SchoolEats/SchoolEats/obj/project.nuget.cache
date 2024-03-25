@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HHNb/XHq2Fw6QsmRkrHJp8SCsNuNxurS7GZYgvlCJOj0+gN493+N9LpkIIOQZYDT5i1xYgcCdvlMCLGFGt6elQ==",
+  "dgSpecHash": "o0IlTh5xUOyLC2A+dbdWFb3JlT8Zu/1nftxNBKwxgCxYH7K4i+JzxeNz9Rg+y5O4llCDQYcNx/ERzKUypAYZ9Q==",
   "success": true,
-  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
+  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Georgi\\.nuget\\packages\\cloudinarydotnet\\1.26.2\\cloudinarydotnet.1.26.2.nupkg.sha512",
     "C:\\Users\\Georgi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

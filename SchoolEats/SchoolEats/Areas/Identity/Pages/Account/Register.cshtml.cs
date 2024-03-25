@@ -19,7 +19,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using SchoolEats.Data.Models;
-
+using static SchoolEats.Common.ValidationConstants.User;
 namespace SchoolEats.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
@@ -71,6 +71,13 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Required]
+            [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
+            public string Name { get; set; }
+
+            [Required]
+            [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
+            public string Surname { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -114,8 +121,8 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
+                string fullName = Input.Name + Input.Surname;
+                await _userStore.SetUserNameAsync(user, fullName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

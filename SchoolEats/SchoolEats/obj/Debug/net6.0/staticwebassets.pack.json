@@ -1,283 +1,283 @@
 {
   "Files": [
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SchoolEats.bundle.scp.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SchoolEats.bundle.scp.css",
       "PackagePath": "staticwebassets\\SchoolEats.bundle.scp.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\LoginStyle\\Login.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\LoginStyle\\Login.css",
       "PackagePath": "staticwebassets\\css\\LoginStyle\\Login.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Style\\style.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Style\\style.css",
       "PackagePath": "staticwebassets\\css\\Style\\style.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\A.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\A.css",
       "PackagePath": "staticwebassets\\css\\shit\\A.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\B.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\B.css",
       "PackagePath": "staticwebassets\\css\\shit\\B.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\C.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\C.css",
       "PackagePath": "staticwebassets\\css\\shit\\C.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\site.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\stail.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\stail.css",
       "PackagePath": "staticwebassets\\css\\stail.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\favicon.ico",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\LOGO.png",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\LOGO.png",
       "PackagePath": "staticwebassets\\images\\LOGO.png"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
       "PackagePath": "staticwebassets\\js\\Products\\Products.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\sidebar.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\sidebar.js",
       "PackagePath": "staticwebassets\\js\\sidebar.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\site.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

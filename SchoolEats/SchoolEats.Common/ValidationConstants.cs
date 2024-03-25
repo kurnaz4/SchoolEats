@@ -2,7 +2,12 @@
 {
 	public static class ValidationConstants
 	{
-		public static class Dish
+        public static class User
+        {
+            public const int NameMaxLength = 30;
+            public const int NameMinLength = 2;
+        }
+        public static class Dish
 		{
 			public const int NameMaxLength = 30;
 			public const int NameMinLength = 5;

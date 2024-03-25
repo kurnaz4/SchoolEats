@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wa4SJOSzof8SVDlkBYbcKH9j2N5F8HsDBTm1NS/ytWu/qDOo87Sm6CnZoqnfXAf4fNgkbxsb84/JR6nd8ZnUeA==",
+  "dgSpecHash": "8VqAWs3p1aTh5VsULUWYgs5e/TCW6nU3aOMxZA5CKYD7GZdSS3yS9/5x9g1l7EGMPZyAqg/U23lnCZwrjLuncw==",
   "success": true,
-  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+  "projectFilePath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Georgi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.27\\microsoft.aspnetcore.cryptography.internal.6.0.27.nupkg.sha512",
     "C:\\Users\\Georgi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.27\\microsoft.aspnetcore.cryptography.keyderivation.6.0.27.nupkg.sha512",

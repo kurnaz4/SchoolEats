@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {}
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {}
   },
   "projects": {
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
         "projectName": "SchoolEats.Common",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
         "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\obj\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -110,14 +110,14 @@
         }
       }
     },
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
         "projectName": "SchoolEats.Data.Models",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
         "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\obj\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,8 +138,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               }
             }
           }
@@ -220,14 +220,14 @@
         }
       }
     },
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
         "projectName": "SchoolEats.Data",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
         "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\obj\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -248,11 +248,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               },
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
               }
             }
           }
@@ -333,14 +333,14 @@
         }
       }
     },
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
         "projectName": "SchoolEats.Services.Data",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
         "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\obj\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -361,14 +361,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
               },
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
               },
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
               }
             }
           }
@@ -421,14 +421,14 @@
         }
       }
     },
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
         "projectName": "SchoolEats.Web.ViewModels",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
         "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\obj\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -449,8 +449,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               }
             }
           }
