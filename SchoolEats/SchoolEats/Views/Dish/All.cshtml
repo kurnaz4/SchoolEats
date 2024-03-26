@@ -1,18 +1,123 @@
 ﻿@model List<AllDishesViewModel>
+
+@{
+    int count = 1;
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/Style/style.css">
+    <link rel="stylesheet" href="~/css/Products.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Document</title>
 </head>
 <body>
-<div>
-	<div class="list">
-		<p></p>
-	</div>
-</div>
+    <div class="menu-tab-wp">
+        <div class="row">
+            <div class="col-lg-12 m-auto">
+                <div class="menu-tab text-center">
+                    <ul class="filters">
+                        <div class="filter-active"></div>
+                        <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
+                            <img src="assets/images/menu-1.png" alt="">
+                            All
+                        </li>
+                        <li class="filter" data-filter=".breakfast">
+                            <img src="assets/images/menu-2.png" alt="">
+                            Breakfast
+                        </li>
+                        <li class="filter" data-filter=".lunch">
+                            <img src="assets/images/menu-3.png" alt="">
+                            Lunch
+                        </li>
+                        <li class="filter" data-filter=".dinner">
+                            <img src="assets/images/menu-4.png" alt="">
+                            Dinner
+                        </li>
+                    </ul>
+                </div>
+            </div>
+ @foreach (var product in Model)
+    {
+
+        <div class="container" onclick="clicking(@count)">
+            <a class="product-container" data-bs-toggle="modal" data-bs-target="@($"#products-preview{count}")">
+
+
+            <div class="products-container">
+
+                <div class="product" data-name="p-1">
+                    <img src="@product.ImageUrl" alt="">
+                    <h3>@product.Name</h3>
+                    <div class="price">@product.Price</div>
+                </div>
+            </div>
+            </a>
+        </div>
+     
+       
+
+        @*<div class="modal products-preview" id="@($"products-preview{count}")" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="preview" data-target="p-1">
+    <i class="fas fa-times"></i>
+    <img src="@product.ImageUrl" alt="">
+    <h3>@product.Name</h3>
+    <p>@product.Description</p>
+    <div class="price">@product.Price лв</div>
+    <div class="buttons">
+    <a href="#" class="buy">buy now</a>
+    <a href="#" class="cart">add to cart</a>
+    </div>
+    </div>
+    </div> *@
+
+        <div class="modal fade" id="@($"products-preview{count}")" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">@product.Name</h1>@* тука е категория *@
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="preview" data-target="p-1">
+                            <i class="fas fa-times"></i>
+                            <img src="@product.ImageUrl" alt="" class="w-100" style="height:325px;"/>
+                            <h3>@product.Name</h3>
+                            <p>@product.Description</p>
+                            <div class="price">@product.Price лв</div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+                        @if (@product.Name == User.Identity!.Name)
+                        {
+                            <div class="d-flex justify-content-end mt-4">
+                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-primary" style="width: 22%">Edit</a>
+                              @*   <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger" style="width: 22%">Delete</a> *@
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="d-flex justify-content-end mt-4">
+                                @* <a asp-action="Add" asp-controller="ShoppingCart" asp-route-id="@Model.Id" class="btn btn-warning" style="width: 22%">Add to Cart</a> *@
+                                <button type="button" class="btn btn-primary">Добави в количка</button>
+                            </div>
+                        }
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        count++;
+
+    }
+
+       </div>
+    </div>
+    
+   <script src="~/js/Products/Products.js"></script>
 </body>
 </html>

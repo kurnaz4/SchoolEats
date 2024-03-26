@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats", "SchoolEats\SchoolEats.csproj", "{A70537AF-BB49-477F-9560-B9DCE81EBA88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats", "SchoolEats\SchoolEats.csproj", "{A70537AF-BB49-477F-9560-B9DCE81EBA88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Common", "SchoolEats.Common\SchoolEats.Common.csproj", "{BF61C5C2-C7FD-461D-8EC0-D864DEE86BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Common", "SchoolEats.Common\SchoolEats.Common.csproj", "{BF61C5C2-C7FD-461D-8EC0-D864DEE86BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Data", "SchoolEats.Data\SchoolEats.Data.csproj", "{9FF05E0A-D27A-4006-B18E-6A074E849A11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Data", "SchoolEats.Data\SchoolEats.Data.csproj", "{9FF05E0A-D27A-4006-B18E-6A074E849A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Data.Models", "SchoolEats.Data.Models\SchoolEats.Data.Models.csproj", "{01AF3D72-F1CC-4A91-A9A7-591467317D9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Data.Models", "SchoolEats.Data.Models\SchoolEats.Data.Models.csproj", "{01AF3D72-F1CC-4A91-A9A7-591467317D9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Services.Data", "SchoolEats.Services.Data\SchoolEats.Services.Data.csproj", "{844C44A9-8F02-4988-9926-0D03B1471ADA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Services.Data", "SchoolEats.Services.Data\SchoolEats.Services.Data.csproj", "{844C44A9-8F02-4988-9926-0D03B1471ADA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Services.Messaging", "SchoolEats.Services.Messaging\SchoolEats.Services.Messaging.csproj", "{9EB2660D-DC6F-4862-9754-C565E2FD0D78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Services.Messaging", "SchoolEats.Services.Messaging\SchoolEats.Services.Messaging.csproj", "{9EB2660D-DC6F-4862-9754-C565E2FD0D78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Web.Infrastructure", "SchoolEats.Web.Infrastructure\SchoolEats.Web.Infrastructure.csproj", "{FA43FC62-0FEA-48F4-AF37-CB07E5C53D9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Web.Infrastructure", "SchoolEats.Web.Infrastructure\SchoolEats.Web.Infrastructure.csproj", "{FA43FC62-0FEA-48F4-AF37-CB07E5C53D9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolEats.Web.ViewModels", "SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj", "{1F4BAB27-58BC-41F3-AA74-2D655297ACA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchoolEats.Web.ViewModels", "SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj", "{1F4BAB27-58BC-41F3-AA74-2D655297ACA6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{749148CB-4265-42B3-B301-FD023412CDFE}"
 EndProject

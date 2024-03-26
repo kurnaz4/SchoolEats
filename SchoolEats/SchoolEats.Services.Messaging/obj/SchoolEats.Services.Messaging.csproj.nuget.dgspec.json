@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj": {}
+    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj": {}
   },
   "projects": {
-    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj": {
+    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj",
         "projectName": "SchoolEats.Services.Messaging",
-        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj",
-        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
-        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\obj\\",
+        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\SchoolEats.Services.Messaging.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,12 +69,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.27, 6.0.27]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
