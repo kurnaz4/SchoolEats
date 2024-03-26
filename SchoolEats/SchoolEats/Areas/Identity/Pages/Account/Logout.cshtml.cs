@@ -30,7 +30,8 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             _logger.LogInformation("User logged out.");
             if (returnUrl != null)
             {
-                return LocalRedirect(returnUrl);
+	            returnUrl = "/";
+                return LocalRedirect("/");  
             }
             else
             {

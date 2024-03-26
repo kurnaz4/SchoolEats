@@ -1,12 +1,12 @@
 ﻿@model DishFormViewModel
 @{
-	string imgSrc = Model.ImagePath == null ? string.Empty : Model.ImagePath;
+	
 }
 <div class="text-center d-flex flex-column justify-content-center align-items-center" style=" width: 100%">
 	<div class="mb-5">
 		<h1 class="text-white">Create Product</h1>
 	</div>
-	<form method="post" asp-action="Add" asp-controller="Dish" class="w-50" enctype="multipart/form-data">
+	<form method="post" asp-action="Edit" asp-controller="Dish" asp-route-id="@Model.Id" class="w-50" enctype="multipart/form-data">
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 		<div class="form-floating">
 			<input asp-for="Name" class="form-control" type="text" placeholder="name" id="floatingName" />

@@ -8,6 +8,10 @@
 
 		Task<DishDetailsViewModel> GetDishForDetailsByDishIdAsync(Guid dishId);
 
-		Task AddDishAsync(AddDishViewModel model);
+		Task AddDishAsync(DishFormViewModel model);
+
+		Task<DishFormViewModel> GetDishForEditAsync(Guid dishId);
+
+		Task EditDishAsync(DishFormViewModel model);
 	}
 }

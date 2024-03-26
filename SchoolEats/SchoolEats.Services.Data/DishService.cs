@@ -29,6 +29,7 @@
 					IsAllergenic = d.IsAllergenic,
 					Price = d.Price,
 					Quantity = d.Quantity,
+					Category = d.Category.Name,
 				})
 				.ToListAsync();
 			return all;
@@ -56,7 +57,7 @@
 			return dish;
 		}
 
-		public async Task AddDishAsync(AddDishViewModel model)
+		public async Task AddDishAsync(DishFormViewModel model)
 		{
 			Dish dishEntity = new Dish()
 			{
@@ -74,6 +75,50 @@
 			};
 
 			await this.dbContext.AddAsync(dishEntity);
+			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task<DishFormViewModel> GetDishForEditAsync(Guid dishId)
+		{
+			var model = await this.dbContext
+				.Dishes
+				.Where(x => x.IsActive && x.Id == dishId)
+				.Select(d => new DishFormViewModel()
+				{
+					Id = d.Id,
+					Name = d.Name,
+					Description = d.Description,
+					IsAllergenic = d.IsAllergenic,
+					Grams = d.Grams,
+					ImagePath = d.ImageUrl,
+					Price = d.Price,
+					Quantity = d.Quantity,
+					CategoryId = d.CategoryId,
+					UserId = d.UserId,
+				})
+				.FirstAsync();
+
+			return model;
+		}
+
+		public async Task EditDishAsync(DishFormViewModel model)
+		{
+			var oldModel = await this.dbContext
+				.Dishes
+				.Where(x => x.IsActive && x.Id == model.Id).FirstAsync();
+
+			oldModel.Id = model.Id;
+			oldModel.Name = model.Name;
+			oldModel.Description = model.Description;
+			oldModel.Grams = model.Grams;
+			oldModel.Price = model.Price;
+			oldModel.IsActive = true;
+			oldModel.IsAllergenic = model.IsAllergenic;
+			oldModel.Quantity = model.Quantity;
+			oldModel.CategoryId = model.CategoryId;
+			oldModel.UserId = model.UserId;
+			oldModel.ImageUrl = model.ImagePath;
+			
 			await this.dbContext.SaveChangesAsync();
 		}
 	}

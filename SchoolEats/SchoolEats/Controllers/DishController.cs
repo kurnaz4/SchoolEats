@@ -1,5 +1,6 @@
 ﻿namespace SchoolEats.Controllers
 {
+	using Microsoft.AspNetCore.Authorization;
 	using Services.Data.Interfaces;
 	using Microsoft.AspNetCore.Mvc;
 	using Web.Infrastructure.Extensions;
@@ -7,6 +8,9 @@
 	using Web.Infrastructure.ImagesCloud;
 	using Web.ViewModels.Dish;
 	using static Common.NotificationMessagesConstants;
+	using static Common.ErrorMessages;
+
+	[Authorize]
 	public class DishController : Controller
     {
 	    private readonly CloudinarySetUp cloudinarySetUp;
@@ -28,13 +32,13 @@
         [HttpGet]
         public async Task<IActionResult> Add()
         {
-            AddDishViewModel model = new AddDishViewModel();
+            DishFormViewModel model = new DishFormViewModel();
             model.Categories = await this.categoryService.AllCategoriesAsync();
             return View(model);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(AddDishViewModel model)
+        public async Task<IActionResult> Add(DishFormViewModel model)
         {
 	        ModelState.Remove(nameof(model.ImagePath));
 	        if (!ModelState.IsValid)
@@ -56,12 +60,12 @@
 		        await cloudinarySetUp.UploadAsync(fullPath);
 		        var correctImageUrl = cloudinarySetUp.GenerateImageUrl(fileName);
 		        model.ImagePath = correctImageUrl;
-		        //we should add categories first if we want this method to work
+		        
 		        await this.dishService.AddDishAsync(model);
 	        }
 	        catch (Exception e)
 	        {
-		        TempData[ErrorMessage] = "Възникна неочаквана грешка";
+		        TempData[ErrorMessage] = CommonErrorMessage;
 		        return View(model);
 	        }
 	        finally
@@ -72,6 +76,68 @@
 		        }
 	        }
 	        TempData[SuccessMessage] = "Успешно добавихте нов продукт!";
+			return RedirectToAction("All", "Dish");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid dishId)
+        {
+			var model = await this.dishService.GetDishForEditAsync(dishId);
+			model.Categories = await this.categoryService.AllCategoriesAsync();
+
+			return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(Guid id, DishFormViewModel model)
+        {
+	        ModelState.Remove(nameof(model.ImagePath));
+	        ModelState.Remove(nameof(model.ProductImage));
+	        if (!ModelState.IsValid)
+	        {
+		        model.Categories = await this.categoryService.AllCategoriesAsync();
+				return View(model);
+	        }
+
+	        model.Id = id;
+	        model.UserId = this.User.GetId();
+			string fullPath = String.Empty;
+			bool isFileCreated = false;
+			try
+		    { 
+			    if (model.ProductImage == null)
+		        {
+			        var item = await this.dishService.GetDishForDetailsByDishIdAsync(model.Id);
+			        model.ImagePath = item.ImageUrl;
+		        }
+		        else
+		        {
+					string fileName = model.ProductImage.FileName;
+					model.ImagePath = fileName;
+					CreateFile.CreateImageFile(model);
+					isFileCreated = true;
+					fullPath = Path.GetFullPath(fileName);
+					await cloudinarySetUp.UploadAsync(fullPath);
+					var correctImageUrl = cloudinarySetUp.GenerateImageUrl(fileName);
+					model.ImagePath = correctImageUrl;
+				}
+
+				await this.dishService.EditDishAsync(model);
+
+				TempData[SuccessMessage] = "Вашият продукт е успешно редактиран!";
+	        }
+	        catch (Exception e)
+	        {
+		        TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+			finally
+			{
+				if (isFileCreated)
+				{
+					System.IO.File.Delete(fullPath);
+				}
+			}
+
 			return RedirectToAction("All", "Dish");
         }
     }

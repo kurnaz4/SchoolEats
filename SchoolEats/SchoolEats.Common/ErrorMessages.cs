@@ -10,5 +10,8 @@
 		public const string DishQuantityLengthError = "Количеството трябва да бъде от {1} до {2}";
 		public const string DishPriceLengthError = "Цената трябва да бъде от {1} до {2}";
 		public const string DishGramsLengthError = "Грамажът трябва да бъде от {1} до {2}";
+
+		//Common unexpected exception message
+		public const string CommonErrorMessage = "Възникна неочаквана грешка! Моля опитайте отново!";
 	}
 }

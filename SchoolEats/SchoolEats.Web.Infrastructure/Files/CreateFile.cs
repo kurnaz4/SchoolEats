@@ -4,7 +4,7 @@
 
 	public class CreateFile
 	{
-		public static void CreateImageFile(AddDishViewModel model)//here view Model-a
+		public static void CreateImageFile(DishFormViewModel model)//here view Model-a
 		{
 			string fileName = model.ImagePath == null ? model.ProductImage.FileName : model.ImagePath;
 

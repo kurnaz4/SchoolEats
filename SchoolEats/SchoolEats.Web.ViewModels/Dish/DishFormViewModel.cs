@@ -6,9 +6,9 @@ namespace SchoolEats.Web.ViewModels.Dish
 	using Category;
 	using Common;
 	using static Common.ValidationConstants.Dish;
-	public class AddDishViewModel
+	public class DishFormViewModel
 	{
-		public AddDishViewModel()
+		public DishFormViewModel()
 		{
 			this.Categories = new HashSet<DishSelectCategory>();
 		}
