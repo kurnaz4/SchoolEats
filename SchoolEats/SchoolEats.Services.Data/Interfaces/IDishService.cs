@@ -13,5 +13,7 @@
 		Task<DishFormViewModel> GetDishForEditAsync(Guid dishId);
 
 		Task EditDishAsync(DishFormViewModel model);
+
+		Task DeleteDishAsync(Guid dishId);
 	}
 }

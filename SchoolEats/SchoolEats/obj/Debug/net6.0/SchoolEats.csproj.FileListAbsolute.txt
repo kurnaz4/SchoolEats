@@ -324,8 +324,6 @@ D:\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructu
 D:\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.ViewModels.pdb
 D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.csproj.AssemblyReference.cache
 D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.GeneratedMSBuildEditorConfig.editorconfig
-D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.AssemblyInfoInputs.cache
-D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.AssemblyInfo.cs
 D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.csproj.CoreCompileInputs.cache
 D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.MvcApplicationPartsAssemblyInfo.cs
 D:\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.MvcApplicationPartsAssemblyInfo.cache

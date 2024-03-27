@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj": {}
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
         "projectName": "SchoolEats.Common",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,40 +101,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
         "projectName": "SchoolEats.Data.Models",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -144,8 +138,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               }
             }
           }
@@ -217,40 +211,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
         "projectName": "SchoolEats.Data",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -264,11 +248,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
               }
             }
           }
@@ -340,40 +324,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
         "projectName": "SchoolEats.Services.Data",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -387,14 +361,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
               }
             }
           }
@@ -438,40 +412,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj",
         "projectName": "SchoolEats.Web.Infrastructure",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -485,11 +449,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
               }
             }
           }
@@ -537,40 +501,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
         "projectName": "SchoolEats.Web.ViewModels",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -584,8 +538,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               }
             }
           }
@@ -629,40 +583,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj": {
+    "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
+        "projectUniqueName": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
         "projectName": "SchoolEats",
-        "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\obj\\",
+        "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\SchoolEats.csproj",
+        "packagesPath": "C:\\Users\\Georgi\\.nuget\\packages\\",
+        "outputPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Georgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -676,23 +620,23 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data\\SchoolEats.Data.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Services.Data\\SchoolEats.Services.Data.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.Infrastructure\\SchoolEats.Web.Infrastructure.csproj"
               },
-              "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
+              "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
+                "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"
               }
             }
           }
@@ -746,24 +690,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.27, 6.0.27]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -772,7 +698,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

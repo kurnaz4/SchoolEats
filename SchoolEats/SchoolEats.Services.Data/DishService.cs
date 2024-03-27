@@ -122,5 +122,20 @@
 			
 			await this.dbContext.SaveChangesAsync();
 		}
+
+		public async Task DeleteDishAsync(Guid dishId)
+		{
+			var modelToDelete = await this.dbContext
+				.Dishes.FirstAsync(x => x.IsActive && x.Id == dishId);
+
+			if (modelToDelete.IsActive is false)
+			{
+				return;
+			}
+
+			modelToDelete.IsActive = false;
+
+			await this.dbContext.SaveChangesAsync();
+		}
 	}
 }

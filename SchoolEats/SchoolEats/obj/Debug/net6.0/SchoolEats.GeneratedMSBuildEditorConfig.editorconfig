@@ -9,123 +9,123 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SchoolEats
 build_property.RootNamespace = SchoolEats
-build_property.ProjectDir = C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\
+build_property.ProjectDir = D:\SchoolEats\SchoolEats\SchoolEats\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats
+build_property.MSBuildProjectDirectory = D:\SchoolEats\SchoolEats\SchoolEats
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Logout.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1N0YXR1c01lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Dish/Add.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Dish/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaFxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Dish/All.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Dish/All.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaFxBbGwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Dish/Edit.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Dish/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzaFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Home/Index.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Login/Loginn.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Login/Loginn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Login/Register.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Login/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Purchase/All.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Purchase/All.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVyY2hhc2VcQWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Shared/Error.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_LoginPartial.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_NotificationsPartial.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_NotificationsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Index.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Products.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Products.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXFByb2R1Y3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Settings.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/SuperUser/Settings.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwZXJVc2VyXFNldHRpbmdzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/_ViewImports.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/_ViewStart.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/user/Desktop/SchoolEats1/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_Layout.cshtml]
+[D:/SchoolEats/SchoolEats/SchoolEats/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-lsint3px8b
