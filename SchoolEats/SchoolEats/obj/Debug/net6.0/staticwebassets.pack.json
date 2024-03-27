@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\css\\Style\\style.css"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\SuperUser\\Orders.css",
+      "PackagePath": "staticwebassets\\css\\SuperUser\\Orders.css"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\shit\\A.css",
       "PackagePath": "staticwebassets\\css\\shit\\A.css"
     },
@@ -75,6 +79,10 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",
       "PackagePath": "staticwebassets\\js\\Products\\Products.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\SuperUser\\Orders.js",
+      "PackagePath": "staticwebassets\\js\\SuperUser\\Orders.js"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\sidebar.js",

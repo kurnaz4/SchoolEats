@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mJZJ7puDy5PLQVfWScUkhkJTavh8fsOTPSz11/GSmAc=",
+  "Hash": "A7G5T3Q6tZOvYPAr96tevKTSEulfkx8R4ywogT7XiN0=",
   "Source": "SchoolEats",
   "BasePath": "_content/SchoolEats",
   "Mode": "Default",
@@ -1385,6 +1385,25 @@
       "OriginalItemSpec": "wwwroot\\css\\Style\\style.css"
     },
     {
+      "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\SuperUser\\Orders.css",
+      "SourceId": "SchoolEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+      "BasePath": "_content/SchoolEats",
+      "RelativePath": "css/SuperUser/Orders.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\SuperUser\\Orders.css"
+    },
+    {
       "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\favicon.ico",
       "SourceId": "SchoolEats",
       "SourceType": "Discovered",
@@ -1573,6 +1592,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\SuperUser\\Orders.js",
+      "SourceId": "SchoolEats",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\",
+      "BasePath": "_content/SchoolEats",
+      "RelativePath": "js/SuperUser/Orders.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\SuperUser\\Orders.js"
     },
     {
       "Identity": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
