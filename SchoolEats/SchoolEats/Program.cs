@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using SchoolEats.Common;
 using SchoolEats.Data;
 using SchoolEats.Data.Models;
 using SchoolEats.Services.Data;
 using SchoolEats.Services.Data.Interfaces;
+using SchoolEats.Web.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+    app.SeedAdministrator(GeneralApplicationConstants.DevelopmentAdminEmail);
 }
 else
 {

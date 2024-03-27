@@ -1988,6 +1988,26 @@
           "bin/placeholder/SchoolEats.Common.dll": {}
         }
       },
+      "SchoolEats.Data.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "6.0.27",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.27",
+          "Microsoft.AspNetCore.Identity.UI": "6.0.27",
+          "Microsoft.EntityFrameworkCore": "6.0.27",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.27",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.27",
+          "Microsoft.Extensions.Identity.Stores": "6.0.27",
+          "SchoolEats.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SchoolEats.Data.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SchoolEats.Data.Models.dll": {}
+        }
+      },
       "SchoolEats.Web.ViewModels/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -5858,6 +5878,11 @@
       "path": "../SchoolEats.Common/SchoolEats.Common.csproj",
       "msbuildProject": "../SchoolEats.Common/SchoolEats.Common.csproj"
     },
+    "SchoolEats.Data.Models/1.0.0": {
+      "type": "project",
+      "path": "../SchoolEats.Data.Models/SchoolEats.Data.Models.csproj",
+      "msbuildProject": "../SchoolEats.Data.Models/SchoolEats.Data.Models.csproj"
+    },
     "SchoolEats.Web.ViewModels/1.0.0": {
       "type": "project",
       "path": "../SchoolEats.Web.ViewModels/SchoolEats.Web.ViewModels.csproj",
@@ -5871,6 +5896,7 @@
       "Microsoft.EntityFrameworkCore >= 6.0.27",
       "Microsoft.Extensions.Identity.Stores >= 6.0.27",
       "SchoolEats.Common >= 1.0.0",
+      "SchoolEats.Data.Models >= 1.0.0",
       "SchoolEats.Web.ViewModels >= 1.0.0"
     ]
   },
@@ -5908,6 +5934,9 @@
           "projectReferences": {
             "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj": {
               "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Common\\SchoolEats.Common.csproj"
+            },
+            "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj": {
+              "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Data.Models\\SchoolEats.Data.Models.csproj"
             },
             "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj": {
               "projectPath": "D:\\SchoolEats\\SchoolEats\\SchoolEats.Web.ViewModels\\SchoolEats.Web.ViewModels.csproj"

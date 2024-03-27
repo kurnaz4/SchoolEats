@@ -15,11 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SchoolEats.Common\SchoolEats.Common.csproj" />
+    <ProjectReference Include="..\SchoolEats.Data.Models\SchoolEats.Data.Models.csproj" />
     <ProjectReference Include="..\SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

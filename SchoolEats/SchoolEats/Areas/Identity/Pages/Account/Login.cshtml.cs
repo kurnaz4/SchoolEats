@@ -18,16 +18,22 @@ using Microsoft.Extensions.Logging;
 namespace SchoolEats.Areas.Identity.Pages.Account
 {
 	using Data.Models;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
-	public class LoginModel : PageModel
+    public class LoginModel : PageModel
     {
         private readonly SignInManager<SchoolEatsUser> _signInManager;
+        private readonly UserManager<SchoolEatsUser> _userManager;
+        private readonly IUserStore<SchoolEatsUser> _userStore;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<SchoolEatsUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<SchoolEatsUser> signInManager, UserManager<SchoolEatsUser> userManager, IUserStore<SchoolEatsUser> userStore, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _userManager = userManager;
+            _userStore = userStore;
         }
 
         /// <summary>
@@ -111,11 +117,22 @@ namespace SchoolEats.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
-                {
+                var result = SignInResult.Failed;
+                 SchoolEatsUser user = _userManager.FindByEmailAsync(Input.Email).Result;
+                 if (user == null)
+                 {
+                     result = SignInResult.Failed;
+                 }
+                 else 
+                 {
+                     if (await _userManager.CheckPasswordAsync(user, Input.Password))
+                     {
+                        result = SignInResult.Success;
+                     }
+                 }
+                 if (result.Succeeded)
+                 {
+                     await _signInManager.SignInAsync(user, isPersistent:false);
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
                 }
