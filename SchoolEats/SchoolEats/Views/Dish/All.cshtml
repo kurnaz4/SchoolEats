@@ -44,9 +44,8 @@
              
             </div>
  @foreach (var product in Model)
-    {
-
-        <div class="container" onclick="clicking(@count)">
+ {
+	    <div class="container" onclick="clicking(@count)">
             <a class="product-container" data-bs-toggle="modal" data-bs-target="@($"#products-preview{count}")">
 
 
@@ -98,8 +97,8 @@
                         @if (@product.Owner == User.Identity.Name)
                         {
                             
-                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success" >Edit</a>
-                              @*   <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger" style="width: 22%">Delete</a> *@
+                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success">Редактирай</a>
+                                    <a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" class="btn btn-danger">Изтрий</a>
                           
                         }
                         else
@@ -115,9 +114,31 @@
             </div>
         </div>
 
-        count++;
-
-    }
+        
+	        @* DELETE MODAL *@
+                <div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			 <div class="modal-dialog modal-dialog-centered">
+				 <div class="modal-content">
+					 <div class="modal-header">
+						 <h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий</h1>
+						 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					 </div>
+					 <div class="modal-body text-center d-flex justify-content-center align-items-center">
+						 <p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете този продукт?</p>
+					 </div>
+					 <div class="modal-footer">
+						 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						 <form asp-action="Delete" asp-controller="Dish" asp-route-id="@product.Id" method="post">
+							 <button class="btn btn-danger">Изтрий</button>
+						 </form>
+					 </div>
+				 </div>
+			 </div>
+		 </div>
+	@* DELETE MODAL END*@
+	 
+	 count++;
+}
 
        </div>
     </div>

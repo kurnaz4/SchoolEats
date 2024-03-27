@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolEats")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2cded20b63a69149df2b5d59ff4ba46a352eb1fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a45d6e9d2fafc5cdadc75ed180c9c39a15fa0b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolEats")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolEats")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

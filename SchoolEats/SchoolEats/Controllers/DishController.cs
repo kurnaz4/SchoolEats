@@ -140,5 +140,22 @@
 
 			return RedirectToAction("All", "Dish");
         }
+
+		[HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+	        try
+	        {
+				await this.dishService.DeleteDishAsync(id);
+
+				TempData[SuccessMessage] = "Вие успешно премахнахте този продукт!";
+	        }
+	        catch (Exception e)
+	        {
+				TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("All", "Dish");
+        }
     }
 }
