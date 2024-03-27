@@ -10,34 +10,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/Products.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="~/css/HomePage/HomePage.css">
+    <link rel="stylesheet" href="~/css/Filter.css">
     <title>Document</title>
 </head>
 <body>
+   
     <div class="menu-tab-wp">
         <div class="row">
-            <div class="col-lg-12 m-auto">
-                <div class="menu-tab text-center">
-                    <ul class="filters">
-                        <div class="filter-active"></div>
-                        <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                            <img src="assets/images/menu-1.png" alt="">
-                            All
-                        </li>
-                        <li class="filter" data-filter=".breakfast">
-                            <img src="assets/images/menu-2.png" alt="">
-                            Breakfast
-                        </li>
-                        <li class="filter" data-filter=".lunch">
-                            <img src="assets/images/menu-3.png" alt="">
-                            Lunch
-                        </li>
-                        <li class="filter" data-filter=".dinner">
-                            <img src="assets/images/menu-4.png" alt="">
-                            Dinner
-                        </li>
-                    </ul>
+            <div class="wrapper">
+
+                <div id="buttons">
+                    <button class="button-value" onclick="filterProduct('all')">All</button>
+                    <button class="button-value" onclick="filterProduct('Ястия')">
+                        Ястия
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Фаст фоод')">
+                        Фаст фоод
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Hапитки')">
+                        Напитки
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Снаксове">
+                        Снаксове
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Десерти')">
+                        Десерти
+                    </button>
+                    <button class="button-value" onclick="filterProduct('Плодове и зеленчуци')">
+                        Плодове и зеленчуци
+                    </button>
                 </div>
+             
             </div>
  @foreach (var product in Model)
     {
@@ -77,7 +81,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">@product.Name</h1>@* тука е категория *@
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">@product.Category</h1>@* тука е категория *@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -91,19 +95,19 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
-                        @if (@product.Name == User.Identity!.Name)
+                        @if (@product.Owner == User.Identity.Name)
                         {
-                            <div class="d-flex justify-content-end mt-4">
-                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-primary" style="width: 22%">Edit</a>
+                            
+                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success" >Edit</a>
                               @*   <a type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn btn-danger" style="width: 22%">Delete</a> *@
-                            </div>
+                          
                         }
                         else
                         {
-                            <div class="d-flex justify-content-end mt-4">
+                            
                                 @* <a asp-action="Add" asp-controller="ShoppingCart" asp-route-id="@Model.Id" class="btn btn-warning" style="width: 22%">Add to Cart</a> *@
                                 <button type="button" class="btn btn-primary">Добави в количка</button>
-                            </div>
+                           
                         }
                         
                     </div>
@@ -117,7 +121,51 @@
 
        </div>
     </div>
-    
+    <div class="contact">
+
+        <div class="c_image">
+
+            <img src="~/images/subscribe.jpg">
+
+        </div>
+
+        <div class="subscribe">
+
+            <h1>За нас</h1>
+            <p class="title">Разлегедайте нашите социални мрежи</p>
+
+
+            <div class="address">
+
+                <div class="place">
+
+                    <h3>Локация</h3>
+                    <p> Радичевец, ул. „Елин Пелин“ 2, 5300 Габрово</p>
+                    <p>България</p>
+
+                </div>
+
+                <div class="follow">
+
+                    <h3>Последвай ни</h3>
+                    <div class="icon">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-google-plus-g"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
    <script src="~/js/Products/Products.js"></script>
+    <script src="~/js/Filter.js"></script>
 </body>
 </html>

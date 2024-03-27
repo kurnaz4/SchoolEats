@@ -30,6 +30,7 @@
 					Price = d.Price,
 					Quantity = d.Quantity,
 					Category = d.Category.Name,
+					 Owner = d.User.UserName
 				})
 				.ToListAsync();
 			return all;

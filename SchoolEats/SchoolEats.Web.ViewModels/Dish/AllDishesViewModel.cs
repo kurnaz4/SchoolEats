@@ -20,5 +20,7 @@
 
 		public string Category { get; set; } = null!;
 
-	}
+		public string Owner { get; set; }
+
+    }
 }

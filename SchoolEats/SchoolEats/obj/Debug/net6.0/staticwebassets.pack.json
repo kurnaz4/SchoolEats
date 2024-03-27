@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\SchoolEats.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\Filter.css",
+      "PackagePath": "staticwebassets\\css\\Filter.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\HomePage\\HomePage.css",
+      "PackagePath": "staticwebassets\\css\\HomePage\\HomePage.css"
+    },
+    {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\css\\LoginStyle\\Login.css",
       "PackagePath": "staticwebassets\\css\\LoginStyle\\Login.css"
     },
@@ -43,6 +51,26 @@
     {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\LOGO.png",
       "PackagePath": "staticwebassets\\images\\LOGO.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\background.jpg",
+      "PackagePath": "staticwebassets\\images\\background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\banner.jpg",
+      "PackagePath": "staticwebassets\\images\\banner.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\login.jpg",
+      "PackagePath": "staticwebassets\\images\\login.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\images\\subscribe.jpg",
+      "PackagePath": "staticwebassets\\images\\subscribe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Filter.js",
+      "PackagePath": "staticwebassets\\js\\Filter.js"
     },
     {
       "Id": "C:\\Users\\user\\Desktop\\SchoolEats1\\SchoolEats\\SchoolEats\\SchoolEats\\wwwroot\\js\\Products\\Products.js",

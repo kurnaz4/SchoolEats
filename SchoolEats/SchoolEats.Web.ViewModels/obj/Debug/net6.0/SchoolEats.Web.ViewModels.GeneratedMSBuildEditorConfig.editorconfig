@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SchoolEats.Web.ViewModels
-build_property.ProjectDir = D:\SchoolEats\SchoolEats\SchoolEats.Web.ViewModels\
+build_property.ProjectDir = C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats.Web.ViewModels\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

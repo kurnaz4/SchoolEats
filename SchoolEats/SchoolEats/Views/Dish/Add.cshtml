@@ -2,9 +2,11 @@
 @{
 	string imgSrc = Model.ImagePath == null ? string.Empty : Model.ImagePath;
 }
+
+
 <div class="text-center d-flex flex-column justify-content-center align-items-center" style=" width: 100%">
 	<div class="mb-5">
-		<h1 class="text-white">Create Product</h1>
+		<h1 class="text-dark">Създай продукт</h1>
 	</div>
 	<form method="post" asp-action="Add" asp-controller="Dish" class="w-50" enctype="multipart/form-data">
 		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -55,8 +57,9 @@
 			<span asp-validation-for="ProductImage" class="text-danger fs-5"></span>
 		</div>
 
+
 		<div class="mt-4">
-			<button class="btn btn-primary" style="width: 60%" type="submit">Submit</button>
+			<button class="btn btn-primary" style="width: 60%" type="submit">Добави</button>
 		</div>
 	</form>
 </div>

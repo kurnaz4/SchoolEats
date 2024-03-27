@@ -1,0 +1,32 @@
+﻿
+.wrapper {
+    width: 60%;
+    margin: 10%;
+}
+
+#search-container input:focus {
+    border-bottom-color: #008622;
+}
+
+#search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #008622;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 0.5em;
+}
+
+.button-value {
+    border: 2px solid #008622;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    background-color: transparent;
+    color: #008622;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #008622;
+    color: #ffffff;
+}
