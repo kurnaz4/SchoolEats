@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using SchoolEats.Data.Models
+@using static SchoolEats.Common.GeneralApplicationConstants
 @inject SignInManager<SchoolEatsUser> SignInManager;
 @{
 	string name = User.Identity.Name;
@@ -19,7 +20,11 @@
 			splittedName += character;
 		}
 	}
-	
+	string background = "background-user";
+	if (this.User.IsInRole(AdminRoleName))
+	{
+		background = "background-admin";
+	}
 
 }
 <!DOCTYPE html>
@@ -42,7 +47,7 @@
 <div class="d-flex justify-content-between flex-column">
 @if (SignInManager.IsSignedIn(this.User))
 {
-	<div class="app-sidebar background-user">
+	<div class="app-sidebar @background">
 		<div class="logo-details">
 			<div class="logo_name">SchoolEats</div>
 			<i class='bx bx-menu' id="btn"></i>
@@ -83,7 +88,7 @@
 				<span class="tooltip">Настройки</span>
 			</li>
 
-			<li class="profile">
+			<li class="profile @background">
 				<div class="profile-details">
 					<div class="name_job">
 						<div class="name">@splittedName</div>
