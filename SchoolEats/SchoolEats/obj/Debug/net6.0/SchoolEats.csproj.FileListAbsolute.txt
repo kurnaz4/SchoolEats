@@ -356,3 +356,14 @@ C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net
 C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Services.Data.pdb
 C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.Infrastructure.pdb
 C:\Users\user\Desktop\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\bin\Debug\net6.0\SchoolEats.Web.ViewModels.pdb
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.csproj.AssemblyReference.cache
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.GeneratedMSBuildEditorConfig.editorconfig
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.csproj.CoreCompileInputs.cache
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.MvcApplicationPartsAssemblyInfo.cs
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.MvcApplicationPartsAssemblyInfo.cache
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.RazorAssemblyInfo.cache
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.RazorAssemblyInfo.cs
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.sourcelink.json
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.dll
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\refint\SchoolEats.dll
+D:\SchoolEats1\SchoolEats\SchoolEats\SchoolEats\obj\Debug\net6.0\SchoolEats.pdb
