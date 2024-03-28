@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolEats.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a3293f96b17c4605010f32182205346fed60f67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2400c1c6cabdb88e2963cecea921767ebaebc49a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolEats.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolEats.Web.ViewModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

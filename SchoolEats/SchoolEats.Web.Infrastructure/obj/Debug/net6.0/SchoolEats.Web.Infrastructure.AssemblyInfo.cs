@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SchoolEats.Web.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6021db2dd0fd7c270255fd4eeeee4bd1e3c4f523")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2400c1c6cabdb88e2963cecea921767ebaebc49a")]
 [assembly: System.Reflection.AssemblyProductAttribute("SchoolEats.Web.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SchoolEats.Web.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
