@@ -1,19 +1,11 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-<p>Admin panel!</p>
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="text/css" href="~/css/ShoopingCart.css" rel="stylesheet" />
-    <link type="text/css" href="~/css/stail.css" rel="stylesheet" />
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
+    
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
           integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -22,7 +14,7 @@
 </head>
 
 <body>
-
+    
     <nav>
         <!--Navbar has two part the top one and the bottom one-->
         <!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
@@ -30,10 +22,21 @@
             <div>
                 <button id="menuButton"><i class="fas fa-bars"></i></button>
                 <!--Logo-->
-           <img src="~/images/LOGO.png" width="150px">
+                <a href="index.html">
+                    <h2 class="logo">LOGO</h2>
+                </a>
             </div>
             <div>
-               
+                <!--My account part-->
+                <div class="account">
+                    <a href="index.html">
+                        <button class="account-btn">
+                            <i class="fas fa-user-alt"></i>
+                        </button>
+                        <span class="account-text">My account</span>
+                    </a>
+                    <!--When we click the btnShowAccountInfo this section will be displayed-->
+                </div>
                 <!--Shopping cart-->
                 <div class="shopping-cart">
                     <div class="sum-prices">

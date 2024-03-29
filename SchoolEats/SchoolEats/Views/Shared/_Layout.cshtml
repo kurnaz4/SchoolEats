@@ -24,6 +24,7 @@
 	if (this.User.IsInRole(AdminRoleName))
 	{
 		background = "background-admin";
+
 	}
 
 }
@@ -47,6 +48,7 @@
 <div class="d-flex justify-content-between flex-column">
 @if (SignInManager.IsSignedIn(this.User))
 {
+
 	<div class="app-sidebar @background">
 		<div class="logo-details">
 			<div class="logo_name">SchoolEats</div>

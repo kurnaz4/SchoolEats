@@ -147,7 +147,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");/*takiva moje da promenqsh*/
+                    ModelState.AddModelError(string.Empty, "Неправилни данни");/*takiva moje da promenqsh*/
                     return Page();
                 }
             }
