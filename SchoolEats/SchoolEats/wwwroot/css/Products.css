@@ -1,4 +1,4 @@
-﻿﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 * {
     font-family: 'Nunito', sans-serif;
@@ -39,6 +39,7 @@ body {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         gap: 2rem;
+        justify-items:center;
     }
 
         .container .products-container .product {
@@ -49,7 +50,6 @@ body {
             outline: .1rem solid #ccc;
             outline-offset: -1.5rem;
             cursor: pointer;
-            width:30%;
         }
 
             .container .products-container .product:hover {
