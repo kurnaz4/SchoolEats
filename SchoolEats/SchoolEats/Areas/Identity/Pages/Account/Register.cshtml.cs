@@ -8,6 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -22,6 +23,8 @@ using SchoolEats.Data.Models;
 using static SchoolEats.Common.ValidationConstants.User;
 namespace SchoolEats.Areas.Identity.Pages.Account
 {
+    using System.ComponentModel;
+
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<SchoolEatsUser> _signInManager;
@@ -71,10 +74,11 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
+            [Display(Name = "Име")]
             [Required]
             [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
             public string Name { get; set; }
-
+            [Display(Name= "Фамилия")]
             [Required]
             [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
             public string Surname { get; set; }
@@ -83,8 +87,8 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [EmailAddress]
-            [Display(Name = "Email")]
+            [EmailAddress(ErrorMessage = "Въведете валиден имейл адрес!")]
+            [Display(Name = "Имейл")]
             public string Email { get; set; }
 
             /// <summary>
@@ -92,9 +96,9 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "{0} трябва да бъде поне {2} и максимум {1} символа дълга.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Парола")]
             public string Password { get; set; }
 
             /// <summary>
@@ -102,8 +106,8 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Display(Name = "Повтори парола")]
+            [Compare("Password", ErrorMessage = "Паролата не съвпада с повторената парола!")]
             public string ConfirmPassword { get; set; }
         }
 
@@ -120,27 +124,47 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = CreateUser();
+                SchoolEatsUser userEmailCheck = _userManager.FindByEmailAsync(Input.Email).Result;
+                if (userEmailCheck != null)
+                {
+                    ModelState.AddModelError(String.Empty, "Потребител с такъв имейл вече съществува!");
+                }
                 string fullName = Input.Name + Input.Surname;
+                SchoolEatsUser userUsernameCheck = _userManager.FindByNameAsync(fullName).Result;
+                if (userUsernameCheck != null)
+                {
+                    ModelState.AddModelError(String.Empty, "Потребител с такова име и фамилия вече съществува!");
+                }
+
+                bool isNameCorrect = this.ValidateUserUsername(Input.Name);
+                bool isSurnameCorrect = this.ValidateUserUsername(Input.Surname);
+
+                if (!isNameCorrect)
+                {
+                    ModelState.AddModelError("Input.Name", "Името трябва да е по-голямо от 2 символа, първата буква да бъде главна и всички други малки, трябва да бъде само на кирилица!");
+                }
+
+                if (!isSurnameCorrect)
+                {
+                    ModelState.AddModelError("Input.Surname", "Фамилията трябва да е по-голяма от 2 символа, първата буква да бъде главна и всички други малки, трябва да бъде само на кирилица!");
+                }
+
+                if (userEmailCheck != null || userUsernameCheck != null || !isNameCorrect || !isSurnameCorrect)
+                {
+                    return Page();
+                }
+
+                var user = CreateUser();
                 await _userStore.SetUserNameAsync(user, fullName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Password);
-
+                //var result = await _userManager.CreateAsync(user, Input.Password);
+                
+                var result = await _userStore.CreateAsync(user, CancellationToken.None);
+                
                 if (result.Succeeded)
                 {
+                    await _userManager.UpdateSecurityStampAsync(user);
                     _logger.LogInformation("User created a new account with password.");
-
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -152,10 +176,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                         return LocalRedirect(returnUrl);
                     }
                 }
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                
             }
 
             // If we got this far, something failed, redisplay form
@@ -183,6 +204,46 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
             return (IUserEmailStore<SchoolEatsUser>)_userStore;
+        }
+
+        private bool ValidateUserUsername(string username)
+        {
+            if (username == null)
+            {
+                return false;
+            }
+
+            if (username.Length == 0)
+            {
+                return false;
+            }
+
+            if (username.Length < 2)
+            {
+                return false;
+            }
+
+            string firstLetter = username[0].ToString();
+            if (firstLetter != firstLetter.ToUpper())
+            {
+                return false;
+            }
+
+            var name = username.Skip(1);
+            var fullname = "";
+            foreach (var c in name)
+            {
+                fullname += c;
+            }
+            if (fullname != fullname.ToLower())
+            {
+                return false;
+            }
+            if (Regex.IsMatch(username, @"\P{IsCyrillic}"))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
