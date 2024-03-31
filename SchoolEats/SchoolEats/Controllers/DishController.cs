@@ -9,8 +9,9 @@
 	using Web.ViewModels.Dish;
 	using static Common.NotificationMessagesConstants;
 	using static Common.ErrorMessages;
+	using static Common.GeneralApplicationConstants;
 
-	[Authorize]
+	[Authorize(Roles = UserRoleName)]
 	public class DishController : Controller
     {
 	    private readonly CloudinarySetUp cloudinarySetUp;

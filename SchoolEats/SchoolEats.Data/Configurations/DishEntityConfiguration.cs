@@ -7,12 +7,15 @@
 	public class DishEntityConfiguration : IEntityTypeConfiguration<Dish>
 	{
 		public void Configure(EntityTypeBuilder<Dish> builder)
-		{
-			builder
-				.Property(x => x.CreatedOn)
-				.HasDefaultValueSql("GETDATE()");
+        {
+            builder
+                .Property(x => x.Id)
+                .IsUnicode();
+            builder
+                .Property(x => x.CreatedOn)
+                .HasDefaultValueSql("GETDATE()");
 
-			builder
+            builder
 				.Property(x => x.IsActive)
 				.HasDefaultValue(true);
 
@@ -21,7 +24,7 @@
 				.HasDefaultValue(false);
 
 			builder.HasOne(x => x.User)
-				.WithMany(x => x.Dishes)
+                .WithMany(x => x.Dishes)
 				.HasForeignKey(x => x.UserId)
 				.OnDelete(DeleteBehavior.Restrict);
 

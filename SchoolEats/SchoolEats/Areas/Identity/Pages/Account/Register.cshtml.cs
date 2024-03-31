@@ -21,9 +21,12 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using SchoolEats.Data.Models;
 using static SchoolEats.Common.ValidationConstants.User;
+using static SchoolEats.Common.GeneralApplicationConstants;
 namespace SchoolEats.Areas.Identity.Pages.Account
 {
     using System.ComponentModel;
+    using Services.Data.Interfaces;
+    using Web.Infrastructure.Extensions;
 
     public class RegisterModel : PageModel
     {
@@ -33,13 +36,15 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<SchoolEatsUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly IDishService _dishService;
 
         public RegisterModel(
             UserManager<SchoolEatsUser> userManager,
             IUserStore<SchoolEatsUser> userStore,
             SignInManager<SchoolEatsUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IDishService dishService)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -47,6 +52,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _dishService = dishService;
         }
 
         /// <summary>
@@ -157,13 +163,14 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                 var user = CreateUser();
                 await _userStore.SetUserNameAsync(user, fullName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                //var result = await _userManager.CreateAsync(user, Input.Password);
-                
-                var result = await _userStore.CreateAsync(user, CancellationToken.None);
-                
+
+                user.NormalizedEmail = _userManager.NormalizeEmail(Input.Email);
+                user.NormalizedUserName = _userManager.NormalizeName(fullName);
+
+                var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
-                    await _userManager.UpdateSecurityStampAsync(user);
                     _logger.LogInformation("User created a new account with password.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
@@ -172,7 +179,9 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                     }
                     else
                     {
+                        await _userManager.AddToRoleAsync(user, UserRoleName);
                         await _signInManager.SignInAsync(user, isPersistent: false);
+
                         return LocalRedirect(returnUrl);
                     }
                 }

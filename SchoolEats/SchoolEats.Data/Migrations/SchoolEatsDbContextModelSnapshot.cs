@@ -172,7 +172,7 @@ namespace SchoolEats.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
 
                     b.HasData(
                         new
@@ -259,7 +259,7 @@ namespace SchoolEats.Data.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Dishes");
+                    b.ToTable("Dishes", (string)null);
                 });
 
             modelBuilder.Entity("SchoolEats.Data.Models.Purchase", b =>
@@ -278,7 +278,7 @@ namespace SchoolEats.Data.Migrations
 
                     b.HasIndex("DishId");
 
-                    b.ToTable("Purchases");
+                    b.ToTable("Purchases", (string)null);
                 });
 
             modelBuilder.Entity("SchoolEats.Data.Models.SchoolEatsUser", b =>

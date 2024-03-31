@@ -1,14 +1,17 @@
 ﻿namespace SchoolEats.Data.Models
 {
 	using Microsoft.AspNetCore.Identity;
-	public class SchoolEatsUser : IdentityUser<Guid>
+    using Microsoft.EntityFrameworkCore;
+
+    public class SchoolEatsUser : IdentityUser<Guid>
 	{
 		public SchoolEatsUser()
 		{
 			Id = Guid.NewGuid();
-			Dishes = new HashSet<Dish>();
+            Dishes = new HashSet<Dish>();
 		}
-
-		public ICollection<Dish> Dishes { get; set; }
+		[Unicode(true)]
+        public override Guid Id { get; set; }
+        public ICollection<Dish> Dishes { get; set; }
 	}
 }

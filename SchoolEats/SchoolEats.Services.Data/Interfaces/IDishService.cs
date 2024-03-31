@@ -1,6 +1,8 @@
 ﻿namespace SchoolEats.Services.Data.Interfaces
 {
-	using Web.ViewModels.Dish;
+    using Microsoft.AspNetCore.Identity;
+    using SchoolEats.Data.Models;
+    using Web.ViewModels.Dish;
 
 	public interface IDishService
 	{
@@ -15,5 +17,6 @@
 		Task EditDishAsync(DishFormViewModel model);
 
 		Task DeleteDishAsync(Guid dishId);
-	}
+		
+    }
 }

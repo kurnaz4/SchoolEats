@@ -1,19 +1,21 @@
 ﻿namespace SchoolEats.Services.Data
 {
 	using Interfaces;
-	using Microsoft.EntityFrameworkCore;
-	using SchoolEats.Data;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
+    using SchoolEats.Data;
 	using SchoolEats.Data.Models;
 	using Web.ViewModels.Dish;
 
 	public class DishService : IDishService
 	{
 		private readonly SchoolEatsDbContext dbContext;
-
-		public DishService(SchoolEatsDbContext dbContext)
+        private readonly UserManager<SchoolEatsUser> userManager;
+        public DishService(SchoolEatsDbContext dbContext, UserManager<SchoolEatsUser> userManager)
 		{
 			this.dbContext = dbContext;
-		}
+			this.userManager = userManager;
+        }
 		public async Task<List<AllDishesViewModel>> GetAllDishesAsync()
 		{
 			List<AllDishesViewModel> all = await  this.dbContext
@@ -137,5 +139,6 @@
 
 			await this.dbContext.SaveChangesAsync();
 		}
-	}
+
+    }
 }
