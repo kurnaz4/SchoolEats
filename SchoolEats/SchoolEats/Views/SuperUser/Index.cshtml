@@ -1,310 +1,223 @@
-﻿
-    <!DOCTYPE html>
-    <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-    <html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
-        <title> Responsive Sidebar Menu  | CodingLab </title>
-        <link rel="stylesheet" href="~/css/Style/style.css">
-        <!-- Boxicons CDN Link -->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        @* <div class="sidebar">
-            <div class="logo-details">
-                <div class="logo_name">SchoolEats</div>
-                <i class='bx bx-menu' id="btn"></i>
-            </div>
-            <ul class="nav-list">
-                <li>
-                    <i class='bx bx-search'></i>
-                    <input type="text" placeholder="Потърси...">
-                    <span class="tooltip">Потърси</span>
-                </li>
-                <li>
-                    <a href="superuser.html">
-                        <i class='bx bx-chat'></i>
-                        <span class="links_name">Начална страница</span>
-                    </a>
-                    <span class="tooltip">Начална страница</span>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class='bx bx-grid-alt'></i>
-                        <span class="links_name">Добавяне на продукти</span>
-                    </a>
-                    <ul>
-                        <span class="tooltip">Добавяне на продукти </span>
-                    </ul>
-                </li>
-
-
-                <li>
-                    <a href="poruchki_za_superuser.html">
-                        <i class='bx bx-pie-chart-alt-2'></i>
-                        <span class="links_name">Налични продукти</span>
-                    </a>
-                    <span class="tooltip">Налични продукти</span>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class='bx bx-cart-alt'></i>
-                        <span class="links_name">Поръчки</span>
-                    </a>
-                    <span class="tooltip">Поръчки</span>
-                </li>
-                <li>
-                    <a href="superuser-potrebiteli.html">
-                        <i class='bx bx-user'></i>
-                        <span class="links_name">Потребители</span>
-                    </a>
-                    <span class="tooltip">Потребители</span>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class='bx bx-cog'></i>
-                        <span class="links_name">Настройки</span>
-                    </a>
-                    <span class="tooltip">Настройки</span>
-                </li>
-                <li class="profile">
-                    <div class="profile-details">
-                        <img src="default-profile-account-unknown-icon-black-silhouette-free-vector.jpg" alt="profileImg">
-                        <div class="name_job">
-                            <div class="name">Админ</div>
-                            <div class="job">Готвач</div>
-                        </div>
-                    </div>
-                    <i class='bx bx-log-out' id="log_out"></i>
-                </li>
-            </ul>
-        </div> *@
-
-            <div class="cardBox" style="justify-content:center;align-items:center;margin: 2rem;">
-                <div class="cardd">
-                    <div>
-                        <div class="numbers">1,504</div>
-                        <div class="cardName">Daily Views</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="cardd">
-                    <div>
-                        <div class="numbers">80</div>
-                        <div class="cardName">Sales</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cart-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="cardd">
-                    <div>
-                        <div class="numbers">284</div>
-                        <div class="cardName">Comments</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="chatbubbles-outline"></ion-icon>
-                    </div>
-                </div>
-
-                <div class="cardd">
-                    <div>
-                        <div class="numbers">$7,842</div>
-                        <div class="cardName">Earning</div>
-                    </div>
-
-                    <div class="iconBx">
-                        <ion-icon name="cash-outline"></ion-icon>
-                    </div>
-                </div>
-            </div>
-      
-       
-
-            <div class="main-box top">
-                <div class="top">
-                    <div class="box">
-                        <p>Hello <b>marti</b>, Welcome</p>
-                    </div>
-                    <div class="box">
-                        <p>Your email is <b>123@mail.com</b>.</p>
-                    </div>
-                </div>
-                <div class="bottom">
-                    <div class="box">
-                        <p>And you are <b>18</b>.</p>
-                    </div>
-                </div>
-            </div>
-
-
-        
-
-        <div class="details">
-            <div class="recentOrders">
-                <div class="cardHeader">
-                    <h2>Recent Orders</h2>
-                    <a href="#" class="btn">View All</a>
-                </div>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Name</td>
-                            <td>Price</td>
-                            <td>Payment</td>
-                            <td>Status</td>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Star Refrigerator</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Dell Laptop</td>
-                            <td>$110</td>
-                            <td>Due</td>
-                            <td><span class="status pending">Pending</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Apple Watch</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="status return">Return</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Addidas Shoes</td>
-                            <td>$620</td>
-                            <td>Due</td>
-                            <td><span class="status inProgress">In Progress</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Star Refrigerator</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="status delivered">Delivered</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Dell Laptop</td>
-                            <td>$110</td>
-                            <td>Due</td>
-                            <td><span class="status pending">Pending</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Apple Watch</td>
-                            <td>$1200</td>
-                            <td>Paid</td>
-                            <td><span class="status return">Return</span></td>
-                        </tr>
-
-                        <tr>
-                            <td>Addidas Shoes</td>
-                            <td>$620</td>
-                            <td>Due</td>
-                            <td><span class="status inProgress">In Progress</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- ================= New Customers ================ -->
-            <div class="recentCustomers">
-                <div class="cardHeader">
-                    <h2>Recent Customers</h2>
-                </div>
-
-                <table>
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer02.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>David <br> <span>Italy</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer01.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>Amit <br> <span>India</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer02.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>David <br> <span>Italy</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer01.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>Amit <br> <span>India</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer02.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>David <br> <span>Italy</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer01.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>Amit <br> <span>India</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer01.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>David <br> <span>Italy</span></h4>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td width="60px">
-                            <div class="imgBx"><img src="customer02.jpg" alt=""></div>
-                        </td>
-                        <td>
-                            <h4>Amit <br> <span>India</span></h4>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+﻿<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> Responsive Sidebar Menu  | CodingLab </title>
+    <link rel="stylesheet" href="~/css/Style/style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="cardBox" style="justify-content:center;align-items:center;margin: 2rem;">
+    <div class="cardd">
+        <div>
+            <div class="numbers">1,504</div>
+            <div class="cardName">Daily Views</div>
         </div>
-        </body>
+	    <div class="iconBx">
+            <ion-icon name="eye-outline"></ion-icon>
+        </div>
+    </div>
+	    <div class="cardd">
+        <div>
+            <div class="numbers">80</div>
+            <div class="cardName">Sales</div>
+        </div>
+		    <div class="iconBx">
+            <ion-icon name="cart-outline"></ion-icon>
+        </div>
+    </div>
+	    <div class="cardd">
+        <div>
+            <div class="numbers">284</div>
+            <div class="cardName">Comments</div>
+        </div>
+		    <div class="iconBx">
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+        </div>
+    </div>
+	    <div class="cardd">
+        <div>
+            <div class="numbers">$7,842</div>
+            <div class="cardName">Earning</div>
+        </div>
+		    <div class="iconBx">
+            <ion-icon name="cash-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+<div class="main-box top">
+    <div class="top">
+        <div class="box">
+            <p>Hello <b>marti</b>, Welcome</p>
+        </div>
+        <div class="box">
+            <p>Your email is <b>123@mail.com</b>.</p>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="box">
+            <p>And you are <b>18</b>.</p>
+        </div>
+    </div>
+</div>
+<div class="details">
+<div class="recentOrders">
+    <div class="cardHeader">
+        <h2>Recent Orders</h2>
+        <a href="#" class="btn">View All</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Payment</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Star Refrigerator</td>
+                <td>$1200</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+            </tr>
+
+            <tr>
+                <td>Dell Laptop</td>
+                <td>$110</td>
+                <td>Due</td>
+                <td><span class="status pending">Pending</span></td>
+            </tr>
+
+            <tr>
+                <td>Apple Watch</td>
+                <td>$1200</td>
+                <td>Paid</td>
+                <td><span class="status return">Return</span></td>
+            </tr>
+
+            <tr>
+                <td>Addidas Shoes</td>
+                <td>$620</td>
+                <td>Due</td>
+                <td><span class="status inProgress">In Progress</span></td>
+            </tr>
+
+            <tr>
+                <td>Star Refrigerator</td>
+                <td>$1200</td>
+                <td>Paid</td>
+                <td><span class="status delivered">Delivered</span></td>
+            </tr>
+
+            <tr>
+                <td>Dell Laptop</td>
+                <td>$110</td>
+                <td>Due</td>
+                <td><span class="status pending">Pending</span></td>
+            </tr>
+
+            <tr>
+                <td>Apple Watch</td>
+                <td>$1200</td>
+                <td>Paid</td>
+                <td><span class="status return">Return</span></td>
+            </tr>
+
+            <tr>
+                <td>Addidas Shoes</td>
+                <td>$620</td>
+                <td>Due</td>
+                <td><span class="status inProgress">In Progress</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- ================= New Customers ================ -->
+<div class="recentCustomers">
+    <div class="cardHeader">
+        <h2>Recent Customers</h2>
+    </div>
+
+    <table>
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer02.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>David <br> <span>Italy</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer01.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>Amit <br> <span>India</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer02.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>David <br> <span>Italy</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer01.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>Amit <br> <span>India</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer02.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>David <br> <span>Italy</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer01.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>Amit <br> <span>India</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer01.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>David <br> <span>Italy</span></h4>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="60px">
+                <div class="imgBx"><img src="customer02.jpg" alt=""></div>
+            </td>
+            <td>
+                <h4>Amit <br> <span>India</span></h4>
+            </td>
+        </tr>
+    </table>
+</div>
+</div>
+</body>

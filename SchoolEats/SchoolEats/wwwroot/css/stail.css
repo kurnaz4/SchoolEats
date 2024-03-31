@@ -4,6 +4,12 @@
     font-family: 'Poppins',sans-serif;
 }
 
+.app-sidebar-margin {
+    margin: 0 0 0 110px;
+}
+.app-sidebar-margin-more {
+    margin: 0 0 0 220px;
+}
 body {
     background: #e4e9f7;
 }

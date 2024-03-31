@@ -14,17 +14,7 @@
     }
 }
 
-
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 main.table {
-    width: 82vw;
     height: 90vh;
     background-color: #fff5;
     backdrop-filter: blur(7px);
@@ -80,8 +70,7 @@ main.table {
     background-color: #fffb;
     margin: .8rem auto;
     border-radius: .6rem;
-    overflow: auto;
-    overflow: overlay;
+    
 }
 
 

@@ -23,5 +23,11 @@
 	        var all = await this.userService.GetAllPendingUsersAsync();
 	        return View(all);
         }
+
+        public async Task<IActionResult> AllUsers()
+        {
+            var all = await this.userService.GetAllUsersAsync();
+            return View(all);
+        }
     }
 }

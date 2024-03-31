@@ -1,0 +1,79 @@
+﻿@using SchoolEats.Services.Data.Interfaces
+@using Microsoft.AspNetCore.Identity
+@using SchoolEats.Data.Models
+@model List<AllUsersViewModel>
+@inject IUserService userService
+@inject UserManager<SchoolEatsUser> userManager;
+
+@{
+	int count = 0;
+}
+<link rel="stylesheet" type="text/css" href="~/css/SuperUser/Orders.css">
+
+<main class="table" id="customers_table">
+    <section class="table__header">
+        <h1>Customer's Orders</h1>
+        <div class="input-group">
+            <input type="search" placeholder="Search Data...">
+
+        </div>
+
+    </section>
+    <section class="table__body">
+        <table>
+            <thead>
+                <tr>
+	                <th> Username <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Email <span class="icon-arrow">&UpArrow;</span></th>
+	                <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+	                <th> Make SuperUser</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in Model)
+            {
+	            string background = user.IsApproved ? "delivered" : "pending";
+	            string status = user.IsApproved ? "Approved" : "Not approved";
+	            <tr>
+		            <td>@user.Username</td>
+		            <td>@user.Email</td>
+		            <td>
+			            <p class="status @background">@status</p>
+		            </td>
+					@if (await userManager.IsInRoleAsync(await userService.GetUserAsync(user.Id), SuperUserRoleName))
+					{
+						<td><a type="button" class="btn btn-danger">Потребителят вече е готвач</a></td>//TODO:Да го направя да може да се премахва готвача
+					}
+					else
+					{
+						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button">Дай права на готвач</a></td>
+					}
+	            </tr> 
+			@* Update User to SuperUser POP UP POP UP *@
+	            <div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		            <div class="modal-dialog modal-dialog-centered">
+			            <div class="modal-content">
+				            <div class="modal-header">
+					            <h1 class="modal-title fs-5" id="staticBackdropLabel">Добави към готвачи</h1>
+					            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				            </div>
+				            <div class="modal-body text-center d-flex justify-content-center align-items-center">
+					            <p class="m-0 text-danger fs-5">Сигурни ли сте че искате да добавите този потребител към готвачите?</p>
+				            </div>
+				            <div class="modal-footer">
+					            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					            <form asp-action="AddUserToSuperUserRole" asp-controller="User" asp-route-userId="@user.Id" method="post">
+						            <button class="btn btn-danger">Добави</button>
+					            </form>
+				            </div>
+			            </div>
+		            </div>
+	            </div>
+			@* Update User to SuperUser POP UP END*@
+	            count++;
+            }
+            </tbody>
+        </table>
+    </section>
+</main>
+<script src="~/js/SuperUser/Orders.js"></script>

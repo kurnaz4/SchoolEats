@@ -50,7 +50,7 @@
 </head>
 <body>
 	<partial name="_NotificationsPartial" />
-<div class="d-flex justify-content-between flex-column">
+	<div id="main-div-test" class="d-flex justify-content-between flex-column app-sidebar-margin">
 	@if (SignInManager.IsSignedIn(this.User))
 	{
 		if (await userService.IsUserApproved(this.User.GetId()))
@@ -171,9 +171,9 @@
 		</footer>
 	}
 }
+
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="~/js/sidebar.js"></script>
+	<script src="~/js/sidebar.js"></script>
 @await RenderSectionAsync("Scripts", required: false)
 
 </body>

@@ -1,5 +1,4 @@
-﻿
-const search = document.querySelector('.input-group input'),
+﻿const search = document.querySelector('.input-group input'),
     table_rows = document.querySelectorAll('tbody tr'),
     table_headings = document.querySelectorAll('thead th');
 
@@ -38,8 +37,7 @@ table_headings.forEach((head, i) => {
 
         sortTable(i, sort_asc);
     }
-})
-
+});
 
 function sortTable(column, sort_asc) {
     [...table_rows].sort((a, b) => {
@@ -49,8 +47,4 @@ function sortTable(column, sort_asc) {
         return sort_asc ? (first_row < second_row ? 1 : -1) : (first_row < second_row ? -1 : 1);
     })
         .map(sorted_row => document.querySelector('tbody').appendChild(sorted_row));
-}
-
-
-
-
+};

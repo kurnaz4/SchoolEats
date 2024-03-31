@@ -12,5 +12,9 @@
         Task<bool> IsUserApproved(Guid id);
 
         Task<SchoolEatsUser> GetUserAsync(Guid userId);
+
+        Task<List<AllUsersViewModel>> GetAllUsersAsync();
+
+        Task<SchoolEatsUser> AddUserToSuperUserRoleAsync(Guid userId);
     }
 }
