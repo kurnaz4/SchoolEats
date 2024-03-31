@@ -74,5 +74,33 @@
 
             return app;
         }
+
+        public static IApplicationBuilder SeedSuperUser(this IApplicationBuilder app)
+        {
+            using IServiceScope scopedServices = app.ApplicationServices.CreateScope();
+
+            IServiceProvider serviceProvider = scopedServices.ServiceProvider;
+
+            RoleManager<IdentityRole<Guid>> roleManager =
+                serviceProvider.GetRequiredService<RoleManager<IdentityRole<Guid>>>();
+
+            Task.Run(async () =>
+                {
+                    if (await roleManager.RoleExistsAsync(SuperUserRoleName))
+                    {
+                        return;
+                    }
+
+                    IdentityRole<Guid> role =
+                        new IdentityRole<Guid>(SuperUserRoleName);
+
+                    await roleManager.CreateAsync(role);
+
+                })
+                .GetAwaiter()
+                .GetResult();
+
+            return app;
+        }
     }
 }

@@ -12,5 +12,8 @@
 
         //User
         public const string UserRoleName = "User";
+
+        //Super User - Cooker
+        public const string SuperUserRoleName = "SuperUser";
     }
 }

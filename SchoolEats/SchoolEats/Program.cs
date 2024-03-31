@@ -38,6 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseMigrationsEndPoint();
     app.SeedAdministrator(GeneralApplicationConstants.DevelopmentAdminEmail);
     app.SeedUser();
+    app.SeedSuperUser();
 }
 else
 {
