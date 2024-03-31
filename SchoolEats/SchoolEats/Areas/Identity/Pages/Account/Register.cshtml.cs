@@ -35,7 +35,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         private readonly IUserStore<SchoolEatsUser> _userStore;
         private readonly IUserEmailStore<SchoolEatsUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
-        private readonly IEmailSender _emailSender;
+        private readonly Services.Messaging.IEmailSender _emailSender;
         private readonly IDishService _dishService;
 
         public RegisterModel(
@@ -43,7 +43,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             IUserStore<SchoolEatsUser> userStore,
             SignInManager<SchoolEatsUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender,
+            Services.Messaging.IEmailSender emailSender,
             IDishService dishService)
         {
             _userManager = userManager;
@@ -118,10 +118,16 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         }
 
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task<IActionResult> OnGetAsync(string returnUrl = null)
         {
+	        if (User.Identity.IsAuthenticated)
+	        {
+		        return RedirectToAction("Index", "Home");
+	        }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
@@ -177,11 +183,14 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _userManager.AddToRoleAsync(user, UserRoleName);
+	                    await _emailSender.SendEmailAsync(user.Email, "Регистрация в School Eats",
+		                    "Благодаря за твоята регистрация в SchoolEats. Твоите данни ще бъдат разгледани. При упешно регистриране ще ви пратим имейл.");
+
+						await _userManager.AddToRoleAsync(user, UserRoleName);
                         await _signInManager.SignInAsync(user, isPersistent: false);
 
                         return RedirectToAction("RegisterConfirmation", "User",
-                            new {returnUrl = "/" });
+                            new {returnUrl = ""});
                     } 
                 }
                 

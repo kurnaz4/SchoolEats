@@ -6,6 +6,7 @@ using SchoolEats.Data;
 using SchoolEats.Data.Models;
 using SchoolEats.Services.Data;
 using SchoolEats.Services.Data.Interfaces;
+using SchoolEats.Services.Messaging;
 using SchoolEats.Web.Infrastructure.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,6 +24,7 @@ builder.Services.AddDefaultIdentity<SchoolEatsUser>(options =>
     .AddRoles<IdentityRole<Guid>>()
     .AddEntityFrameworkStores<SchoolEatsDbContext>();
 
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IDishService, DishService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();

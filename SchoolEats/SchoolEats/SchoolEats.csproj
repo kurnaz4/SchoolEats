@@ -29,6 +29,7 @@
     <ProjectReference Include="..\SchoolEats.Data.Models\SchoolEats.Data.Models.csproj" />
     <ProjectReference Include="..\SchoolEats.Data\SchoolEats.Data.csproj" />
     <ProjectReference Include="..\SchoolEats.Services.Data\SchoolEats.Services.Data.csproj" />
+    <ProjectReference Include="..\SchoolEats.Services.Messaging\SchoolEats.Services.Messaging.csproj" />
     <ProjectReference Include="..\SchoolEats.Web.Infrastructure\SchoolEats.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\SchoolEats.Web.ViewModels\SchoolEats.Web.ViewModels.csproj" />
   </ItemGroup>

@@ -1,7 +1,10 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using SchoolEats.Data.Models
+@using SchoolEats.Services.Data.Interfaces
+@using SchoolEats.Web.Infrastructure.Extensions
 @using static SchoolEats.Common.GeneralApplicationConstants
 @inject SignInManager<SchoolEatsUser> SignInManager;
+@inject IUserService userService;
 @{
 	string name = User.Identity.Name;
 	string splittedName = string.Empty;
@@ -48,117 +51,115 @@
 <body>
 	<partial name="_NotificationsPartial" />
 <div class="d-flex justify-content-between flex-column">
+	@if (SignInManager.IsSignedIn(this.User))
+	{
+		if (await userService.IsUserApproved(this.User.GetId()))
+		{
+
+			<div class="app-sidebar @background">
+				<div class="logo-details">
+					<div class="logo_name">SchoolEats</div>
+					<i class='bx bx-menu' id="btn"></i>
+				</div>
+				<ul class="nav-list">
+					<li>
+						<i class='bx bx-search'></i>
+						<input type="text" placeholder="Потърси...">
+						<span class="tooltip">Потърси</span>
+					</li>
+					<li>
+						<a asp-action="Index" asp-controller="Home">
+							<i class='bx bx-pie-chart-alt-2'></i>
+							<span class="links_name">Начална страница</span>
+						</a>
+						<span class="tooltip">Начална страница</span>
+					</li>
+
+					<li>
+						<a asp-controller="Dish" asp-action="All">
+							<i class='bx bx-cart-alt'></i>
+							<span class="links_name">Налични продукти</span>
+						</a>
+						<span class="tooltip">Налични продукти</span>
+					</li>
+					<li>
+						<a asp-controller="Purchase" asp-action="All">
+							<i class='bx bx-chat'></i>
+							<span class="links_name">История на поръчки</span>
+						</a>
+						<span class="tooltip">История на поръчки</span>
+					</li>
+					<li>
+						<a asp-action="Settings" asp-controller="SuperUser">
+							<i class='bx bx-cog'></i>
+							<span class="links_name">Настройки</span>
+						</a>
+						<span class="tooltip">Настройки</span>
+					</li>
+
+					<li class="profile @background">
+						<div class="profile-details">
+							<div class="name_job">
+								<div class="name">@splittedName</div>
+								<div class="job">Ученик</div>
+							</div>
+						</div>
+						<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
+							<button type="submit">
+								<i class='bx bx-log-out' id="log_out"></i>
+							</button>
+						</form>
+					</li>
+				</ul>
+			</div>
+		}
+	}
+	<div class="">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+</div>
 @if (SignInManager.IsSignedIn(this.User))
 {
+	if (await userService.IsUserApproved(this.User.GetId()))
+	{
+		<footer>
+			<div class="contact">
 
-	<div class="app-sidebar @background">
-		<div class="logo-details">
-			<div class="logo_name">SchoolEats</div>
-			<i class='bx bx-menu' id="btn"></i>
-		</div>
-		<ul class="nav-list">
-			<li>
-				<i class='bx bx-search'></i>
-				<input type="text" placeholder="Потърси...">
-				<span class="tooltip">Потърси</span>
-			</li>
-			<li>
-				<a asp-action="Index" asp-controller="Home">
-					<i class='bx bx-pie-chart-alt-2'></i>
-					<span class="links_name">Начална страница</span>
-				</a>
-				<span class="tooltip">Начална страница</span>
-			</li>
+			<div class="c_image">
 
-			<li>
-				<a asp-controller="Dish" asp-action="All">
-					<i class='bx bx-cart-alt'></i>
-					<span class="links_name">Налични продукти</span>
-				</a>
-				<span class="tooltip">Налични продукти</span>
-			</li>
-			<li>
-				<a asp-controller="Purchase" asp-action="All">
-					<i class='bx bx-chat'></i>
-					<span class="links_name">История на поръчки</span>
-				</a>
-				<span class="tooltip">История на поръчки</span>
-			</li>
-			<li>
-				<a asp-action="Settings" asp-controller="SuperUser">
-					<i class='bx bx-cog'></i>
-					<span class="links_name">Настройки</span>
-				</a>
-				<span class="tooltip">Настройки</span>
-			</li>
+				<img src="~/images/subscribe.jpg">
 
-			<li class="profile @background">
-				<div class="profile-details">
-					<div class="name_job">
-						<div class="name">@splittedName</div>
-						<div class="job">Ученик</div>
+			</div>
+
+			<div class="subscribe">
+
+				<h1>За нас</h1>
+				<p class="title">Разлегедайте нашите социални мрежи</p>
+
+
+				<div class="address">
+
+					<div class="place">
+
+						<h3>Локация</h3>
+						<p> Радичевец, ул. „Елин Пелин“ 2, 5300 Габрово</p>
+						<p>България</p>
+
 					</div>
-				</div>
-				<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
-					<button type="submit">
-						<i class='bx bx-log-out' id="log_out"></i>
-					</button>
-				</form>
-			</li>
-		</ul>
-	</div>
-}
-<div class="">
-	<main role="main" class="pb-3">
-		@RenderBody()
-	</main>
-</div>
-</div>
-<footer class="border-top footer text-muted">
-	<div class="container text-center">
-		<p>&copy; 2024 - SchoolEats all rights reserved!</p>
-	</div>
-</footer>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-<script src="~/js/sidebar.js"></script>
-@await RenderSectionAsync("Scripts", required: false)
 
+					<div class="follow">
 
-	</div>
-	<div class="contact">
+						<h3>Последвай ни</h3>
+						<div class="icon">
 
-		<div class="c_image">
+							<i class="fa-brands fa-facebook-f"></i>
+							<i class="fa-brands fa-twitter"></i>
+							<i class="fa-brands fa-instagram"></i>
+							<i class="fa-brands fa-google-plus-g"></i>
 
-			<img src="~/images/subscribe.jpg">
-
-		</div>
-
-		<div class="subscribe">
-
-			<h1>За нас</h1>
-			<p class="title">Разлегедайте нашите социални мрежи</p>
-
-
-			<div class="address">
-
-				<div class="place">
-
-					<h3>Локация</h3>
-					<p> Радичевец, ул. „Елин Пелин“ 2, 5300 Габрово</p>
-					<p>България</p>
-
-				</div>
-
-				<div class="follow">
-
-					<h3>Последвай ни</h3>
-					<div class="icon">
-
-						<i class="fa-brands fa-facebook-f"></i>
-						<i class="fa-brands fa-twitter"></i>
-						<i class="fa-brands fa-instagram"></i>
-						<i class="fa-brands fa-google-plus-g"></i>
+						</div>
 
 					</div>
 
@@ -167,7 +168,13 @@
 			</div>
 
 		</div>
+		</footer>
+	}
+}
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/sidebar.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
 
-	</div>
 </body>
 </html>

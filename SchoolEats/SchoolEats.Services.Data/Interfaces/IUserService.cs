@@ -1,6 +1,7 @@
 ﻿namespace SchoolEats.Services.Data.Interfaces
 {
-    using Web.ViewModels.Admin;
+	using SchoolEats.Data.Models;
+	using Web.ViewModels.Admin;
 
     public interface IUserService
     {
@@ -9,5 +10,7 @@
         Task ApproveUserAsync(Guid userId);
 
         Task<bool> IsUserApproved(Guid id);
+
+        Task<SchoolEatsUser> GetUserAsync(Guid userId);
     }
 }

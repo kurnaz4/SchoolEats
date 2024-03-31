@@ -58,5 +58,13 @@
 
             return false;
         }
+
+        public async Task<SchoolEatsUser> GetUserAsync(Guid userId)
+        {
+	        var user = await this.dbContext.Users
+		        .FindAsync(userId);
+
+	        return user;
+        }
     }
 }
