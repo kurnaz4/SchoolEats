@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace SchoolEats.Controllers
+﻿namespace SchoolEats.Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Authorization;
+    using static Common.GeneralApplicationConstants;
+
+    [Authorize(Roles = SuperUserRoleName)]
     public class SuperUserController : Controller
     {
         public IActionResult Index()

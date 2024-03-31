@@ -164,9 +164,7 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, fullName, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
-                user.NormalizedEmail = _userManager.NormalizeEmail(Input.Email);
-                user.NormalizedUserName = _userManager.NormalizeName(fullName);
-
+                user.IsApproved = false;
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -182,8 +180,9 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                         await _userManager.AddToRoleAsync(user, UserRoleName);
                         await _signInManager.SignInAsync(user, isPersistent: false);
 
-                        return LocalRedirect(returnUrl);
-                    }
+                        return RedirectToAction("RegisterConfirmation", "User",
+                            new {returnUrl = "/" });
+                    } 
                 }
                 
             }

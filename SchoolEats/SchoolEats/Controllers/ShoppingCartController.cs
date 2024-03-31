@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace SchoolEats.Controllers
+﻿namespace SchoolEats.Controllers
 {
-    public class SchoppingCart : Controller
+    using Microsoft.AspNetCore.Mvc;
+
+    public class ShoppingCart : Controller
     {
         public IActionResult Index()
         {
@@ -12,6 +12,5 @@ namespace SchoolEats.Controllers
         {
             return View();
         }
-     
     }
 }

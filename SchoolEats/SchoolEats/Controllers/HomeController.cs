@@ -5,17 +5,31 @@ using System.Diagnostics;
 
 namespace SchoolEats.Controllers
 {
-    public class HomeController : Controller
+	using Services.Data.Interfaces;
+	using Web.Infrastructure.Extensions;
+    using static Common.GeneralApplicationConstants;
+	public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly IUserService userService;
+        public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
             _logger = logger;
+            this.userService = userService;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+	        if (User.Identity.IsAuthenticated)
+			{
+				bool isUserApproved = await this.userService.IsUserApproved(this.User.GetId());
+				if (!isUserApproved && User.IsInRole(UserRoleName))
+				{
+					return RedirectToAction("RegisterConfirmation", "User");
+				}
+				
+			}
+
             if (!this.User.Identity.IsAuthenticated)
 	        {
 				return LocalRedirect("/Identity/Account/Login");
