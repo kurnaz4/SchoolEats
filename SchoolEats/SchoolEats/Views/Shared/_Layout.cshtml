@@ -6,6 +6,7 @@
 @inject SignInManager<SchoolEatsUser> SignInManager;
 @inject IUserService userService;
 @{
+	string margin = User.Identity.IsAuthenticated  && await userService.IsUserApproved(this.User.GetId()) ? "app-sidebar-margin" : "";
 	string name = User.Identity.Name;
 	string splittedName = string.Empty;
 	if (name != null)
@@ -50,7 +51,7 @@
 </head>
 <body>
 	<partial name="_NotificationsPartial" />
-	<div id="main-div-test" class="d-flex justify-content-between flex-column app-sidebar-margin">
+	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	@if (SignInManager.IsSignedIn(this.User))
 	{
 		if (await userService.IsUserApproved(this.User.GetId()))
