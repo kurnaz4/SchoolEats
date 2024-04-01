@@ -28,9 +28,7 @@
 	if (this.User.IsInRole(AdminRoleName))
 	{
 		background = "background-admin";
-
 	}
-
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -68,14 +66,26 @@
 						<input type="text" placeholder="Потърси...">
 						<span class="tooltip">Потърси</span>
 					</li>
-					<li>
-						<a asp-action="Index" asp-controller="Home">
-							<i class='bx bx-pie-chart-alt-2'></i>
-							<span class="links_name">Начална страница</span>
-						</a>
-						<span class="tooltip">Начална страница</span>
-					</li>
-
+					@if (this.User.IsInRole(UserRoleName))
+					{
+						<li>
+							<a asp-action="Index" asp-controller="Home">
+								<i class='bx bx-pie-chart-alt-2'></i>
+								<span class="links_name">Начална страница</span>
+							</a>
+							<span class="tooltip">Начална страница</span>
+						</li>
+					}
+					@if (this.User.IsInRole(SuperUserRoleName))
+					{
+						<li>
+							<a asp-action="Add" asp-controller="Dish">
+								<i class='bx bx-pie-chart-alt-2'></i>
+								<span class="links_name">Добави ястие</span>
+							</a>
+							<span class="tooltip">Добави ястие</span>
+						</li>
+					}
 					<li>
 						<a asp-controller="Dish" asp-action="All">
 							<i class='bx bx-cart-alt'></i>
@@ -83,21 +93,41 @@
 						</a>
 						<span class="tooltip">Налични продукти</span>
 					</li>
-					<li>
-						<a asp-controller="Purchase" asp-action="All">
-							<i class='bx bx-chat'></i>
-							<span class="links_name">История на поръчки</span>
-						</a>
-						<span class="tooltip">История на поръчки</span>
-					</li>
-					<li>
-						<a asp-action="Settings" asp-controller="SuperUser">
-							<i class='bx bx-cog'></i>
-							<span class="links_name">Настройки</span>
-						</a>
-						<span class="tooltip">Настройки</span>
-					</li>
-
+					@if (!this.User.IsInRole(AdminRoleName))
+					{
+						<li>
+							<a asp-controller="Purchase" asp-action="All">
+								<i class='bx bx-chat'></i>
+								<span class="links_name">История на поръчки</span>
+							</a>
+							<span class="tooltip">История на поръчки</span>
+						</li>
+					
+						<li>
+							<a asp-action="Settings" asp-controller="Home">
+								<i class='bx bx-cog'></i>
+								<span class="links_name">Настройки</span>
+							</a>
+							<span class="tooltip">Настройки</span>
+						</li>
+					}
+					@if (this.User.IsInRole(AdminRoleName))
+					{
+						<li>
+							<a asp-action="PendingUsers" asp-controller="Admin">
+								<i class='bx bx-cog'></i>
+								<span class="links_name">Чакащи потребители</span>
+							</a>
+								<span class="tooltip">Чакащи потребители</span>
+						</li>
+						<li>
+							<a asp-action="AllUsers" asp-controller="Admin">
+								<i class='bx bx-cog'></i>
+								<span class="links_name">Потребители</span>
+							</a>
+							<span class="tooltip">Потребители</span>
+						</li>
+					}
 					<li class="profile @background">
 						<div class="profile-details">
 							<div class="name_job">

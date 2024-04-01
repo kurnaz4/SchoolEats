@@ -32,10 +32,26 @@
             <tbody>
             @foreach (var user in Model)
             {
+	            string name = user.Username;
+	            string splittedName = string.Empty;
+	            if (name != null)
+	            {
+		            bool isReady = false;
+		            splittedName += name[0];
+		            foreach (var character in name.Skip(1))
+		            {
+			            if (character.ToString() == character.ToString().ToUpper() && !isReady)
+			            {
+				            splittedName += " ";
+				            isReady = true;
+			            }
+			            splittedName += character;
+		            }
+	            }
 	            string background = user.IsApproved ? "delivered" : "pending";
 	            string status = user.IsApproved ? "Approved" : "Not approved";
 	            <tr>
-		            <td>@user.Username</td>
+		            <td>@splittedName</td>
 		            <td>@user.Email</td>
 		            <td>
 			            <p class="status @background">@status</p>

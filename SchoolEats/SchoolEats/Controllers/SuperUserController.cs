@@ -11,13 +11,10 @@
         {
             return View();
         }
-		public IActionResult Products()
-		{
-			return View();
-		}
-		public IActionResult Settings()
-		{
-			return View();
-		}
-	}
+
+        public IActionResult Orders()
+        {
+	        return this.View();
+        }
+    }
 }

@@ -2,11 +2,27 @@
 
 namespace SchoolEats.Controllers
 {
-    public class PurchaseController : Controller
-    {
-        public IActionResult All()
+	using Services.Data.Interfaces;
+	using Web.Infrastructure.Extensions;
+
+	public class PurchaseController : Controller
+	{
+		private readonly IPurchaseService purchaseService;
+
+		public PurchaseController(IPurchaseService purchaseService)
+		{
+			this.purchaseService = purchaseService;
+		}
+        public async Task<IActionResult> All()
         {
-            return View();
+	       var all = await this.purchaseService.GetAllPurchasesByUserIdAsync(this.User.GetId());
+            return View(all);
+        }
+
+        [HttpPost]
+        public IActionResult Purchase()
+        {
+	        return RedirectToAction("All", "Dish");
         }
     }
 }

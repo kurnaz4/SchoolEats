@@ -7,16 +7,32 @@
 		<tr>
 			<th scope="col">Id</th>
 			<th scope="col">Username</th>
-			<th scope="col">IsPending</th>
+			<th scope="col">Status</th>
 			<th scope="col">Approve User</th>
 		</tr>
 	</thead>
 	<tbody>
 	@foreach (var user in Model)
 	{
+		string name = user.Username;
+		string splittedName = string.Empty;
+		if (name != null)
+		{
+			bool isReady = false;
+			splittedName += name[0];
+			foreach (var character in name.Skip(1))
+			{
+				if (character.ToString() == character.ToString().ToUpper() && !isReady)
+				{
+					splittedName += " ";
+					isReady = true;
+				}
+				splittedName += character;
+			}
+		}
 		<tr>
 			<th scope="row">@user.Id</th>
-			<td>@user.Username</td>
+			<td>@splittedName</td>
 			<td><button type="button" class="btn btn-warning">Is not approved</button></td>
 			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button" class="btn btn-primary">Approve User</a></td>
 		</tr>

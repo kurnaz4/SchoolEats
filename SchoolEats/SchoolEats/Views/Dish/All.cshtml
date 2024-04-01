@@ -12,137 +12,172 @@
     <link rel="stylesheet" href="~/css/Products.css">
     <link rel="stylesheet" href="~/css/HomePage/HomePage.css">
     <link rel="stylesheet" href="~/css/Filter.css">
+    <link type="text/css" href="~/css/ShoopingCart.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous" />
+
     <title>Document</title>
 </head>
 <body>
    
-    <div class="menu-tab-wp">
-        <div class="row">
-            <div class="wrapper">
+<div class="menu-tab-wp">
+    <div class="row">
+	    @* <div class="wrapper">
 
-                <div id="buttons">
-                    <button class="button-value" onclick="filterProduct('all')">All</button>
-                    <button class="button-value" onclick="filterProduct('Ястия')">
-                        Ястия
-                    </button>
-                    <button class="button-value" onclick="filterProduct('Фаст фоод')">
-                        Фаст фоод
-                    </button>
-                    <button class="button-value" onclick="filterProduct('Hапитки')">
-                        Напитки
-                    </button>
-                    <button class="button-value" onclick="filterProduct('Снаксове">
-                        Снаксове
-                    </button>
-                    <button class="button-value" onclick="filterProduct('Десерти')">
-                        Десерти
-                    </button>
-                    <button class="button-value" onclick="filterProduct('Плодове и зеленчуци')">
-                        Плодове и зеленчуци
-                    </button>
-                </div>
+		    <div id="buttons">
+			    <button class="button-value" onclick="filterProduct('all')">All</button>
+			    <button class="button-value" onclick="filterProduct('Ястия')">
+				    Ястия
+			    </button>
+			    <button class="button-value" onclick="filterProduct('Фаст фоод')">
+				    Фаст фоод
+			    </button>
+			    <button class="button-value" onclick="filterProduct('Hапитки')">
+				    Напитки
+			    </button>
+			    <button class="button-value" onclick="filterProduct('Снаксове">
+				    Снаксове
+			    </button>
+			    <button class="button-value" onclick="filterProduct('Десерти')">
+				    Десерти
+			    </button>
+			    <button class="button-value" onclick="filterProduct('Плодове и зеленчуци')">
+				    Плодове и зеленчуци
+			    </button>
+		    </div>
              
-            </div>
- @foreach (var product in Model)
- {
-	    <div class="container" onclick="clicking(@count)">
-            <a class="product-container" data-bs-toggle="modal" data-bs-target="@($"#products-preview{count}")">
+	    </div> *@
+	    <nav>
+		    <!--Navbar has two part the top one and the bottom one-->
+		    <!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
+		    <div class="navbar-top">
+			    <div>
+				    <button id="menuButton"><i class="fas fa-bars"></i></button>
+				    <!--Logo-->
+				    <img src="~/images/LOGO.png" width="150px">
+			    </div>
+			    <div>
+               
+				    <!--Shopping cart-->
+				    <div class="shopping-cart">
+					    <div class="sum-prices">
+						    <!--Shopping cart logo-->
+						    <i class="fas fa-shopping-cart shoppingCartButton"></i>
+						    <!--The total prices of products in the shopping cart -->
+						    <h6 id="sum-prices"></h6>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
 
 
-            <div class="products-container">
+		    <div class="producstOnCart hide">
+			    <div class="overlay"></div>
+			    <div class="top">
+				    <button id="closeButton">
+					    <i class="fas fa-times-circle"></i>
+				    </button>
+				    <h3>Cart</h3>
+			    </div>
+			    <ul id="buyItems">
+				    <h4 class="empty">Your shopping cart is empty</h4>
 
-                <div class="product" data-name="p-1">
-                    <img src="@product.ImageUrl" alt="" width="">
-                    <h3>@product.Name</h3>
-                    <div class="price">@product.Price</div>
-                </div>
-            </div>
-            </a>
-        </div>
-     
-       
+			    </ul>
+			    <button class="btn checkout hidden">Check out</button>
+		    </div>
+	    </nav>
+    <section class="main-section">
+    <div class="product-container">
+	    <div class="products">
+	    @foreach (var product in Model)
+	    {
+		    <div class="product">
+			    <div class="product-under">
 
-        @*<div class="modal products-preview" id="@($"products-preview{count}")" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="preview" data-target="p-1">
-    <i class="fas fa-times"></i>
-    <img src="@product.ImageUrl" alt="">
-    <h3>@product.Name</h3>
-    <p>@product.Description</p>
-    <div class="price">@product.Price лв</div>
-    <div class="buttons">
-    <a href="#" class="buy">buy now</a>
-    <a href="#" class="cart">add to cart</a>
-    </div>
-    </div>
-    </div> *@
+				    <div class="container" onclick="clicking(@count)">
+					    <a class="product-container" data-bs-toggle="modal" data-bs-target="@($"#products-preview{count}")">
+						    <div class="products-container">
+							    <div class="product" data-name="p-1">
+								    <img src="@product.ImageUrl" alt="" width="">
+								    <h3>@product.Name</h3>
+								    <div class="price priceValue">@product.Price</div>
+							    </div>
+						    </div>
+					    </a>
+				    </div>
+				    <div class="modal fade" id="@($"products-preview{count}")" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					    <div class="modal-dialog">
+						    <div class="modal-content">
+							    <div class="modal-header">
+								    <h1 class="modal-title fs-5" id="exampleModalLabel">@product.Category</h1>@* тука е категория *@
+								    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							    </div>
+							    <div class="modal-body">
+								    <div class="preview" data-target="p-1">
+									    <i class="fas fa-times"></i>
+									    <img src="@product.ImageUrl" alt="" class="w-100" style="height: 325px;"/>
+									    <h3 class="productName">@product.Name</h3>
+									    <p>@product.Description</p>
+									    <div class="price priceValue">@product.Price лв</div>
+								    </div>
+							    </div>
+							    <div class="modal-footer">
+								    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+								    @if (@product.Owner == User.Identity.Name)
+								    {
 
-        <div class="modal fade" id="@($"products-preview{count}")" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">@product.Category</h1>@* тука е категория *@
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="preview" data-target="p-1">
-                            <i class="fas fa-times"></i>
-                            <img src="@product.ImageUrl" alt="" class="w-100" style="height:325px;"/>
-                            <h3>@product.Name</h3>
-                            <p>@product.Description</p>
-                            <div class="price">@product.Price лв</div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
-                        @if (@product.Owner == User.Identity.Name)
-                        {
-                            
-                                <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success">Редактирай</a>
-                                    <a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" class="btn btn-danger">Изтрий</a>
-                          
-                        }
-                        else
-                        {
-                            
+									    <a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success">Редактирай</a>
+									    <a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" class="btn btn-danger">Изтрий</a>
+
+								    }
+								    else
+								    {
                                 @* <a asp-action="Add" asp-controller="ShoppingCart" asp-route-id="@Model.Id" class="btn btn-warning" style="width: 22%">Add to Cart</a> *@
-                                <button type="button" class="btn btn-primary">Добави в количка</button>
-                           
-                        }
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+									    <a asp-action="Purchase" asp-controller="Purchase" class="btn btn-primary addToCart" data-product-id=@count>Добави в количка</a>
 
-        
-	        @* DELETE MODAL *@
-                <div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-			 <div class="modal-dialog modal-dialog-centered">
-				 <div class="modal-content">
-					 <div class="modal-header">
-						 <h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий</h1>
-						 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					 </div>
-					 <div class="modal-body text-center d-flex justify-content-center align-items-center">
-						 <p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете този продукт?</p>
-					 </div>
-					 <div class="modal-footer">
-						 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						 <form asp-action="Delete" asp-controller="Dish" asp-route-id="@product.Id" method="post">
-							 <button class="btn btn-danger">Изтрий</button>
-						 </form>
-					 </div>
-				 </div>
-			 </div>
-		 </div>
-	@* DELETE MODAL END*@
-	 
-	 count++;
-}
+								    }
+							    </div>
+						    </div>
+					    </div>
+				    </div>
 
-
-
-   <script src="~/js/Products/Products.js"></script>
-    <script src="~/js/Filter.js"></script>
+				    @* DELETE MODAL *@
+				    <div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					    <div class="modal-dialog modal-dialog-centered">
+						    <div class="modal-content">
+							    <div class="modal-header">
+								    <h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий</h1>
+								    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							    </div>
+							    <div class="modal-body text-center d-flex justify-content-center align-items-center">
+								    <p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете този продукт?</p>
+							    </div>
+							    <div class="modal-footer">
+								    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								    <form asp-action="Delete" asp-controller="Dish" asp-route-id="@product.Id" method="post">
+									    <button class="btn btn-danger">Изтрий</button>
+								    </form>
+							    </div>
+						    </div>
+					    </div>
+				    </div>
+				    @* DELETE MODAL END*@
+			    </div>
+				</div>
+		    count++;
+	    }
+    </div>
+	</div>
+</section>
+    </div>
+	</div>
+        <script src="~/js/ShoppingCart/script.js"></script>
+	    <script src="~/js/ShoppingCart/Cart.js"></script>
+		<script src="~/js/Products/Products.js"></script>
+	    <script src="~/js/Filter.js"></script>
 </body>
 </html>

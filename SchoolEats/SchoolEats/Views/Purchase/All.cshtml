@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model List<AllDishesViewModel>
+<table class="table table-bordered">
+	<thead>
+	<tr>
+		<th scope="col">Снимка</th>
+		<th scope="col">Име</th>
+		<th scope="col">Категория</th>
+		<th scope="col">Съдържание на алергени</th>
+		<th scope="col">Грамажи</th>
+		<th scope="col">Количество</th>
+		<th scope="col">Цена</th>
+		<th scope="col">Създател</th>
+	</tr>
+	</thead>
+	<tbody>
+		@foreach (var dish in Model)
+		{
+			string allergenic = @dish.IsAllergenic ? "С алергени" : "Без алергени";
+			<tr>
+				<td><img src="@dish.ImageUrl" class="img-fluid"/></td>
+				<td>@dish.Name</td>
+				<td>@dish.Category</td>
+				<td>@allergenic</td>
+				<td>@dish.Grams</td>
+				<td>@dish.Quantity</td>
+				<td>@dish.Price</td>
+				<td>@dish.Owner</td>
+			</tr>
+		}
+	</tbody>
+</table>
+@* //History *@

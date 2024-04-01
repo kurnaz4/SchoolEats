@@ -3,6 +3,7 @@
 	using Interfaces;
 	using Microsoft.EntityFrameworkCore;
 	using SchoolEats.Data;
+	using SchoolEats.Data.Models;
 	using Web.ViewModels.Dish;
 
 	public class PurchaseService : IPurchaseService
@@ -12,7 +13,7 @@
 		{
 			this.dbContext = dbContext;
 		}
-		public async Task<List<AllDishesViewModel>> GetAllPurchasesByUserIdAsync(Guid userId)
+		public async Task<List<AllDishesViewModel>> GetAllPurchasesByUserIdAsync(Guid userId)//For history
 		{
 			return await this.dbContext
 				.Purchases
@@ -29,6 +30,22 @@
 					Quantity = p.Dish.Quantity,
 				})
 				.ToListAsync();
+		}
+
+		public async Task PurchaseDishAsync(Guid dishId, Guid userId)
+		{
+			var dish = await this.dbContext
+				.Dishes
+				.FindAsync(dishId);
+
+			var purchase = new Purchase()
+			{
+				DishId = dishId,
+				BuyerId = userId,
+			};
+
+			await this.dbContext.Purchases.AddAsync(purchase);
+			await this.dbContext.SaveChangesAsync();
 		}
 	}
 }

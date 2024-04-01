@@ -11,7 +11,7 @@
 	using static Common.ErrorMessages;
 	using static Common.GeneralApplicationConstants;
 
-	[Authorize(Roles = UserRoleName)]
+	[Authorize(Roles = "User,Administrator")]
 	public class DishController : Controller
     {
 	    private readonly CloudinarySetUp cloudinarySetUp;
