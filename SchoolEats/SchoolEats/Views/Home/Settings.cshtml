@@ -1,4 +1,27 @@
-﻿    
+﻿@using SchoolEats.Web.Infrastructure.Extensions
+@{
+	string fullName = User.Identity.Name;
+	string firstName = string.Empty;
+	string secondName = string.Empty;
+	firstName += fullName[0];
+	bool isSurname = false;
+    foreach (var character in fullName.Skip(1))
+    {
+	    if (character.ToString() == character.ToString().ToUpper())
+	    {
+		    isSurname = true;
+	    }
+	    if(!isSurname)
+	    {
+		   firstName += character; 
+	    }
+	    if (isSurname)
+	    {
+		    secondName += character;
+	    }
+	    
+	}
+}
     <!DOCTYPE html>
     <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
     <html lang="en" dir="ltr">
@@ -35,21 +58,23 @@
                             <input class="b-none border-ccc p-10 rad-6 d-block w-full"
                                    type="text"
                                    id="first"
-                                   placeholder="показва името" />
+                                   value="@firstName"
+                                   disabled />
                         </div>
                         <div class="mb-15">
                             <label class="fs-14 c-grey d-block mb-5" for="last">Фамилия</label>
                             <input class="b-none border-ccc p-10 rad-6 d-block w-full"
                                    id="last"
+                                   value="@secondName"
                                    type="text"
-                                   placeholder="показва фамилия" />
+                                   disabled />
                         </div>
                         <div>
                             <label class="fs-14 c-grey d-block mb-5" for="email">Email</label>
                             <input class="email b-none border-ccc p-10 rad-6 w-full mr-10"
                                    id="email"
                                    type="email"
-                                   value="o@nn.sa"
+                                   value="@User.GetEmail()"
                                    disabled />
                             <a class="c-blue" href="#">Change</a>
                         </div>
