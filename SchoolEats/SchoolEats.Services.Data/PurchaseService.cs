@@ -28,6 +28,9 @@
 					IsAllergenic = p.Dish.IsAllergenic,
 					Price = p.Dish.Price,
 					Quantity = p.Dish.Quantity,
+					Category = p.Dish.Category.Name,
+					Owner = p.Dish.User.UserName,
+					PurchasedOn = DateTime.Now,
 				})
 				.ToListAsync();
 		}

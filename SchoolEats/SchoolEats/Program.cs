@@ -29,6 +29,7 @@ builder.Services.AddDefaultIdentity<SchoolEatsUser>(options =>
 
 builder.Services.AddSession();
 
+builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IDishService, DishService>();

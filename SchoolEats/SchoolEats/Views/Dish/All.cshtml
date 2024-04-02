@@ -23,7 +23,7 @@
     <title>Document</title>
 </head>
 <body>
-   
+<h1 class="fs-1 text-center">Всички ястия</h1>
 <div class="menu-tab-wp">
 	<div class="row">
 		@* <div class="wrapper">
@@ -51,17 +51,19 @@
 		    </div>
              
 	    </div> *@
-		<nav>
+		
+		
+		@* Kolichka koqto ne ni trqbva veche	 *@
+		@* <nav>
 			<!--Navbar has two part the top one and the bottom one-->
 			<!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
 			<div class="navbar-top">
-				<div>
+				 <div>
 					<button id="menuButton"><i class="fas fa-bars"></i></button>
 					<!--Logo-->
 					<img src="~/images/LOGO.png" width="150px">
-				</div>
+				</div> 
 				<div>
-               
 					<!--Shopping cart-->
 					<div class="shopping-cart">
 						<div class="sum-prices">
@@ -75,7 +77,7 @@
 			</div>
 
 
-			<div class="producstOnCart hide">
+			 <div class="producstOnCart hide">
 				<div class="overlay"></div>
 				<div class="top">
 					<button id="closeButton">
@@ -88,10 +90,11 @@
 
 				</ul>
 				<form method="post" asp-action="Purchase" asp-controller="Purchase">
-					<button class="btn checkout hidden buttonPurchase" >Check out</button>
+					<button class="btn checkout">Check out</button>
 				</form>
-			</div>
-		</nav>
+			</div> 
+		</nav> *@
+
 		<section class="main-section">
 			<div class="product-container">
 				<div class="products">
@@ -100,13 +103,13 @@
 						<div class="product">
 							<div class="product-under">
 
-								<div class="container" onclick="clicking(@count)">
+								<div class="container">
 									<a class="product-container" data-bs-toggle="modal" data-bs-target="@($"#products-preview{count}")">
 										<div class="products-container">
 											<div class="product" data-name="p-1">
 												<img src="@product.ImageUrl" alt="" width="">
 												<h3>@product.Name</h3>
-												<div class="price priceValue">@product.Price</div>
+												<div class="price">@product.Price</div>
 											</div>
 										</div>
 									</a>
@@ -122,9 +125,9 @@
 												<div class="preview" data-target="p-1">
 													<i class="fas fa-times"></i>
 													<img src="@product.ImageUrl" alt="" class="w-100" style="height: 325px;"/>
-													<h3 class="productName">@product.Name</h3>
+													<h3> product.Name</h3>
 													<p>@product.Description</p>
-													<div class="price priceValue">@product.Price лв</div>
+													<div class="price">@product.Price лв</div>
 												</div>
 											</div>
 											<div class="modal-footer">
@@ -136,7 +139,7 @@
 												}
 												else
 												{
-													<a asp-action="AddToShoppingCart" asp-controller="Purchase" class="btn btn-primary addToCart" data-product-id=@product.Id>Добави в количка</a>
+													<a asp-action="Add" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">Добави в количка</a>
 												}
 											</div>
 										</div>
@@ -173,9 +176,9 @@
 		</section>
 	</div>
 </div>
-		<script src="~/js/Purchase.js"></script>
+		@* <script src="~/js/Purchase.js"></script>
         <script src="~/js/ShoppingCart/script.js"></script>
-	    <script src="~/js/ShoppingCart/Cart.js"></script>
+	    <script src="~/js/ShoppingCart/Cart.js"></script> *@
 		<script src="~/js/Products/Products.js"></script>
 	    <script src="~/js/Filter.js"></script>
 </body>

@@ -95,6 +95,13 @@
 					</li>
 					@if (!this.User.IsInRole(AdminRoleName))
 					{
+							<li>
+								<a asp-controller="ShoppingCart" asp-action="All">
+									<i class='bx bx-cart-alt'></i>
+									<span class="links_name">Количка</span>
+								</a>
+								<span class="tooltip">Количка</span>
+							</li>
 						<li>
 							<a asp-controller="Purchase" asp-action="All">
 								<i class='bx bx-chat'></i>

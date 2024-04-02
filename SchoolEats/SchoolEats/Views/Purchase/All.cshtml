@@ -10,21 +10,39 @@
 		<th scope="col">Количество</th>
 		<th scope="col">Цена</th>
 		<th scope="col">Създател</th>
+		<th scope="col">Купено</th>
 	</tr>
 	</thead>
 	<tbody>
 		@foreach (var dish in Model)
 		{
+			string name = dish.Owner;
+			string splittedName = string.Empty;
+			if (name != null)
+			{
+				bool isReady = false;
+				splittedName += name[0];
+				foreach (var character in name.Skip(1))
+				{
+					if (character.ToString() == character.ToString().ToUpper() && !isReady)
+					{
+						splittedName += " ";
+						isReady = true;
+					}
+					splittedName += character;
+				}
+			}
 			string allergenic = @dish.IsAllergenic ? "С алергени" : "Без алергени";
 			<tr>
-				<td><img src="@dish.ImageUrl" class="img-fluid"/></td>
+				<td style="width: 100px; height: 100px;"><img src="@dish.ImageUrl" class="img-fluid"/></td>
 				<td>@dish.Name</td>
 				<td>@dish.Category</td>
 				<td>@allergenic</td>
 				<td>@dish.Grams</td>
 				<td>@dish.Quantity</td>
 				<td>@dish.Price</td>
-				<td>@dish.Owner</td>
+				<td>@splittedName</td>
+				<td>@dish.PurchasedOn</td>
 			</tr>
 		}
 	</tbody>
