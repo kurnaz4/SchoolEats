@@ -9,6 +9,7 @@
 	using Stripe.Checkout;
 	using Web.Infrastructure.Extensions;
 	using Web.ViewModels.Purchase;
+	using Web.ViewModels.ShoppingCart;
 	using static Common.NotificationMessagesConstants;
 	using static Common.ErrorMessages;
 	using JsonSerializer = System.Text.Json.JsonSerializer;
@@ -73,6 +74,7 @@
 				{
 					"card"
 				},
+				CustomerEmail = this.User.GetEmail(),
 			};
 
 			var service = new SessionService();
@@ -90,6 +92,34 @@
 			return Redirect(session.Url);
 		}
 
+		[HttpPost]
+		public async Task<IActionResult> PurchaseWithCode()
+		{
+			try
+			{
+				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
+				List<string> names = new List<string>();
+				//Generate Template
+				string code = this.purchaseService.GenerateRandomPurchaseCode();
+				foreach (var dish in all.Dishes)
+				{
+					names.Add(dish.Name);
+					await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId(), dish.Quantity, code);
+					await this.shoppingCartService.DeleteDishToUserAsync(dish.Id, this.User.GetId());
+				}
+
+				await this.emailSender.SendEmailAsync(this.User.GetEmail(), "Благодарим за поръчаната храна!", $"Благодарим ви за поръчката на продуктите: {String.Join(", ", names)}. Кодът на вашата поръчка е: {code} . Очакваме ви в стола за да вземете поръчката си!");
+
+				TempData[SuccessMessage] = "Успешно заявихте вашите продукти!";
+			}
+			catch (Exception e)
+			{
+				TempData[ErrorMessage] = CommonErrorMessage;
+			}
+			
+			return RedirectToAction("All", "Dish");
+		}
+
 		public IActionResult Failed()
 		{
 			TempData[ErrorMessage] = "Неуспешна транзакция!Опитайте отново!";
@@ -97,19 +127,31 @@
 		}
 		public async Task<IActionResult> Success()
 		{
+			ShoppingCartViewModel all = null;
 			try
 			{
-				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
-				foreach (var dish in all.Dishes)
+				List<string> names = new List<string>();
+				all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
+				foreach (var dish in all.Dishes) 
 				{
-					await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId());
+					names.Add(dish.Name);
+					await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId(), dish.Quantity);
 					await this.shoppingCartService.DeleteDishToUserAsync(dish.Id, this.User.GetId());
 				}
-				await this.emailSender.SendEmailAsync(this.User.GetEmail(), "Успешно заплащане", "Успешно закупихте вашите продукти!");
+				await this.emailSender.SendEmailAsync(this.User.GetEmail(), "Успешно заплащане", $"Успешно закупихте вашите продукти: {String.Join(", ", names)}!");
+
 				TempData[SuccessMessage] = "Успешно транзация!Очакваме ви в стола за да си вземете яденето!";
 			}
 			catch (Exception e)
 			{
+				if (all != null)
+				{
+					foreach (var dish in all.Dishes)
+					{
+						await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId(), dish.Quantity);
+						await this.shoppingCartService.DeleteDishToUserAsync(dish.Id, this.User.GetId());
+					}
+				}
 				TempData[ErrorMessage] = CommonErrorMessage;
 				TempData[InformationMessage] = "Вашата транзакция беше успешна въпреки тази грешка!";
 			}

@@ -12,5 +12,9 @@
 		public Guid DishId { get; set; }
 
 		public Dish Dish { get; set; } = null!;
+
+		public string Code { get; set; } = null!;
+
+		public int PurchasedQuantity { get; set; }
 	}
 }

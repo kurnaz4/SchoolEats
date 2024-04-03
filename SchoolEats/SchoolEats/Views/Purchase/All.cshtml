@@ -1,4 +1,4 @@
-﻿@model List<AllDishesViewModel>
+﻿@model List<AllPurchasesViewModel>
 <table class="table table-bordered">
 	<thead>
 	<tr>
@@ -7,15 +7,17 @@
 		<th scope="col">Категория</th>
 		<th scope="col">Съдържание на алергени</th>
 		<th scope="col">Грамажи</th>
-		<th scope="col">Количество</th>
+		<th scope="col">Брой</th>
 		<th scope="col">Цена</th>
 		<th scope="col">Създател</th>
+		<th scope="col">Код</th>
 		<th scope="col">Купено</th>
 	</tr>
 	</thead>
 	<tbody>
 		@foreach (var dish in Model)
 		{
+			string code = dish.Code != string.Empty ? dish.Code : "Купено с Карта";
 			string name = dish.Owner;
 			string splittedName = string.Empty;
 			if (name != null)
@@ -39,9 +41,10 @@
 				<td>@dish.Category</td>
 				<td>@allergenic</td>
 				<td>@dish.Grams</td>
-				<td>@dish.Quantity</td>
+				<td>@dish.PurchaseQuantity</td>
 				<td>@dish.Price</td>
 				<td>@splittedName</td>
+				<td>@code</td>
 				<td>@dish.PurchasedOn</td>
 			</tr>
 		}

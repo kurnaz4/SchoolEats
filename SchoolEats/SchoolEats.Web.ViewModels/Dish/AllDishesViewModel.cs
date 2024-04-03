@@ -22,7 +22,5 @@
 
 		public string Owner { get; set; }
 
-		public DateTime PurchasedOn { get; set; }
-
     }
 }

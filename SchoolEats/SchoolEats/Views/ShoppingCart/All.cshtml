@@ -17,9 +17,14 @@
 			</a>
 		</div>
 	}
-	<form asp-action="Purchase" asp-controller="Purchase" method="post">
-		<button asp-action="Purchase" asp-controller="Purchase" class="text-center btn btn-primary fs-1">Checkout</button>
-	</form>
+	<div class="d-flex justify-content-center">
+		<form asp-action="PurchaseWithCode" asp-controller="Purchase" method="post">
+			<button class="btn btn-primary fs-1">Поръчай с код</button>
+		</form>
+		<form class="ms-3" asp-action="Purchase" asp-controller="Purchase" method="post">
+			<button class="btn btn-primary fs-1">Checkout</button>
+		</form>
+	</div>
 }
 else
 {
