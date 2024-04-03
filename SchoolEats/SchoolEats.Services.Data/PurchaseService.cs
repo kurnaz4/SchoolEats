@@ -62,5 +62,30 @@
 			string code = Guid.NewGuid().ToString("N").Substring(0, 6);
 			return code;
 		}
+
+		public async Task<List<AllPurchaseForSuperUserViewModel>> GetAllPurchases()
+		{
+			var all = await this.dbContext
+				.Purchases
+				.Select(p => new AllPurchaseForSuperUserViewModel()
+				{
+					PurchaseId = p.Id,
+					PurchasedOn = p.PurchasedOn,
+					BuyerName = "",
+					BuyerEmail = "",
+					DishCategory = p.Dish.Category.Name,
+					DishGrams = p.Dish.Grams,
+					DishImageUrl = p.Dish.ImageUrl,
+					DishName = p.Dish.Name,
+					DishPrice = p.Dish.Price,
+					PurchasedQuantity = p.PurchasedQuantity,
+					Code = p.Code,
+					BuyerId = p.BuyerId,
+				})
+				.ToListAsync();
+			
+			return all;
+		}
+
 	}
 }

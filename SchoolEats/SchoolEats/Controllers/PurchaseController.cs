@@ -91,35 +91,6 @@
 			}
 			return Redirect(session.Url);
 		}
-
-		[HttpPost]
-		public async Task<IActionResult> PurchaseWithCode()
-		{
-			try
-			{
-				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
-				List<string> names = new List<string>();
-				//Generate Template
-				string code = this.purchaseService.GenerateRandomPurchaseCode();
-				foreach (var dish in all.Dishes)
-				{
-					names.Add(dish.Name);
-					await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId(), dish.Quantity, code);
-					await this.shoppingCartService.DeleteDishToUserAsync(dish.Id, this.User.GetId());
-				}
-
-				await this.emailSender.SendEmailAsync(this.User.GetEmail(), "Благодарим за поръчаната храна!", $"Благодарим ви за поръчката на продуктите: {String.Join(", ", names)}. Кодът на вашата поръчка е: {code} . Очакваме ви в стола за да вземете поръчката си!");
-
-				TempData[SuccessMessage] = "Успешно заявихте вашите продукти!";
-			}
-			catch (Exception e)
-			{
-				TempData[ErrorMessage] = CommonErrorMessage;
-			}
-			
-			return RedirectToAction("All", "Dish");
-		}
-
 		public IActionResult Failed()
 		{
 			TempData[ErrorMessage] = "Неуспешна транзакция!Опитайте отново!";
@@ -157,6 +128,40 @@
 			}
 			
 			return RedirectToAction("All", "Dish");
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> PurchaseWithCode()
+		{
+			try
+			{
+				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
+				List<string> names = new List<string>();
+				//Generate Template
+				string code = this.purchaseService.GenerateRandomPurchaseCode();
+				foreach (var dish in all.Dishes)
+				{
+					names.Add(dish.Name);
+					await this.purchaseService.PurchaseDishAsync(dish.Id, this.User.GetId(), dish.Quantity, code);
+					await this.shoppingCartService.DeleteDishToUserAsync(dish.Id, this.User.GetId());
+				}
+
+				await this.emailSender.SendEmailAsync(this.User.GetEmail(), "Благодарим за поръчаната храна!", $"Благодарим ви за поръчката на продуктите: {String.Join(", ", names)}. Кодът на вашата поръчка е: {code} . Очакваме ви в стола за да вземете поръчката си!");
+
+				TempData[SuccessMessage] = "Успешно заявихте вашите продукти!";
+			}
+			catch (Exception e)
+			{
+				TempData[ErrorMessage] = CommonErrorMessage;
+			}
+			
+			return RedirectToAction("All", "Dish");
+		}
+
+		[HttpPost]
+		public async Task<IActionResult> CompleteOrder(Guid purchaseId)
+		{
+			return RedirectToAction("Orders", "SuperUser");
 		}
 	}
 }
