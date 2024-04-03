@@ -12,9 +12,9 @@
 
 <main class="table" id="customers_table">
     <section class="table__header">
-        <h1>Customer's Orders</h1>
+        <h1>Създаване на готвач</h1>
         <div class="input-group">
-            <input type="search" placeholder="Search Data...">
+            <input type="Потърси" placeholder="Потърси информация...">
 
         </div>
 
@@ -23,10 +23,10 @@
         <table>
             <thead>
                 <tr>
-	                <th> Username <span class="icon-arrow">&UpArrow;</span></th>
-                    <th> Email <span class="icon-arrow">&UpArrow;</span></th>
-	                <th> Status <span class="icon-arrow">&UpArrow;</span></th>
-	                <th> Make SuperUser</th>
+	                <th> Име <span class="icon-arrow">&UpArrow;</span></th>
+                    <th> Имейл <span class="icon-arrow">&UpArrow;</span></th>
+	                <th> Статус <span class="icon-arrow">&UpArrow;</span></th>
+	                <th> Права за готвач</th>
                 </tr>
             </thead>
             <tbody>
@@ -49,7 +49,7 @@
 		            }
 	            }
 	            string background = user.IsApproved ? "delivered" : "pending";
-	            string status = user.IsApproved ? "Approved" : "Not approved";
+	            string status = user.IsApproved ? "Приет" : "Не приет";
 	            <tr>
 		            <td>@splittedName</td>
 		            <td>@user.Email</td>
