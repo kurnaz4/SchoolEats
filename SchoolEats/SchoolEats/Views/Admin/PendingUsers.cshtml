@@ -2,13 +2,14 @@
 @{
 	int count = 0;
 }
+<link rel="stylesheet" type="text/css" href="~/css/SuperUser/Orders.css">
 <table class="table">
 	<thead>
 		<tr>
 			<th scope="col">Id</th>
-			<th scope="col">Username</th>
-			<th scope="col">Status</th>
-			<th scope="col">Approve User</th>
+			<th scope="col">Име и фамилия</th>
+			<th scope="col">Премахни</th>
+			<th scope="col">Приеми</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -33,8 +34,8 @@
 		<tr>
 			<th scope="row">@user.Id</th>
 			<td>@splittedName</td>
-			<td><button type="button" class="btn btn-warning">Is not approved</button></td>
-			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button" class="btn btn-primary">Approve User</a></td>
+			<td><button type="button" class="btn btn-warning">Премахни user</button></td>
+			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button" class="btn btn-primary">Приеми user</a></td>
 		</tr>
 
 		@* Approve POP UP *@
