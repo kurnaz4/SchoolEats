@@ -16,5 +16,7 @@
 		public string Code { get; set; } = null!;
 
 		public int PurchasedQuantity { get; set; }
+
+		public DateTime PurchasedOn { get; set; }
 	}
 }

@@ -132,12 +132,12 @@
 											</div>
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
-												@if (@product.Owner == User.Identity.Name)
+												@if (this.User.IsInRole(SuperUserRoleName))
 												{
 													<a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@product.Id" class="btn btn-success">Редактирай</a>
 													<a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" class="btn btn-danger">Изтрий</a>
 												}
-												else
+												@if(this.User.IsInRole(UserRoleName) || this.User.IsInRole(SuperUserRoleName))
 												{
 													<a asp-action="Add" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">Добави в количка</a>
 												}
@@ -158,7 +158,7 @@
 												<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете този продукт?</p>
 											</div>
 											<div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
 												<form asp-action="Delete" asp-controller="Dish" asp-route-id="@product.Id" method="post">
 													<button class="btn btn-danger">Изтрий</button>
 												</form>

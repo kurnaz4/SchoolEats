@@ -30,6 +30,7 @@
 	        var dishes = await this.dishService.GetAllDishesAsync();
             return View(dishes);
         }
+		[Authorize(Roles = SuperUserRoleName)]
         [HttpGet]
         public async Task<IActionResult> Add()
         {
@@ -37,8 +38,8 @@
             model.Categories = await this.categoryService.AllCategoriesAsync();
             return View(model);
         }
-
-        [HttpPost]
+        [Authorize(Roles = SuperUserRoleName)]
+		[HttpPost]
         public async Task<IActionResult> Add(DishFormViewModel model)
         {
 	        ModelState.Remove(nameof(model.ImagePath));
@@ -80,7 +81,8 @@
 			return RedirectToAction("All", "Dish");
         }
 
-        [HttpGet]
+        [Authorize(Roles = SuperUserRoleName)]
+		[HttpGet]
         public async Task<IActionResult> Edit(Guid dishId)
         {
 			var model = await this.dishService.GetDishForEditAsync(dishId);
@@ -89,7 +91,8 @@
 			return View(model);
         }
 
-        [HttpPost]
+        [Authorize(Roles = SuperUserRoleName)]
+		[HttpPost]
         public async Task<IActionResult> Edit(Guid id, DishFormViewModel model)
         {
 	        ModelState.Remove(nameof(model.ImagePath));
@@ -142,6 +145,7 @@
 			return RedirectToAction("All", "Dish");
         }
 
+        [Authorize(Roles = SuperUserRoleName)]
 		[HttpPost]
         public async Task<IActionResult> Delete(Guid id)
         {

@@ -31,7 +31,7 @@
 					Quantity = p.Dish.Quantity,
 					Category = p.Dish.Category.Name,
 					Owner = p.Dish.User.UserName,
-					PurchasedOn = DateTime.Now,
+					PurchasedOn = p.PurchasedOn,
 					Code = p.Code,
 					PurchaseQuantity = p.PurchasedQuantity
 				})
@@ -49,7 +49,8 @@
 				DishId = dishId,
 				BuyerId = userId,
 				Code = code,
-				PurchasedQuantity = purchasedQuantity
+				PurchasedQuantity = purchasedQuantity,
+				PurchasedOn = DateTime.Now
 			};
 
 			await this.dbContext.Purchases.AddAsync(purchase);
