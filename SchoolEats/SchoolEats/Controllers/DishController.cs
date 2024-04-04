@@ -81,7 +81,7 @@
 			return RedirectToAction("All", "Dish");
         }
 
-        [Authorize(Roles = SuperUserRoleName)]
+        [Authorize(Roles = SuperUserRoleName)] 
 		[HttpGet]
         public async Task<IActionResult> Edit(Guid dishId)
         {

@@ -9,9 +9,11 @@
     public class AdminController : Controller
     {
 	    private readonly IUserService userService;
-	    public AdminController(IUserService userService)
+        private readonly IReportService reportService;
+	    public AdminController(IUserService userService, IReportService reportService)
 	    {
 		    this.userService = userService;
+            this.reportService = reportService;
 	    }
 		public IActionResult Index()
         {
@@ -27,6 +29,13 @@
         public async Task<IActionResult> AllUsers()
         {
             var all = await this.userService.GetAllUsersAsync();
+            return View(all);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> AllReports()
+        {
+            var all = await this.reportService.GetAllReportsAsync();
             return View(all);
         }
     }

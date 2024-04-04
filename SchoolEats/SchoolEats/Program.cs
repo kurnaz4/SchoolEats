@@ -37,6 +37,7 @@ builder.Services.AddDefaultIdentity<SchoolEatsUser>(options =>
 
 builder.Services.AddSession();
 
+builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IShoppingCartService, ShoppingCartService>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -45,12 +46,11 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 builder.Services.AddTransient<SchoolEatsDbContext>();
 
-builder.Services.AddControllersWithViews()
-	.AddMvcOptions(options =>
-	{
-		options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
-		options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
-	});
+builder.Services.AddControllersWithViews(options =>
+{
+	options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+});
+	
 
 var app = builder.Build();
 

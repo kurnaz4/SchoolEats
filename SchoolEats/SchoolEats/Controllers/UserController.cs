@@ -6,6 +6,7 @@ namespace SchoolEats.Controllers
 	using Microsoft.AspNetCore.Identity;
 	using Services.Data.Interfaces;
 	using Services.Messaging;
+	using Web.ViewModels.User;
 	using static Common.NotificationMessagesConstants;
 	using static Common.ErrorMessages;
 	using static Common.GeneralApplicationConstants;
@@ -89,6 +90,19 @@ namespace SchoolEats.Controllers
 	        }
 
 	        return RedirectToAction("AllUsers", "Admin");
+        }
+
+		[HttpGet]
+        public IActionResult ForgotPassword()
+        {
+			ForgotPasswordViewModel model = new ForgotPasswordViewModel();
+			return View(model);
+        }
+        [HttpPost]
+        public IActionResult ForgotPassword(ForgotPasswordViewModel model)
+        {
+	        //TODO
+	        return View();
         }
 	}
 }

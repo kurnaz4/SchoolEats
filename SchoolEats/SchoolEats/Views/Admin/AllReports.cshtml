@@ -1,0 +1,28 @@
+﻿@model List<AllReportsViewModel>
+@{
+	int count = 1;
+}
+
+<table class="table">
+	<thead>
+	<tr>
+		<th scope="col">Номер</th>
+		<th scope="col">Спечелени пари</th>
+		<th scope="col">Брой продадени продукти</th>
+		<th scope="col">Дата</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var report in Model)
+	{
+		<tr>
+			<td>@count</td>
+			<td><span class="fs-2">@report.TotalPrice</span></td>
+			<td><span class="fs-2">@report.TotalQuantity</span></td>
+			<td><span class="fs-2">@report.Time</span></td>
+		</tr>
+
+		count++;
+	}
+	</tbody>
+</table>
