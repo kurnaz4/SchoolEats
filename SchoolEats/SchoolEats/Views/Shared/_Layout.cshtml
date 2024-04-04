@@ -24,10 +24,17 @@
 			splittedName += character;
 		}
 	}
+	string title = "Ученик";
 	string background = "background-user";
 	if (this.User.IsInRole(AdminRoleName))
 	{
 		background = "background-admin";
+		title = "Админ";
+	}
+	if (this.User.IsInRole(SuperUserRoleName))
+	{
+		title = "Готвач";
+		background = "background-superuser";
 	}
 }
 <!DOCTYPE html>
@@ -155,7 +162,7 @@
 						<div class="profile-details">
 							<div class="name_job">
 								<div class="name">@splittedName</div>
-								<div class="job">Ученик</div>
+								<div class="job">@title</div>
 							</div>
 						</div>
 						<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
