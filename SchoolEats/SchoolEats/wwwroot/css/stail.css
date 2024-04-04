@@ -149,7 +149,10 @@ body {
     background: #008622;
 }
 .background-admin {
-    background: #cacd16; /*//yellow color*/
+    background: #c30505; /*//yellow color*/
+}
+.background-superuser {
+    background: #cacd16;
 }
 .app-sidebar {
     position: fixed;
