@@ -32,8 +32,8 @@
 		}
 		<tr>
 			<td>@splittedName</td>
-			<td><button type="button" class="btn btn-warning">Премахни user</button></td>
-			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button" class="btn btn-primary">Приеми user</a></td>
+			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#backdrop{count}")" type="button" class="btn btn-primary">Премахни потребител</a></td>
+			<td><a type="button" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button" class="btn btn-primary">Приеми потребител</a></td>
 		</tr>
 
 		@* Approve POP UP *@
@@ -57,6 +57,28 @@
 			</div>
 		</div>
 			@* Approve POP UP END*@
+
+			@* Remove POP UP *@
+			<div class="modal fade" id="@($"backdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="staticBackdropLabel">Удобри</h1>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body text-center d-flex justify-content-center align-items-center">
+							<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете този потребител?</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							<form asp-action="RemoveUser" asp-controller="User" asp-route-userId="@user.Id" method="post">
+								<button class="btn btn-danger">Премахни</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			@* Remove POP UP END*@
 		count++;
 	}
 </tbody>

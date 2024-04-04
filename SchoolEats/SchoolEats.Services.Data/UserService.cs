@@ -45,6 +45,16 @@
             await this.dbContext.SaveChangesAsync();
         }
 
+        public async Task RemoveUserAsync(Guid userId)
+        {
+	        var user = await this.dbContext
+		        .Users
+		        .FindAsync(userId);
+
+	        this.dbContext.Users.Remove(user);
+            await this.dbContext.SaveChangesAsync();
+		}
+
         public async Task<bool> IsUserApproved(Guid id)
         {
 	        var user = await this.dbContext

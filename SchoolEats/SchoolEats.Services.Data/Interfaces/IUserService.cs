@@ -8,6 +8,8 @@
         Task<List<AllPendingUsersViewModel>> GetAllPendingUsersAsync();
 
         Task ApproveUserAsync(Guid userId);
+        
+        Task RemoveUserAsync(Guid userId);
 
         Task<bool> IsUserApproved(Guid id);
 

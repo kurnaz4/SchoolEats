@@ -51,6 +51,27 @@ namespace SchoolEats.Controllers
         }
 
         [HttpPost]
+        public async Task<IActionResult> RemoveUser(Guid userId)
+        {
+	        try
+	        {
+		        var user = await this.userService.GetUserAsync(userId);
+		       
+				await this.userService.RemoveUserAsync(userId);
+				await this.emailSender.SendEmailAsync(user.Email, "Отхвърлен акаунт от School Eats",
+					"Вашият акаунт е отхвърлен поради опит за повторно влизане на един и същ потребител в системата или поради някаква съмнителна грешка!");
+
+				TempData[SuccessMessage] = "Успешно премахнахте този потребител!";
+	        }
+	        catch (Exception e)
+	        {
+				TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("PendingUsers", "Admin");
+        }
+
+        [HttpPost]
         public async Task<IActionResult> AddUserToSuperUserRole(Guid userId)
         {
 	        try
