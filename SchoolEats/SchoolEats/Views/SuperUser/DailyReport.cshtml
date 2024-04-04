@@ -1,0 +1,12 @@
+﻿@model SchoolEats.Web.ViewModels.SuperUser.DailyReportViewModel
+@inject IPurchaseService PurchaseService
+@if (!(await PurchaseService.IsReportAlreadySend(DateTime.Now)))
+{
+	<div class="text-center">
+		<h1>Средствата изкарани за деня: <span class="fs-1 text-danger">@Model.TotalPrice</span></h1>
+		<h1>Продадени бройки ястия: <span class="fs-1 text-danger">@Model.TotalQuantity</span></h1>
+		<form asp-action="SendReport" asp-controller="SuperUser" method="post">
+			<button  class="btn btn-primary">Запази отчета</button>
+		</form>
+	</div>
+}

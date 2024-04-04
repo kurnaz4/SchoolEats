@@ -22,6 +22,8 @@
 
         public DbSet<Cart> Carts { get; set; } = null!;
 
+        public DbSet<Report> Reports { get; set; } = null!;
+
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
 			builder.ApplyConfiguration(new DishEntityConfiguration());

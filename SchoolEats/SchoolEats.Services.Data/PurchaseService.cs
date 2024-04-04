@@ -6,6 +6,7 @@
 	using SchoolEats.Data.Models;
 	using Web.ViewModels.Dish;
 	using Web.ViewModels.Purchase;
+	using Web.ViewModels.SuperUser;
 
 	public class PurchaseService : IPurchaseService
 	{
@@ -138,6 +139,62 @@
 				.ToListAsync();
 
 			return all.Sum(x => x.Price * x.Quantity);
+		}
+
+		public async Task<DailyReportViewModel> GetDailyReportAsync()
+		{
+			var all = await this.dbContext
+				.Purchases
+				.Where(x => x.IsCompleted && x.PurchasedOn.Date == DateTime.Today)
+				.Select(x => new AllDishesViewModel()
+				{
+					Quantity = x.PurchasedQuantity,
+					Price = x.Dish.Price
+				})
+				.ToListAsync();
+
+			return new DailyReportViewModel()
+			{
+				TotalPrice = all.Sum(x => x.Price * x.Quantity),
+				TotalQuantity = all.Sum(x => x.Quantity)
+			};
+		}
+
+
+		public async Task SendDailyReportAsync(DailyReportViewModel report)
+		{
+			var reportToAdd = new Report()
+			{
+				TotalPrice = report.TotalPrice,
+				TotalQuantity = report.TotalQuantity,
+				Time = DateTime.Now
+			};
+
+			await this.dbContext.Reports.AddAsync(reportToAdd);
+			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task DeleteAllPurchasesByDateTimeAsync(DateTime date)
+		{
+			var all = await this.dbContext.Purchases
+				.Where(x => x.PurchasedOn.Date == date.Date)
+				.ToListAsync();
+
+			this.dbContext.Purchases.RemoveRange(all);
+			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task<bool> IsReportAlreadySend(DateTime time)
+		{
+			var report = await this.dbContext
+				.Reports
+				.FirstOrDefaultAsync(x => x.Time.Date == time.Date);
+			if (report == null)
+			{
+				return false;
+			}
+
+			return true;
 		}
 	}
 }
