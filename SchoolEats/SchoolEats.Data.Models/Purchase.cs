@@ -18,5 +18,7 @@
 		public int PurchasedQuantity { get; set; }
 
 		public DateTime PurchasedOn { get; set; }
+
+		public bool IsCompleted { get; set; }
 	}
 }

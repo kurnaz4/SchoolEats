@@ -67,6 +67,7 @@
 		{
 			var all = await this.dbContext
 				.Purchases
+				.Where(p => !p.IsCompleted)
 				.Select(p => new AllPurchaseForSuperUserViewModel()
 				{
 					PurchaseId = p.Id,
@@ -87,5 +88,56 @@
 			return all;
 		}
 
+		public async Task CompletePurchaseAsync(List<Purchase> purchases)
+		{
+			foreach (var purchase in purchases)
+			{
+				purchase.IsCompleted = true;
+				if (purchase.Code != "с карта")
+				{
+					purchase.PurchasedOn = DateTime.Now;
+				}
+			}
+
+			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task<Purchase> GetPurchaseByPurchaseId(Guid purchaseId)
+		{
+			var purchase = await this.dbContext
+				.Purchases
+				.FindAsync(purchaseId);
+
+			return purchase;
+		}
+
+		public async Task<List<Purchase>> GetPurchasesByPurchaseCodeAndBuyerIdAsync(string code, Guid buyerId)
+		{
+			var all = await this.dbContext
+				.Purchases
+				.Where(x => x.Code == code && x.BuyerId == buyerId)
+				.ToListAsync();
+
+			return all;
+		}
+
+		public async Task<decimal> GetPriceSumOfPurchaseByCodeAndBuyerIdAsync(string code, Guid buyerId)
+		{
+			if (code == "с карта")
+			{
+				return 0;
+			}
+			var all = await this.dbContext
+				.Purchases
+				.Where(x => x.Code == code && x.BuyerId == buyerId)
+				.Select(x => new AllDishesViewModel()
+				{
+					Price = x.Dish.Price,
+					Quantity = x.PurchasedQuantity
+				})
+				.ToListAsync();
+
+			return all.Sum(x => x.Price * x.Quantity);
+		}
 	}
 }

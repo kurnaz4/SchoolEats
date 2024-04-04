@@ -13,5 +13,12 @@
 
 		Task<List<AllPurchaseForSuperUserViewModel>> GetAllPurchases();
 
+		Task CompletePurchaseAsync(List<Purchase> purchases);
+
+		Task<Purchase> GetPurchaseByPurchaseId(Guid purchaseId);
+
+		Task<List<Purchase>> GetPurchasesByPurchaseCodeAndBuyerIdAsync(string code, Guid buyerId);
+
+		Task<decimal> GetPriceSumOfPurchaseByCodeAndBuyerIdAsync(string code, Guid buyerId);
 	}
 }
