@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using SchoolEats.Common;
@@ -8,6 +9,7 @@ using SchoolEats.Services.Data;
 using SchoolEats.Services.Data.Interfaces;
 using SchoolEats.Services.Messaging;
 using SchoolEats.Web.Infrastructure.Extensions;
+using SchoolEats.Web.Infrastructure.ModelBinders;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,7 +44,13 @@ builder.Services.AddScoped<IDishService, DishService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IPurchaseService, PurchaseService>();
 builder.Services.AddTransient<SchoolEatsDbContext>();
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews()
+	.AddMvcOptions(options =>
+	{
+		options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
+		options.Filters.Add<AutoValidateAntiforgeryTokenAttribute>();
+	});
 
 var app = builder.Build();
 
