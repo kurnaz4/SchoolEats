@@ -158,7 +158,7 @@ section .text {
 
 .banner {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     background: #000;
 }
 
