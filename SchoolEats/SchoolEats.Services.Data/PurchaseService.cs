@@ -177,7 +177,7 @@
 		public async Task DeleteAllPurchasesByDateTimeAsync(DateTime date)
 		{
 			var all = await this.dbContext.Purchases
-				.Where(x => x.PurchasedOn.Date == date.Date)
+				.Where(x => x.PurchasedOn.Date == date.Date && !x.IsCompleted)
 				.ToListAsync();
 
 			this.dbContext.Purchases.RemoveRange(all);

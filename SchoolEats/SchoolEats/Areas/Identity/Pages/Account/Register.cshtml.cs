@@ -81,18 +81,19 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Display(Name = "Име")]
-            [Required]
+            [Required(ErrorMessage = "Полето име е задължително!")]
             [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
             public string Name { get; set; }
             [Display(Name= "Фамилия")]
-            [Required]
+            [Required(ErrorMessage = "Полето фамилия е задължително!")]
             [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
             public string Surname { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "Полето имейл е задължително!")]
+            [RegularExpression("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$", ErrorMessage = "Въведете валиден имейл адрес!")]
             [EmailAddress(ErrorMessage = "Въведете валиден имейл адрес!")]
             [Display(Name = "Имейл")]
             public string Email { get; set; }
@@ -101,8 +102,8 @@ namespace SchoolEats.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [StringLength(100, ErrorMessage = "{0} трябва да бъде поне {2} и максимум {1} символа дълга.", MinimumLength = 6)]
+            [Required(ErrorMessage = "Паролата е задължителна!")]
+            [StringLength(30, ErrorMessage = "{0} трябва да бъде поне {2} и максимум {1} символа дълга.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Парола")]
             public string Password { get; set; }
@@ -193,8 +194,15 @@ namespace SchoolEats.Areas.Identity.Pages.Account
                             new {returnUrl = ""});
                     } 
                 }
-                
-            }
+				else
+				{
+					ModelState.AddModelError("Input.Password", "Неправилнa парола");
+					ModelState.AddModelError("Input.ConfirmPassword", "Неправилнa парола");
+					return Page();
+				}
+
+
+			}
 
             // If we got this far, something failed, redisplay form
             return Page();

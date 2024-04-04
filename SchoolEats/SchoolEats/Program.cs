@@ -20,7 +20,13 @@ builder.Services.AddDbContext<SchoolEatsDbContext>(options =>
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddDefaultIdentity<SchoolEatsUser>(options =>
-    {
+	{
+		options.Password.RequireUppercase = true;
+        options.Password.RequireLowercase = true;
+        options.Password.RequireDigit = true;
+        options.Password.RequireNonAlphanumeric = false;
+        options.Password.RequiredLength = 6;
+        options.Password.RequiredUniqueChars = 0;
         options.SignIn.RequireConfirmedAccount = false;
         options.User.AllowedUserNameCharacters = "абвгдежзийклмнопрстуфхцчшщъьюяАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
     })
