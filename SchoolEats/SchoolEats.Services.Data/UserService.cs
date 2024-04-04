@@ -101,5 +101,22 @@
 
 			return currUser;
         }
+
+        public async Task<SchoolEatsUser> RemoveSuperUserRoleFromUserAsync(Guid userId)
+        {
+	        var user = await this.dbContext
+		        .Users
+		        .FindAsync(userId);
+
+            var currUser = user;
+
+            this.dbContext.Users.Remove(user);
+            await this.dbContext.SaveChangesAsync();
+            await userManager.CreateAsync(currUser);
+            await userManager.AddToRoleAsync(user, UserRoleName);
+            await this.dbContext.SaveChangesAsync();
+
+            return currUser;
+        }
     }
 }

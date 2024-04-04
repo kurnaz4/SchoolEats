@@ -58,7 +58,7 @@
 		            </td>
 					@if (await userManager.IsInRoleAsync(await userService.GetUserAsync(user.Id), SuperUserRoleName))
 					{
-						<td><a type="button" class="btn btn-danger">Потребителят вече е готвач</a></td>//TODO:Да го направя да може да се премахва готвача
+						<td><a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="@($"#backdrop{count}")" type="button">Премахни правата на готвач</a></td>
 					}
 					else
 					{
@@ -85,7 +85,29 @@
 			            </div>
 		            </div>
 	            </div>
-			@* Update User to SuperUser POP UP END*@
+				@* Update User to SuperUser POP UP END*@
+
+					@* Remove user from super user POP UP POP UP *@
+					<div class="modal fade" id="@($"backdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Добави към готвачи</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body text-center d-flex justify-content-center align-items-center">
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете правата на готвач на този потребител?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+									<form asp-action="RemoveUserFromSuperUserRole" asp-controller="User" asp-route-userId="@user.Id" method="post">
+										<button class="btn btn-danger">Премахни</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					@* Remove user from super user POP UP END*@
 	            count++;
             }
             </tbody>

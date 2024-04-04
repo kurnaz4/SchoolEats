@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolEats.Data;
 
@@ -11,9 +12,10 @@ using SchoolEats.Data;
 namespace SchoolEats.Data.Migrations
 {
     [DbContext(typeof(SchoolEatsDbContext))]
-    partial class SchoolEatsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240404122718_addIsCompletedToPurchaseTable")]
+    partial class addIsCompletedToPurchaseTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -317,26 +319,6 @@ namespace SchoolEats.Data.Migrations
                     b.HasIndex("DishId");
 
                     b.ToTable("Purchases");
-                });
-
-            modelBuilder.Entity("SchoolEats.Data.Models.Report", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("Time")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("TotalPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("TotalQuantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Reports");
                 });
 
             modelBuilder.Entity("SchoolEats.Data.Models.SchoolEatsUser", b =>

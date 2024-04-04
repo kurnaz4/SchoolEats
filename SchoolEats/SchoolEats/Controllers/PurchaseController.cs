@@ -1,18 +1,13 @@
 ﻿namespace SchoolEats.Controllers
 {
-	using System.Text.Json;
-	using System.Text.Json.Serialization;
 	using Microsoft.AspNetCore.Mvc;
-	using Newtonsoft.Json;
 	using Services.Data.Interfaces;
 	using Services.Messaging;
 	using Stripe.Checkout;
 	using Web.Infrastructure.Extensions;
-	using Web.ViewModels.Purchase;
 	using Web.ViewModels.ShoppingCart;
 	using static Common.NotificationMessagesConstants;
 	using static Common.ErrorMessages;
-	using JsonSerializer = System.Text.Json.JsonSerializer;
 
 	public class PurchaseController : Controller
 	{
@@ -161,6 +156,21 @@
 		[HttpPost]
 		public async Task<IActionResult> CompleteOrder(Guid purchaseId)
 		{
+			try
+			{
+				var purchase = await this.purchaseService.GetPurchaseByPurchaseId(purchaseId);
+				var allByCode = await this.purchaseService.GetPurchasesByPurchaseCodeAndBuyerIdAsync(purchase.Code, purchase.BuyerId);
+				await this.purchaseService.CompletePurchaseAsync(allByCode);
+				var priceSum = await this.purchaseService.GetPriceSumOfPurchaseByCodeAndBuyerIdAsync(purchase.Code, purchase.BuyerId);
+
+				TempData[SuccessMessage] = $"Успешно завършена поръчка на стойност {priceSum} лв.";
+			}
+			catch (Exception e)
+			{
+				TempData[ErrorMessage] = CommonErrorMessage;
+			}
+			
+
 			return RedirectToAction("Orders", "SuperUser");
 		}
 	}
