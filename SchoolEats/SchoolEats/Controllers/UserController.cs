@@ -69,5 +69,26 @@ namespace SchoolEats.Controllers
 
 	        return RedirectToAction("AllUsers", "Admin");
 		}
-    }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveUserFromSuperUserRole(Guid userId)
+        {
+	        try
+	        {
+		        var user = await this.userService.RemoveSuperUserRoleFromUserAsync(userId);
+
+		        await emailSender.SendEmailAsync(user.Email, "Екип готвачи в SchoolEats",
+			        "Акаунтът ви е успешно добавен към готвачите и вече имате всички права на един готвач!");
+
+		        TempData[SuccessMessage] = "Вие успешно премахнахте този потребител от готвачите!";
+		        TempData[InformationMessage] = "Потребителят вече е без права на готвач!";
+	        }
+	        catch (Exception e)
+	        {
+		        TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("AllUsers", "Admin");
+        }
+	}
 }

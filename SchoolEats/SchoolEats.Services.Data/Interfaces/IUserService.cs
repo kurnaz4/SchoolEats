@@ -16,5 +16,7 @@
         Task<List<AllUsersViewModel>> GetAllUsersAsync();
 
         Task<SchoolEatsUser> AddUserToSuperUserRoleAsync(Guid userId);
+
+        Task<SchoolEatsUser> RemoveSuperUserRoleFromUserAsync(Guid userId);
     }
 }
