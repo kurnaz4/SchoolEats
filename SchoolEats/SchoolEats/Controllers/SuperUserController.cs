@@ -10,11 +10,14 @@
     [Authorize(Roles = SuperUserRoleName)]
     public class SuperUserController : Controller
     {
+	    private readonly IDishService dishService;
 	    private readonly IPurchaseService purchaseService;
         private readonly IUserService userService;
         private readonly IEmailSender emailSender;
-	    public SuperUserController(IPurchaseService purchaseService, IUserService userService, IEmailSender emailSender)
+        
+	    public SuperUserController(IPurchaseService purchaseService, IUserService userService, IEmailSender emailSender, IDishService dishService)
 	    {
+            this.dishService = dishService;
 		    this.purchaseService = purchaseService;
             this.userService = userService;
             this.emailSender = emailSender;
@@ -63,5 +66,12 @@
 	        
 	        return RedirectToAction("DailyReport", "SuperUser");
         }
-    }
+
+        [HttpGet]
+        public async Task<IActionResult> AllDishes()
+        {
+	        var all = await this.dishService.GetAllActiveAndNotActiveDishesAsync();
+	        return View(all);
+        }
+	}
 }

@@ -177,8 +177,14 @@
 				TempData[ErrorMessage] = CommonErrorMessage;
 	        }
 
-	        return RedirectToAction("AllDishes", "Admin");
+	        if (this.User.IsInRole(SuperUserRoleName))
+	        {
+				return RedirectToAction("AllDishes", "SuperUser");
+	        }
+
+			return RedirectToAction("AllDishes", "Admin");
         }
+
         [HttpPost]
         public async Task<IActionResult> DeactivateDish(Guid id)
         {
@@ -193,8 +199,13 @@
 		        TempData[ErrorMessage] = CommonErrorMessage;
 	        }
 
-	        return RedirectToAction("AllDishes", "Admin");
-        }
+			if (this.User.IsInRole(SuperUserRoleName))
+			{
+				return RedirectToAction("AllDishes", "SuperUser");
+			}
+
+			return RedirectToAction("AllDishes", "Admin");
+		}
         [HttpPost]
         public async Task<IActionResult> HardDelete(Guid id)
         {
@@ -209,7 +220,12 @@
 		        TempData[ErrorMessage] = CommonErrorMessage;
 	        }
 
-	        return RedirectToAction("AllDishes", "Admin");
-        }
+			if (this.User.IsInRole(SuperUserRoleName))
+			{
+				return RedirectToAction("AllDishes", "SuperUser");
+			}
+
+			return RedirectToAction("AllDishes", "Admin");
+		}
 	}
 }
