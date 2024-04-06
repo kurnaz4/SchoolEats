@@ -1,0 +1,130 @@
+﻿@model List<AllDishesViewModel>
+@{
+	int count = 0;
+}
+<link rel="stylesheet" type="text/css" href="~/css/SuperUser/Orders.css">
+
+<main class="table" id="customers_table">
+	<section class="table__header">
+		<h1>Всички потребители</h1>
+		<div class="input-group">
+			<input type="Потърси" placeholder="Потърси информация...">
+
+		</div>
+
+	</section>
+	<section class="table__body">
+		<table>
+			<thead>
+			<tr>
+				<th> Снимка <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Име <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Брой <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Цена <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Създател <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Категория <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Грамаж <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Алергени <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Статус <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Действие <span class="icon-arrow">&UpArrow;</span></th>
+				<th> Изтрий ястие <span class="icon-arrow">&UpArrow;</span></th>
+			</tr>
+			</thead>
+			<tbody>
+				@foreach (var dish in Model)
+				{
+					string allergenic = dish.IsAllergenic ? "Съдържа" : "Не съдържа";
+					string background = dish.IsActive ? "delivered" : "pending";
+					string status = dish.IsActive ? "Активен" : "Не активен";
+					<tr>
+						<td><img src="@dish.ImageUrl" /></td>
+						<td>@dish.Name</td>
+						<td>@dish.Quantity</td>
+						<td>@dish.Price</td>
+						<td>@dish.Owner</td>
+						<td>@dish.Category</td>
+						<td>@dish.Grams</td>
+						<td>@allergenic</td>
+						<td>
+							<p class="status @background">@status</p>
+						</td>
+						@if (dish.IsActive)
+						{
+							<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#deActive{count}")" type="button">Деактивирай</a></td>
+						}
+						else
+						{
+							<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#active{count}")" type="button">Активирай</a></td>
+						}
+						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button">Изтрий ястие</a></td>
+					</tr>
+					@* Delete user POP UP *@
+					<div class="modal fade" id="@($"backdropDelete{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий ястие</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body text-center d-flex justify-content-center align-items-center">
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да изтриете това ястие от системата?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+									<form asp-action="HardDelete" asp-controller="Dish" asp-route-id="@dish.Id" method="post">
+										<button class="btn btn-danger">Изтрий</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					@* Delete user POP UP END*@
+					@* Update Active POP UP *@
+					<div class="modal fade" id="@($"active{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Активирай ястие</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body text-center d-flex justify-content-center align-items-center">
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да активирате това ястие?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+									<form asp-action="ActivateDish" asp-controller="Dish" asp-route-id="@dish.Id" method="post">
+										<button class="btn btn-danger">Активирай</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					@* Update Active POP UP END*@
+					@* De Active POP UP *@
+					<div class="modal fade" id="@($"deActive{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Деактивирай ястие</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body text-center d-flex justify-content-center align-items-center">
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да деактивирате това ястие?</p>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+									<form asp-action="DeactivateDish" asp-controller="Dish" asp-route-id="@dish.Id" method="post">
+										<button class="btn btn-danger">Деактивирай</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					@* De Active POP UP END*@
+					count++;
+				}
+			</tbody>
+		</table>
+	</section>
+</main>
+<script src="~/js/SuperUser/Orders.js"></script>

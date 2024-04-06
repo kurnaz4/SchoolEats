@@ -10,10 +10,12 @@
     {
 	    private readonly IUserService userService;
         private readonly IReportService reportService;
-	    public AdminController(IUserService userService, IReportService reportService)
+        private readonly IDishService dishService;
+	    public AdminController(IUserService userService, IReportService reportService, IDishService dishService)
 	    {
 		    this.userService = userService;
             this.reportService = reportService;
+            this.dishService = dishService;
 	    }
 		public IActionResult Index()
         {
@@ -38,5 +40,12 @@
             var all = await this.reportService.GetAllReportsAsync();
             return View(all);
         }
-    }
+
+        [HttpGet]
+        public async Task<IActionResult> AllDishes()
+        {
+	        var all = await this.dishService.GetAllActiveAndNotActiveDishesAsync();
+	        return View(all);
+        }
+	}
 }

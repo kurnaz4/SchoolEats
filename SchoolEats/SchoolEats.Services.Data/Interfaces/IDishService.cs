@@ -8,6 +8,7 @@
 	{
 		Task<List<AllDishesViewModel>> GetAllDishesAsync();
 
+		Task<List<AllDishesViewModel>> GetAllActiveAndNotActiveDishesAsync();
 		Task<DishDetailsViewModel> GetDishForDetailsByDishIdAsync(Guid dishId);
 
 		Task AddDishAsync(DishFormViewModel model);
@@ -17,6 +18,10 @@
 		Task EditDishAsync(DishFormViewModel model);
 
 		Task DeleteDishAsync(Guid dishId);
-		
-    }
+
+		Task MakeDishActiveAsync(Guid dishId);
+
+		Task HardDeleteDishAsync(Guid dishId);
+
+	}
 }

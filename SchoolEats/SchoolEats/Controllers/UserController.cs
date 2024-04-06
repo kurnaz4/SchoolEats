@@ -3,6 +3,7 @@
 namespace SchoolEats.Controllers
 {
 	using Data.Models;
+	using Microsoft.AspNetCore.Authorization;
 	using Microsoft.AspNetCore.Identity;
 	using Services.Data.Interfaces;
 	using Services.Messaging;
@@ -113,6 +114,26 @@ namespace SchoolEats.Controllers
 			{
 				TempData[ErrorMessage] = CommonErrorMessage;
 			}
+
+			return RedirectToAction("AllUsers", "Admin");
+		}
+
+		[Authorize(Roles = AdminRoleName)]
+		[HttpPost]
+		public async Task<IActionResult> DeleteUser(Guid userId)
+		{
+			try
+			{
+				await this.userService.DeleteUser(userId);
+
+				TempData[SuccessMessage] = "Успешно изтрихте този потребител!";
+			}
+			catch (Exception e)
+			{
+				TempData[ErrorMessage] = "Най-вероятно потребителят има създадени ястия!";
+				TempData[InformationMessage] = "Изтрийте първо ястията публикувани от потребителя!";
+			}
+			
 
 			return RedirectToAction("AllUsers", "Admin");
 		}

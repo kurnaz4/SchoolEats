@@ -12,7 +12,7 @@
 
 <main class="table" id="customers_table">
     <section class="table__header">
-        <h1>Създаване на готвач</h1>
+        <h1>Всички потребители</h1>
         <div class="input-group">
             <input type="Потърси" placeholder="Потърси информация...">
 
@@ -27,6 +27,7 @@
                     <th> Имейл <span class="icon-arrow">&UpArrow;</span></th>
 	                <th> Статус <span class="icon-arrow">&UpArrow;</span></th>
 	                <th> Права за готвач</th>
+	                <th> Изтрий потребител</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,6 +65,7 @@
 					{
 						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button">Дай права на готвач</a></td>
 					}
+					<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button">Изтрий потребител</a></td>
 	            </tr> 
 			@* Update User to SuperUser POP UP POP UP *@
 	            <div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -108,6 +110,27 @@
 						</div>
 					</div>
 					@* Remove user from super user POP UP END*@
+					@* Delete user POP UP *@
+	            <div class="modal fade" id="@($"backdropDelete{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		            <div class="modal-dialog modal-dialog-centered">
+			            <div class="modal-content">
+				            <div class="modal-header">
+					            <h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий потребител</h1>
+					            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				            </div>
+				            <div class="modal-body text-center d-flex justify-content-center align-items-center">
+					            <p class="m-0 text-danger fs-5">Сигурни ли сте че искате да изтриете този потребител от системата?</p>
+				            </div>
+				            <div class="modal-footer">
+					            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+					            <form asp-action="DeleteUser" asp-controller="User" asp-route-userId="@user.Id" method="post">
+						            <button class="btn btn-danger">Изтрий</button>
+					            </form>
+				            </div>
+			            </div>
+		            </div>
+	            </div>
+					@* Delete user POP UP END*@
 	            count++;
             }
             </tbody>

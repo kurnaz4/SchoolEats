@@ -79,8 +79,12 @@
 
         public async Task<List<AllUsersViewModel>> GetAllUsersAsync()
         {
+	        var admin = await this.dbContext
+		        .Users
+		        .FirstOrDefaultAsync(x => x.Email == DevelopmentAdminEmail);
 			var all = await this.dbContext
 				.Users
+				.Where(x => x.Id != admin!.Id)
 				.Select(x => new AllUsersViewModel()
 				{
                     Id = x.Id,
@@ -128,5 +132,13 @@
 
             return currUser;
         }
+
+        public async Task DeleteUser(Guid userId)
+        {
+	        var user = await this.dbContext
+		        .Users.FindAsync(userId);
+	        this.dbContext.Users.Remove(user);
+	        await this.dbContext.SaveChangesAsync();
+        }   
     }
 }

@@ -20,5 +20,7 @@
         Task<SchoolEatsUser> AddUserToSuperUserRoleAsync(Guid userId);
 
         Task<SchoolEatsUser> RemoveSuperUserRoleFromUserAsync(Guid userId);
+
+        Task DeleteUser(Guid userId);
     }
 }

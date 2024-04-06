@@ -162,5 +162,54 @@
 
 	        return RedirectToAction("All", "Dish");
         }
-    }
+
+        [HttpPost]
+        public async Task<IActionResult> ActivateDish(Guid id)
+        {
+	        try
+	        {
+				await this.dishService.MakeDishActiveAsync(id);
+				TempData[SuccessMessage] = "Успешно активирахте това ястие!";
+				TempData[InformationMessage] = "Имайте предвит, че ястието е видно за всички потребители!";
+	        }
+	        catch (Exception e)
+	        {
+				TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("AllDishes", "Admin");
+        }
+        [HttpPost]
+        public async Task<IActionResult> DeactivateDish(Guid id)
+        {
+	        try
+	        {
+		        await this.dishService.DeleteDishAsync(id);
+		        TempData[SuccessMessage] = "Успешно деактивирахте това ястие!";
+		        TempData[InformationMessage] = "Имайте предвит, че ястието вече не е видно за потребителите!";
+	        }
+	        catch (Exception e)
+	        {
+		        TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("AllDishes", "Admin");
+        }
+        [HttpPost]
+        public async Task<IActionResult> HardDelete(Guid id)
+        {
+	        try
+	        {
+		        await this.dishService.HardDeleteDishAsync(id);
+		        TempData[SuccessMessage] = "Успешно изтрихте това ястие!";
+		        TempData[InformationMessage] = "Имайте предвит, че ястието вече не съществува в системата!";
+	        }
+	        catch (Exception e)
+	        {
+		        TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+
+	        return RedirectToAction("AllDishes", "Admin");
+        }
+	}
 }

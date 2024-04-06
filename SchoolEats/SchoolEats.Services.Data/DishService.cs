@@ -32,7 +32,30 @@
 					Price = d.Price,
 					Quantity = d.Quantity,
 					Category = d.Category.Name,
-					 Owner = d.User.UserName
+					 Owner = d.User.UserName,
+					 IsActive = d.IsActive,
+				})
+				.ToListAsync();
+			return all;
+		}
+
+		public async Task<List<AllDishesViewModel>> GetAllActiveAndNotActiveDishesAsync()
+		{
+			List<AllDishesViewModel> all = await this.dbContext
+				.Dishes
+				.Select(d => new AllDishesViewModel()
+				{
+					Id = d.Id,
+					Name = d.Name,
+					Description = d.Description,
+					Grams = d.Grams,
+					ImageUrl = d.ImageUrl,
+					IsAllergenic = d.IsAllergenic,
+					Price = d.Price,
+					Quantity = d.Quantity,
+					Category = d.Category.Name,
+					Owner = d.User.UserName,
+					IsActive = d.IsActive,
 				})
 				.ToListAsync();
 			return all;
@@ -140,5 +163,24 @@
 			await this.dbContext.SaveChangesAsync();
 		}
 
-    }
+		public async Task MakeDishActiveAsync(Guid dishId)
+		{
+			var dish = await this.dbContext
+				.Dishes
+				.FindAsync(dishId);
+			dish.IsActive = true;
+			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task HardDeleteDishAsync(Guid dishId)
+		{
+			var dish = await this.dbContext
+				.Dishes
+				.FindAsync(dishId);
+
+			this.dbContext.Dishes.Remove(dish);
+
+			await this.dbContext.SaveChangesAsync();
+		}
+	}
 }
