@@ -13,7 +13,7 @@ using SchoolEats.Web.Infrastructure.ModelBinders;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
-
+//key za moqta karta 
 StripeConfiguration.ApiKey = "sk_test_51Of7n6Grqe6vOSV1i1suN4aL7YXnvppU0ZgpSifrMGLRvi5Wri21T69V9vovbcwkKc87Hv2436ZP7Ml0APnW3XMD00ggRke19q";
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

@@ -33,14 +33,25 @@
 		{
 			var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
 
-	        List <SessionLineItemOptions> sessionList = new List<SessionLineItemOptions>();
+	        List<SessionLineItemOptions> sessionList = new List<SessionLineItemOptions>();
 			foreach (var purchase in all.Dishes)
 			{
-				var sessionItem = new SessionLineItemOptions()
+				var stringPrice = purchase.Price.ToString();
+				if (stringPrice.Contains("."))
+				{
+                    stringPrice = stringPrice.Replace(".", "");
+				}
+				else if (stringPrice.Contains(","))
+				{
+					stringPrice = stringPrice.Replace(",", "");
+				}
+                var price = decimal.Parse(stringPrice);
+
+                var sessionItem = new SessionLineItemOptions()
 				{
 					PriceData = new SessionLineItemPriceDataOptions()
 					{
-						UnitAmountDecimal = decimal.Parse(purchase.Price.ToString().Replace(".", "")),
+						UnitAmountDecimal = price,
 						Currency = "BGN",
 						ProductData = new SessionLineItemPriceDataProductDataOptions
 						{
@@ -54,7 +65,7 @@
 				sessionList.Add(sessionItem);
 			}
 
-
+			//tursi hosta na komputara
 			var location = new Uri($"{Request.Scheme}://{Request.Host}{Request.Path}{Request.QueryString}");
 
 			var url = "https://";

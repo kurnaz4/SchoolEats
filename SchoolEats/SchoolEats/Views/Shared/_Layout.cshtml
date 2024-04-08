@@ -49,12 +49,26 @@
 	<link rel="stylesheet" href="~/css/HomePage/HomePage.css" asp-append-version="true" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<link type="text/css" href="~/css/ShoopingCart.css" rel="stylesheet" />
 @* NotificationMessages *@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.css" integrity="sha512-6S2HWzVFxruDlZxI3sXOZZ4/eJ8AcxkQH1+JjSe/ONCEqR9L4Ysq5JdT5ipqtzU7WHalNwzwBv+iE51gNHJNqQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js" integrity="sha512-lbwH47l/tPXJYG9AcFNoJaTMhGvYWhVM9YI43CT+uteTRRaiLCui8snIgyAN8XWgNjNhCqlAUdzZptso6OCoFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 @* NotificationMessages *@
 </head>
 <body>
+	<nav>
+		<!--Navbar has two part the top one and the bottom one-->
+		<!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
+		<div class="navbar-top">
+			<div>
+				<button id="menuButton"><i class="fas fa-bars"></i></button>
+				<!--Logo-->
+				<img src="~/images/LOGO.png" width="150px">
+			</div>
+			
+			</div>
+		</div>
+	</nav>
 	<partial name="_NotificationsPartial" />
 	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	@if (SignInManager.IsSignedIn(this.User))
