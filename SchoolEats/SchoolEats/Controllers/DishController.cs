@@ -81,8 +81,8 @@
 			return RedirectToAction("All", "Dish");
         }
 
-        [Authorize(Roles = SuperUserRoleName)] 
-		[HttpGet]
+        [Authorize(Roles = "SuperUser,Administrator")]
+        [HttpGet]
         public async Task<IActionResult> Edit(Guid dishId)
         {
 			var model = await this.dishService.GetDishForEditAsync(dishId);
@@ -91,8 +91,8 @@
 			return View(model);
         }
 
-        [Authorize(Roles = SuperUserRoleName)]
-		[HttpPost]
+        [Authorize(Roles = "SuperUser,Administrator")]
+        [HttpPost]
         public async Task<IActionResult> Edit(Guid id, DishFormViewModel model)
         {
 	        ModelState.Remove(nameof(model.ImagePath));
@@ -142,10 +142,16 @@
 				}
 			}
 
-			return RedirectToAction("All", "Dish");
+			if (this.User.IsInRole(AdminRoleName))
+			{
+				return RedirectToAction("AllDishes", "Admin");
+			}
+
+			return RedirectToAction("AllDishes", "SuperUser");
         }
 
         [Authorize(Roles = SuperUserRoleName)]
+        
 		[HttpPost]
         public async Task<IActionResult> Delete(Guid id)
         {

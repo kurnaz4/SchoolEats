@@ -27,7 +27,8 @@
 					<th> Алергени <span class="icon-arrow">&UpArrow;</span></th>
 					<th> Статус <span class="icon-arrow">&UpArrow;</span></th>
 					<th> Действие <span class="icon-arrow">&UpArrow;</span></th>
-					<th> Изтрий ястие <span class="icon-arrow">&UpArrow;</span></th>
+					<th> Промени ястие </th>
+					<th> Изтрий ястие </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -56,6 +57,7 @@
 						{
 							<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#active{count}")" type="button">Активирай</a></td>
 						}
+						<td><a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@dish.Id" class="btn btn-success">Промени ястие</a></td>
 						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button">Изтрий ястие</a></td>
 					</tr>
 					@* Delete user POP UP *@

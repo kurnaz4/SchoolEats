@@ -34,5 +34,13 @@
 
             return RedirectToAction("All", "Dish");
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Remove(Guid dishId)
+        {
+	        await this.shoppingCart.DeleteDishToUserAsync(dishId, this.User.GetId());
+
+            return RedirectToAction("All", "ShoppingCart");
+        }
     }
 }

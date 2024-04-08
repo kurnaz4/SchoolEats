@@ -1,4 +1,7 @@
 ﻿@model ShoppingCartViewModel
+@{
+	int count = 0;
+}
 <link rel="stylesheet" href="~/css/Products.css">
 @if (Model.Dishes.Any())
 {
@@ -7,7 +10,11 @@
 		<div class="container">
 			<a class="product-container">
 				<div class="products-container">
+
 					<div class="product" data-name="p-1">
+						<div class="text-end">
+							<a data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button" class="btn-close fs-4"></a>@* //here *@
+						</div>
 						<img class="img-fluid" src="@product.ImageUrl" alt="" width="">
 						<h3>@product.Name</h3>
 						<div class="price">@product.Price</div>
@@ -16,6 +23,28 @@
 				</div>
 			</a>
 		</div>
+		@* Delete dish POP UP *@
+		<div class="modal fade" id="@($"backdropDelete{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="staticBackdropLabel">Премахни от количка</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body text-center d-flex justify-content-center align-items-center">
+						<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да премахнете това ястие от количката си?</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
+						<form asp-action="Remove" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" method="post">
+							<button class="btn btn-danger">Премахни</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		@* Delete dish POP UP END*@
+		count++;
 	}
 	<div class="d-flex justify-content-center">
 		<form asp-action="PurchaseWithCode" asp-controller="Purchase" method="post">
