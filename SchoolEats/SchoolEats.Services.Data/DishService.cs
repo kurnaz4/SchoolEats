@@ -32,8 +32,8 @@
 					Price = d.Price,
 					Quantity = d.Quantity,
 					Category = d.Category.Name,
-					 Owner = d.User.UserName,
-					 IsActive = d.IsActive,
+					Owner = d.User.UserName,
+					IsActive = d.IsActive,
 				})
 				.ToListAsync();
 			return all;

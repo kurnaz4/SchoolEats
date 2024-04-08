@@ -26,6 +26,7 @@ nav {
 
     /* logo , my account and shopping cart */
     nav .navbar-top {
+        margin-top:10px;
         position: fixed;
         max-width: 1600px;
         padding: 20px;
