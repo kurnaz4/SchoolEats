@@ -20,7 +20,7 @@
 		{
 			List<AllDishesViewModel> all = await  this.dbContext
 				.Dishes
-				.Where(x => x.IsActive && x.Quantity > 0)
+				.Where(x => x.IsActive)
 				.Select(d => new AllDishesViewModel()
 				{
 					Id = d.Id,

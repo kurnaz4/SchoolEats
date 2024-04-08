@@ -104,6 +104,7 @@
 				<div class="products">
 					@foreach (var product in Model)
 					{
+						string disabled = @product.Quantity == 0 ? "disabled" : "";
 						<div class="product">
 							<div class="product-under">
 
@@ -130,6 +131,14 @@
 													<img src="@product.ImageUrl" alt="" class="w-100" style="height: 325px;"/>
 													<h3 class="fs-1">@product.Name</h3>
 													<p class="fs-2">@product.Description</p>
+													@if (@product.Quantity == 0)
+													{
+														<p class="fs-2 text-danger">Няма налични</p>
+													}
+													else
+													{
+														<p class="fs-2">Наличност: <span class="text-danger">@product.Quantity</span></p>
+													}
 													<div class="price fs-1">@product.Price лв</div>
 												</div>
 											</div>
@@ -142,7 +151,15 @@
 												}
 												@if (this.User.IsInRole(UserRoleName) || this.User.IsInRole(SuperUserRoleName))
 												{
-													<a asp-action="Add" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">Добави в количка</a>
+													@if (@product.Quantity == 0)
+													{
+														<button class="btn btn-primary" disabled>Добави в количка</button>
+													}
+													else
+													{
+														<a asp-action="Add" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">Добави в количка</a>
+													}
+													
 												}
 											</div>
 										</div>

@@ -14,7 +14,7 @@ using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
-StripeConfiguration.ApiKey = "sk_test_51Of7n6Grqe6vOSV1i1suN4aL7YXnvppU0ZgpSifrMGLRvi5Wri21T69V9vovbcwkKc87Hv2436ZP7Ml0APnW3XMD00ggRke19q";
+StripeConfiguration.ApiKey = "sk_test_51OwLybRo9wWMfFI989Wl9co0guP0vMKV6Cdt6TZ3H0kgFNehUQfubbclBYGx2G8Irk3v14mcRm4MtEihQSmWVvGC00Nj5opGUw";
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<SchoolEatsDbContext>(options =>
