@@ -46,7 +46,7 @@
             var dish = await this.dbContext
                 .Dishes
                 .FindAsync(dishId);
-
+            dish.Quantity -= 1;
             var cart = new Cart()
             {
                 DishId = dishId,
@@ -59,7 +59,7 @@
             {
                 if (currDish.Id == dishId)
                 {
-                    cart.Quantity = currDish.Quantity + 1;
+	                cart.Quantity = currDish.Quantity + 1;
                     await this.UpdateDishToUserAsync(dishId, userId, cart.Quantity);
                     return;
                 }
@@ -84,6 +84,10 @@
                 .Carts
                 .FirstAsync(x => x.DishId == dishId && x.BuyerId == userId);
 
+            var dish = await this.dbContext
+	            .Dishes
+	            .FindAsync(dishId);
+            dish.Quantity += cartItem.Quantity; //check is this working
             this.dbContext.Remove(cartItem);
             await this.dbContext.SaveChangesAsync();
         }

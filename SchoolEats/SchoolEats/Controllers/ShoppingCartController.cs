@@ -8,10 +8,12 @@
     public class ShoppingCartController : Controller
     {
         private readonly IShoppingCartService shoppingCart;
+        private readonly IDishService dishService;
 
-        public ShoppingCartController(IShoppingCartService shoppingCart)
+        public ShoppingCartController(IShoppingCartService shoppingCart, IDishService dishService)
         {
             this.shoppingCart = shoppingCart;
+            this.dishService = dishService;
         }
         public async Task<IActionResult> All()
         {
@@ -23,9 +25,16 @@
         {
             try
             {
-                await this.shoppingCart.AddAsync(dishId, this.User.GetId());
-
-                TempData[SuccessMessage] = "Успешно добавихте този продукт в количката!";
+	            bool isQuantityEnough = await this.dishService.IsQuantityEnough(dishId);
+	            if (isQuantityEnough)
+	            {
+					await this.shoppingCart.AddAsync(dishId, this.User.GetId());
+					TempData[SuccessMessage] = "Успешно добавихте този продукт в количката!";
+	            }
+	            else
+	            {
+		            TempData[ErrorMessage] = "Няма налични бройки!";
+	            }
             }
             catch (Exception e)
             {
@@ -38,7 +47,16 @@
         [HttpPost]
         public async Task<IActionResult> Remove(Guid dishId)
         {
-	        await this.shoppingCart.DeleteDishToUserAsync(dishId, this.User.GetId());
+	        try
+	        {
+				await this.shoppingCart.DeleteDishToUserAsync(dishId, this.User.GetId());
+				TempData[SuccessMessage] = "Успешно премахнахте ястието от количката си!";
+	        }
+	        catch (Exception e)
+	        {
+                TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+	        
 
             return RedirectToAction("All", "ShoppingCart");
         }

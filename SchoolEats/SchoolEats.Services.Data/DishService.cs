@@ -20,7 +20,7 @@
 		{
 			List<AllDishesViewModel> all = await  this.dbContext
 				.Dishes
-				.Where(x => x.IsActive)
+				.Where(x => x.IsActive && x.Quantity > 0)
 				.Select(d => new AllDishesViewModel()
 				{
 					Id = d.Id,
@@ -181,6 +181,19 @@
 			this.dbContext.Dishes.Remove(dish);
 
 			await this.dbContext.SaveChangesAsync();
+		}
+
+		public async Task<bool> IsQuantityEnough(Guid dishId)
+		{
+			var dish = await this.dbContext
+				.Dishes
+				.FindAsync(dishId);
+			if (dish.Quantity - 1 < 0)
+			{
+				return false;
+			}
+
+			return true;
 		}
 	}
 }
