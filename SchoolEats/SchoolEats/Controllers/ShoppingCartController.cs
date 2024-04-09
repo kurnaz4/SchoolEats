@@ -25,7 +25,18 @@
         {
             try
             {
-	            bool isQuantityEnough = await this.dishService.IsQuantityEnough(dishId);
+	            var neededQuantity = 0;
+	            var all = await this.shoppingCart.GetAllByBuyerIdAsync(this.User.GetId());
+	            var neededDish = all.Dishes.FirstOrDefault(x => x.Id == dishId);
+	            if (neededDish == null)
+	            {
+		            neededQuantity = 1;
+	            }
+	            if (neededDish != null)
+	            {
+                    neededQuantity = neededDish.Quantity + 1;
+	            }
+	            bool isQuantityEnough = await this.dishService.IsQuantityEnough(dishId, neededQuantity);
 	            if (isQuantityEnough)
 	            {
 					await this.shoppingCart.AddAsync(dishId, this.User.GetId());

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -60,15 +61,16 @@ if (app.Environment.IsDevelopment())
     app.UseMigrationsEndPoint();
     app.SeedAdministrator(GeneralApplicationConstants.DevelopmentAdminEmail);
     app.SeedUser();
-    app.SeedSuperUser();    
+    app.SeedSuperUser();
 }
 else
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 app.UseSession();
+
+app.UseExceptionHandler("/Home/Error");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
