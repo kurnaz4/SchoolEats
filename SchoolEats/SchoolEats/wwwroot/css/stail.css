@@ -6,9 +6,11 @@
 
 .app-sidebar-margin {
     margin: 0 0 0 130px;
+    transition: all 0.5s ease;
 }
 .app-sidebar-margin-more {
     margin: 0 0 0 300px;
+    transition: all 0.5s ease;
 }
 body {
     background: #e4e9f7;

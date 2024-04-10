@@ -71,7 +71,7 @@
 						<td>@purchase.PurchasedOn</td>
 						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#staticBackdrop{count}")" type="button">Завърши поръчка</a></td>
 					</tr>
-					@* Delete Purchase POP UP POP UP *@
+					@* Complete Purchase POP UP POP UP *@
 					<div class="modal fade" id="@($"staticBackdrop{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content">
@@ -91,7 +91,7 @@
 							</div>
 						</div>
 					</div>
-					@* Delete Purchase POP UP END*@
+					@* Complete Purchase POP UP END*@
 					count++;
 				}
 			</tbody>

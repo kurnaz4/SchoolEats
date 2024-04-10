@@ -1,13 +1,14 @@
 ﻿@model SchoolEats.Web.ViewModels.SuperUser.DailyReportViewModel
 @inject IPurchaseService PurchaseService
+@{
+	int count = 0;
+}
 @if (!(await PurchaseService.IsReportAlreadySend(DateTime.Now)))
 {
 	<div class="text-center">
 		<h1>Средствата изкарани за деня: <span class="fs-1 text-danger">@Model.TotalPrice</span></h1>
 		<h1>Продадени бройки ястия: <span class="fs-1 text-danger">@Model.TotalQuantity</span></h1>
-		<form asp-action="SendReport" asp-controller="SuperUser" method="post">
-			<button  class="btn btn-primary">Запази отчета</button>
-		</form>
+		<a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@("#staticBackdrop")" type="button">Запази отчет</a>
 	</div>
 }
 else
@@ -16,3 +17,24 @@ else
 		<h1 class="fs-1 text-info">Дневният отчет вече е предаден!</h1>
 	</div>
 }
+@* Update User to SuperUser POP UP POP UP *@
+<div class="modal fade" id="@("staticBackdrop")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="staticBackdropLabel">Запази отчет</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body text-center d-flex justify-content-center align-items-center">
+				<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да запазите отчета?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<form asp-action="SendReport" asp-controller="SuperUser" method="post">
+					<button class="btn btn-primary">Запази отчета</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+@* Update User to SuperUser POP UP END*@
