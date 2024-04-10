@@ -17,6 +17,10 @@
 						</div>
 						<img class="img-fluid" src="@product.ImageUrl" alt="" width="">
 						<h3>@product.Name</h3>
+						<div>
+							<a asp-action="IncreaseCount" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-secondary">+</a>
+							<a asp-action="DecreaseCount" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">-</a>
+						</div>
 						<div class="fs-3 ms-3 mb-3 text-start">Quantity @product.Quantity</div>
 						<div class="fs-2 text-start ms-3 text-danger fw-bold">@product.Price</div>
 					</div>

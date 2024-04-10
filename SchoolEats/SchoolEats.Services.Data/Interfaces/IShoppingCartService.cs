@@ -1,6 +1,7 @@
 ﻿namespace SchoolEats.Services.Data.Interfaces
 {
-    using Web.ViewModels.ShoppingCart;
+	using SchoolEats.Data.Models;
+	using Web.ViewModels.ShoppingCart;
 
     public interface IShoppingCartService
     {
@@ -11,5 +12,7 @@
         Task UpdateDishToUserAsync(Guid dishId, Guid userId, int announceCount);
 
         Task DeleteDishToUserAsync(Guid dishId, Guid userId);
+        
+        Task<Cart> GetDishFromCartAsync(Guid dishId, Guid userId);
     }
 }

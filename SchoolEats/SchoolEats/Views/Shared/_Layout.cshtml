@@ -6,7 +6,7 @@
 @inject SignInManager<SchoolEatsUser> SignInManager;
 @inject IUserService userService;
 @{
-	string margin = User.Identity.IsAuthenticated  && await userService.IsUserApproved(this.User.GetId()) ? "app-sidebar-margin" : "";
+	string margin = User.Identity.IsAuthenticated && await userService.IsUserApproved(this.User.GetId()) ? "app-sidebar-margin" : "";
 	string name = User.Identity.Name;
 	string splittedName = string.Empty;
 	if (name != null)
@@ -57,7 +57,7 @@
 </head>
 <body>
 <partial name="_NotificationsPartial" />
-<div style="background: white;" class="mb-3">
+<div id="main-header-test" style="background: white;" class="mb-3 @margin">
 		<!--Navbar has two part the top one and the bottom one-->
 		<!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
 		<div class="d-flex justify-content-center">
@@ -68,7 +68,7 @@
 			</div>
 			
 			</div>
-		</div>
+</div>
 <div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	@if (SignInManager.IsSignedIn(this.User))
 	{
@@ -219,7 +219,7 @@
 {
 	if (await userService.IsUserApproved(this.User.GetId()))
 	{
-		<footer style="margin-top: 5rem;">
+		<footer id="main-footer-test" style="margin-top: 5rem;" class="@margin">
 			<div class="contact">
 
 			<div class="c_image">

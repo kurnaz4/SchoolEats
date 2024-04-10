@@ -7,17 +7,17 @@
     using static Common.NotificationMessagesConstants;
     public class ShoppingCartController : Controller
     {
-        private readonly IShoppingCartService shoppingCart;
+        private readonly IShoppingCartService shoppingCartService;
         private readonly IDishService dishService;
 
-        public ShoppingCartController(IShoppingCartService shoppingCart, IDishService dishService)
+        public ShoppingCartController(IShoppingCartService shoppingCartService, IDishService dishService)
         {
-            this.shoppingCart = shoppingCart;
+            this.shoppingCartService = shoppingCartService;
             this.dishService = dishService;
         }
         public async Task<IActionResult> All()
         {
-            var all = await this.shoppingCart.GetAllByBuyerIdAsync(this.User.GetId());
+            var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
             return View(all);
         }
 
@@ -26,7 +26,7 @@
             try
             {
 	            var neededQuantity = 0;
-	            var all = await this.shoppingCart.GetAllByBuyerIdAsync(this.User.GetId());
+	            var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
 	            var neededDish = all.Dishes.FirstOrDefault(x => x.Id == dishId);
 	            if (neededDish == null)
 	            {
@@ -39,7 +39,7 @@
 	            bool isQuantityEnough = await this.dishService.IsQuantityEnough(dishId, neededQuantity);
 	            if (isQuantityEnough)
 	            {
-					await this.shoppingCart.AddAsync(dishId, this.User.GetId());
+					await this.shoppingCartService.AddAsync(dishId, this.User.GetId());
 					TempData[SuccessMessage] = "Успешно добавихте този продукт в количката!";
 	            }
 	            else
@@ -60,7 +60,7 @@
         {
 	        try
 	        {
-				await this.shoppingCart.DeleteDishToUserAsync(dishId, this.User.GetId());
+				await this.shoppingCartService.DeleteDishToUserAsync(dishId, this.User.GetId());
 				TempData[SuccessMessage] = "Успешно премахнахте ястието от количката си!";
 	        }
 	        catch (Exception e)
@@ -71,5 +71,59 @@
 
             return RedirectToAction("All", "ShoppingCart");
         }
-    }
+
+        [HttpGet]
+        public async Task<IActionResult> IncreaseCount(Guid dishId)
+        {
+	        try
+	        {
+				var neededQuantity = 0;
+				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
+				var neededDish = all.Dishes.FirstOrDefault(x => x.Id == dishId);
+				neededQuantity = neededDish.Quantity + 1;
+		        bool isQuantityEnough = await this.dishService.IsQuantityEnough(dishId, neededQuantity);
+				if (isQuantityEnough)
+				{
+					await this.shoppingCartService.AddAsync(dishId, this.User.GetId());
+					TempData[SuccessMessage] = "Успешно увеличихте количеството на този продукт в количката!";
+				}
+				else
+				{
+					TempData[ErrorMessage] = "Няма налични бройки!";
+				}
+	        }
+	        catch (Exception e)
+	        {
+				TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+	        
+			return RedirectToAction("All", "ShoppingCart");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> DecreaseCount(Guid dishId)
+        {
+	        try
+	        {
+				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
+				var neededDish = all.Dishes.FirstOrDefault(x => x.Id == dishId);
+				neededDish.Quantity -= 1;
+		        if (neededDish.Quantity <= 0)
+		        {
+			        TempData[ErrorMessage] = "Минималният брой е 1!";
+		        }
+		        else
+		        {
+			        await this.shoppingCartService.UpdateDishToUserAsync(dishId, this.User.GetId(), neededDish.Quantity);
+			        TempData[SuccessMessage] = "Успешно увеличихте количеството на продукта!";
+		        }
+			}
+	        catch (Exception e)
+	        {
+				TempData[ErrorMessage] = CommonErrorMessage;
+	        }
+	        
+	        return RedirectToAction("All", "ShoppingCart");
+        }
+	}
 }

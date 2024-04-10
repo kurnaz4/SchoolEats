@@ -233,9 +233,6 @@
 
 			return RedirectToAction("AllDishes", "Admin");
 		}
-		public IActionResult Quantity()
-		{
-			return View();
-		}
+		
 	}
 }

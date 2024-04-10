@@ -83,5 +83,12 @@
             this.dbContext.Remove(cartItem);
             await this.dbContext.SaveChangesAsync();
         }
+
+        public async Task<Cart> GetDishFromCartAsync(Guid dishId, Guid userId)
+        {
+	        return await this.dbContext
+		        .Carts
+		        .FirstOrDefaultAsync(x => x.DishId == dishId && x.BuyerId == userId);
+        }
     }
 }
