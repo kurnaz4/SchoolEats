@@ -5,11 +5,11 @@
 }
 
 .app-sidebar-margin {
-    margin: 0 0 0 130px;
+    margin: 0 0 0 45px;
     transition: all 0.5s ease;
 }
 .app-sidebar-margin-more {
-    margin: 0 0 0 300px;
+    margin: 0 0 0 200px;
     transition: all 0.5s ease;
 }
 body {
