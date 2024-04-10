@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 540px;
     margin: 0 auto;
     padding: 3rem 2rem;
 }
@@ -36,9 +36,6 @@ body {
     }
 
     .container .products-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        gap: 2rem;
         justify-items:center;
     }
 
@@ -58,7 +55,8 @@ body {
             }
 
             .container .products-container .product img {
-                height: 25rem;
+                height: 27rem;
+                width: 27rem;
             }
 
             .container .products-container .product:hover img {

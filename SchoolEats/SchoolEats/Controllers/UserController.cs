@@ -76,7 +76,7 @@ namespace SchoolEats.Controllers
 			return RedirectToAction("PendingUsers", "Admin");
 		}
 
-		[HttpPost]
+		[HttpPost]	
 		public async Task<IActionResult> AddUserToSuperUserRole(Guid userId)
 		{
 			try
