@@ -25,9 +25,11 @@
 		}
 	}
 	string title = "Ученик";
+	string underBackground = "background-user-under";
 	string background = "background-user";
 	if (this.User.IsInRole(AdminRoleName))
 	{
+		underBackground = "background-admin-under";
 		background = "background-admin";
 		title = "Админ";
 	}
@@ -35,6 +37,8 @@
 	{
 		title = "Готвач";
 		background = "background-superuser";
+		underBackground = "background-superuser-under";
+
 	}
 }
 <!DOCTYPE html>
@@ -70,6 +74,8 @@
 			</div>
 </div>
 <div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
+	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
+	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	@if (SignInManager.IsSignedIn(this.User))
 	{
 		if (await userService.IsUserApproved(this.User.GetId()))
@@ -109,7 +115,7 @@
 						</li>
 						<li>
 							<a asp-action="Orders" asp-controller="SuperUser">
-								<i class='bx bx-pie-chart-alt-2'></i>
+							    <i class='bx bxs-purchase-tag-alt'></i>
 								<span class="links_name">Поръчки</span>
 							</a>
 							<span class="tooltip">Поръчки</span>
@@ -123,7 +129,7 @@
 							</li>
 						<li>
 							<a asp-action="DailyReport" asp-controller="SuperUser">
-								<i class='bx bx-pie-chart-alt-2'></i>
+											<i class='bx bx-wallet'></i>
 								<span class="links_name">Дневен отчет</span>
 							</a>
 							<span class="tooltip">Дневен отчет</span>
@@ -138,6 +144,7 @@
 					</li>
 					@if (!this.User.IsInRole(AdminRoleName))
 					{
+
 							<li>
 								<a asp-controller="ShoppingCart" asp-action="All">
 									<i class='bx bx-cart-alt'></i>
@@ -186,22 +193,22 @@
 							</li>
 						<li>
 							<a asp-action="AllReports" asp-controller="Admin">
-								<i class='bx bxs-dish'></i>
+											<i class='bx bx-wallet'></i>
 								<span class="links_name">Всички отчети</span>
 							</a>
 							<span class="tooltip">Всички отчети</span>
 						</li>
 					}
-					<li class="profile @background">
+					<li class="profile @underBackground">
 						<div class="profile-details">
 							<div class="name_job">
 								<div class="name">@splittedName</div>
 								<div class="job">@title</div>
 							</div>
 						</div>
-						<form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
+						<form class="@underBackground" method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })">
 							<button type="submit">
-								<i class='bx bx-log-out' id="log_out"></i>
+											<i class='bx bx-log-out' id="log_out" class="@underBackground"></i>
 							</button>
 						</form>
 					</li>

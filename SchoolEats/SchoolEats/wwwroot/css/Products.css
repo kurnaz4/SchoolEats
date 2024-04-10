@@ -180,6 +180,16 @@ body {
                     background: #444;
                     color: #fff;
                 }
+img. {
+    width: 10px;
+    height: 1000px;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    /*overflow-y: hidden;*/ /* Hide vertical scrollbar */
+    /*overflow-x: hidden;*/ /* Hide horizontal scrollbar */
+}
+
 
 
 @media (max-width:991px) {
