@@ -23,7 +23,7 @@
 
 		Task HardDeleteDishAsync(Guid dishId);
 
-		Task<bool> IsQuantityEnough(Guid dishId);
+		Task<bool> IsQuantityEnough(Guid dishId, int quantity);
 
 	}
 }

@@ -43,11 +43,7 @@
 
         public async Task AddAsync(Guid dishId, Guid userId)
         {
-            var dish = await this.dbContext
-                .Dishes
-                .FindAsync(dishId);
-            dish.Quantity -= 1;
-            var cart = new Cart()
+	        var cart = new Cart()
             {
                 DishId = dishId,
                 BuyerId = userId,
@@ -84,10 +80,6 @@
                 .Carts
                 .FirstAsync(x => x.DishId == dishId && x.BuyerId == userId);
 
-            var dish = await this.dbContext
-	            .Dishes
-	            .FindAsync(dishId);
-            dish.Quantity += cartItem.Quantity; //check is this working
             this.dbContext.Remove(cartItem);
             await this.dbContext.SaveChangesAsync();
         }

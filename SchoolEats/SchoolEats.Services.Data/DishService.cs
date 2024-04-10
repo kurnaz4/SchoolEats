@@ -183,12 +183,12 @@
 			await this.dbContext.SaveChangesAsync();
 		}
 
-		public async Task<bool> IsQuantityEnough(Guid dishId)
+		public async Task<bool> IsQuantityEnough(Guid dishId, int quantity)
 		{
 			var dish = await this.dbContext
 				.Dishes
 				.FindAsync(dishId);
-			if (dish.Quantity - 1 < 0)
+			if (dish.Quantity - quantity < 0)
 			{
 				return false;
 			}

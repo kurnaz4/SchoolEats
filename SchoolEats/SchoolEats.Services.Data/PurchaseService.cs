@@ -44,7 +44,7 @@
 			var dish = await this.dbContext
 				.Dishes
 				.FindAsync(dishId);
-
+			dish.Quantity -= purchasedQuantity;
 			var purchase = new Purchase()
 			{
 				DishId = dishId,
@@ -159,7 +159,6 @@
 				TotalQuantity = all.Sum(x => x.Quantity)
 			};
 		}
-
 
 		public async Task SendDailyReportAsync(DailyReportViewModel report)
 		{

@@ -6,7 +6,11 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-
+.background-image {
+    background: image("~/images/login.jpg");
+    background-position: center;
+    background-size: cover;
+}
 body {
     background: #e4e9f7;
 }

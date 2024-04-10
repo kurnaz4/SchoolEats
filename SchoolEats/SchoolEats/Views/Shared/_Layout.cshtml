@@ -56,8 +56,21 @@
 @* NotificationMessages *@
 </head>
 <body>
-	 bbbbbbbbbbbbbhg
-	<partial name="_NotificationsPartial" />
+<partial name="_NotificationsPartial" />
+<div style="background: white;" class="mb-3">
+		<!--Navbar has two part the top one and the bottom one-->
+		<!--Here is top one and in this part I put logo, my account part, and the shopping cart-->
+		<div class="d-flex justify-content-center">
+			<div>
+				<button id="menuButton"><i class="fas fa-bars"></i></button>
+				<!--Logo-->
+				<img src="~/images/LOGO.png" width="150px">
+			</div>
+			
+			</div>
+		</div>
+<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
+	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	<div id="main-div-test" class="d-flex justify-content-between flex-column @margin">
 	@if (SignInManager.IsSignedIn(this.User))
 	{
