@@ -113,7 +113,7 @@ thead th {
     left: 0;
     background-color: #d5d1defe;
     cursor: pointer;
-    text-transform: capitalize;
+
 }
 
 tbody tr:nth-child(even) {

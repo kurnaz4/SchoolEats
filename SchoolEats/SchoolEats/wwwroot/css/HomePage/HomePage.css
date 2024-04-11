@@ -291,7 +291,7 @@ section .text {
             color: #cfcfcf;
             font-family: "Franklin Gothic Book";
             text-align: right;
-            line-height: 23px;
+            line-height: 50px;
         }
 
         .contact .subscribe .address .follow {

@@ -27,8 +27,8 @@
 					<th> Алергени <span class="icon-arrow">&UpArrow;</span></th>
 					<th> Статус <span class="icon-arrow">&UpArrow;</span></th>
 					<th> Действие <span class="icon-arrow">&UpArrow;</span></th>
-					<th> Промени ястие </th>
-					<th> Изтрий ястие </th>
+					<th> Промени продукт </th>
+					<th> Изтрий продукт </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -73,19 +73,19 @@
 						{
 							<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#active{count}")" type="button">Активирай</a></td>
 						}
-						<td><a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@dish.Id" class="btn btn-success">Промени ястие</a></td>
-						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button">Изтрий ястие</a></td>
+						<td><a asp-action="Edit" asp-controller="Dish" asp-route-dishId="@dish.Id" class="btn btn-success">Промени продукт</a></td>
+						<td><a class="btn btn-success" data-bs-toggle="modal" data-bs-target="@($"#backdropDelete{count}")" type="button">Изтрий продукт</a></td>
 					</tr>
 					@* Delete user POP UP *@
 					<div class="modal fade" id="@($"backdropDelete{count}")" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 						<div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий ястие</h1>
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Изтрий продукт</h1>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body text-center d-flex justify-content-center align-items-center">
-									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да изтриете това ястие от системата?</p>
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да изтриете този продукт от системата?</p>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
@@ -102,11 +102,11 @@
 						<div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h1 class="modal-title fs-5" id="staticBackdropLabel">Активирай ястие</h1>
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Активирай продукт</h1>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body text-center d-flex justify-content-center align-items-center">
-									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да активирате това ястие?</p>
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да активирате този продукт?</p>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
@@ -123,11 +123,11 @@
 						<div class="modal-dialog modal-dialog-centered">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h1 class="modal-title fs-5" id="staticBackdropLabel">Деактивирай ястие</h1>
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Деактивирай продукт</h1>
 									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 								</div>
 								<div class="modal-body text-center d-flex justify-content-center align-items-center">
-									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да деактивирате това ястие?</p>
+									<p class="m-0 text-danger fs-5">Сигурни ли сте че искате да деактивирате този продукт?</p>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Затвори</button>
