@@ -25,7 +25,8 @@
 		    this.dishService = dishService;
 			this.categoryService = categoryService;
 	    }
-        public async Task<IActionResult> All()
+	    [Authorize(Roles = "SuperUser,User")]
+		public async Task<IActionResult> All()
         {
 	        var dishes = await this.dishService.GetAllDishesAsync();
             return View(dishes);

@@ -17,8 +17,8 @@
         public const string SuperUserRoleName = "SuperUser";
 
 		public const string EmailFrom = "schooleats.contacts@abv.bg";
-		public const string SmtpMail = "georgi-07@abv.bg";
-		public const string SmtpPassword = "g2dRHcIj9rB8DAS0";
+		public const string SmtpMail = "kornazov04@gmail.com";
+		public const string SmtpPassword = "bqgC4XsR0t7NwpWS";
 		public const string SmtpHost = "smtp-relay.sendinblue.com";
 		public const int SmtpPort = 587;
 	}
