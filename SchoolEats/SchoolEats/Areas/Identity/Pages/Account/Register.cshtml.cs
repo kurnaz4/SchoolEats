@@ -82,11 +82,11 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         {
             [Display(Name = "Име")]
             [Required(ErrorMessage = "Полето име е задължително!")]
-            [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
+            [StringLength(NameMaxLength, MinimumLength = NameMinLength, ErrorMessage = "Полето {0} трябва да бъде от {2} до {1} символа")]
             public string Name { get; set; }
             [Display(Name= "Фамилия")]
             [Required(ErrorMessage = "Полето фамилия е задължително!")]
-            [StringLength(NameMaxLength, MinimumLength = NameMinLength)]
+            [StringLength(NameMaxLength, MinimumLength = NameMinLength, ErrorMessage = "Полето {0} трябва да бъде от {2} до {1} символа")]
             public string Surname { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used

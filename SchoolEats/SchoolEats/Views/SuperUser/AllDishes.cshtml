@@ -34,6 +34,22 @@
 			<tbody>
 				@foreach (var dish in Model)
 				{
+					string name = dish.Owner;
+					string splittedName = string.Empty;
+					if (name != null)
+					{
+						bool isReady = false;
+						splittedName += name[0];
+						foreach (var character in name.Skip(1))
+						{
+							if (character.ToString() == character.ToString().ToUpper() && !isReady)
+							{
+								splittedName += " ";
+								isReady = true;
+							}
+							splittedName += character;
+						}
+					}
 					string allergenic = dish.IsAllergenic ? "Съдържа" : "Не съдържа";
 					string background = dish.IsActive ? "delivered" : "pending";
 					string status = dish.IsActive ? "Активен" : "Не активен";
@@ -42,7 +58,7 @@
 						<td>@dish.Name</td>
 						<td>@dish.Quantity</td>
 						<td>@dish.Price</td>
-						<td>@dish.Owner</td>
+						<td>@splittedName</td>
 						<td>@dish.Category</td>
 						<td>@dish.Grams</td>
 						<td>@allergenic</td>

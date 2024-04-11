@@ -68,22 +68,22 @@ namespace SchoolEats.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-            [Required]
-            [Display(Name = "Имейл")]
+			/// <summary>
+			///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+			///     directly from your code. This API may change or be removed in future releases.
+			/// </summary>
+			[Required(ErrorMessage = "Полето имейл е задължително!")]
+			[Display(Name = "Имейл")]
             [EmailAddress(ErrorMessage = "Въведете валиден имейл адрес!")]
             
             public string Email { get; set; }
 
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-            [Required]
-            [DataType(DataType.Password)]
+			/// <summary>
+			///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
+			///     directly from your code. This API may change or be removed in future releases.
+			/// </summary>
+			[Required(ErrorMessage = "Полето парола е задължително!")]
+			[DataType(DataType.Password)]
             [Display(Name = "Парола")]
             public string Password { get; set; }
 
