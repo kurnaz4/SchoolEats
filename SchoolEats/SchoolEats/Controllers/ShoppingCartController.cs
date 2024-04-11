@@ -9,11 +9,13 @@
     {
         private readonly IShoppingCartService shoppingCartService;
         private readonly IDishService dishService;
+		private readonly IPurchaseService purchaseService;
 
-        public ShoppingCartController(IShoppingCartService shoppingCartService, IDishService dishService)
+        public ShoppingCartController(IShoppingCartService shoppingCartService, IDishService dishService, IPurchaseService purchaseService)
         {
             this.shoppingCartService = shoppingCartService;
             this.dishService = dishService;
+			this.purchaseService = purchaseService;
         }
         public async Task<IActionResult> All()
         {
@@ -75,7 +77,12 @@
         [HttpGet]
         public async Task<IActionResult> IncreaseCount(Guid dishId)
         {
-	        try
+	        if (await this.purchaseService.IsReportAlreadySend(DateTime.Now))
+	        {
+		        TempData[ErrorMessage] = "За днес приключихме! Не може да поръчвате храна!";
+		        return RedirectToAction("All", "ShoppingCart");
+	        }
+			try
 	        {
 				var neededQuantity = 0;
 				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
@@ -103,7 +110,12 @@
         [HttpGet]
         public async Task<IActionResult> DecreaseCount(Guid dishId)
         {
-	        try
+	        if (await this.purchaseService.IsReportAlreadySend(DateTime.Now))
+	        {
+		        TempData[ErrorMessage] = "За днес приключихме! Не може да поръчвате храна!";
+		        return RedirectToAction("All", "ShoppingCart");
+	        }
+			try
 	        {
 				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
 				var neededDish = all.Dishes.FirstOrDefault(x => x.Id == dishId);

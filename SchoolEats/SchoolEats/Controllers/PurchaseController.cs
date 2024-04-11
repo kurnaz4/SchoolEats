@@ -31,6 +31,11 @@
         [HttpPost]
 		public async Task<IActionResult> Purchase()
 		{
+			if (await this.purchaseService.IsReportAlreadySend(DateTime.Now))
+			{
+				TempData[ErrorMessage] = "За днес приключихме! Не може да поръчвате храна!";
+				return RedirectToAction("All", "ShoppingCart");
+			}
 			var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());
 
 	        List<SessionLineItemOptions> sessionList = new List<SessionLineItemOptions>();
@@ -139,6 +144,11 @@
 		[HttpPost]
 		public async Task<IActionResult> PurchaseWithCode()
 		{
+			if (await this.purchaseService.IsReportAlreadySend(DateTime.Now))
+			{
+				TempData[ErrorMessage] = "За днес приключихме! Не може да поръчвате храна!";
+				return RedirectToAction("All", "ShoppingCart");
+			}
 			try
 			{
 				var all = await this.shoppingCartService.GetAllByBuyerIdAsync(this.User.GetId());

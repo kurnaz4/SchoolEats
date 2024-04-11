@@ -65,7 +65,7 @@
 		{
 			var dish = await this.dbContext
 				.Dishes
-				.Where(x => x.IsActive && x.Id == dishId)
+				.Where(x => x.Id == dishId)
 				.Select(d => new DishDetailsViewModel()
 				{
 					Id = d.Id,
@@ -108,7 +108,7 @@
 		{
 			var model = await this.dbContext
 				.Dishes
-				.Where(x => x.IsActive && x.Id == dishId)
+				.Where(x => x.Id == dishId)
 				.Select(d => new DishFormViewModel()
 				{
 					Id = d.Id,
@@ -131,7 +131,7 @@
 		{
 			var oldModel = await this.dbContext
 				.Dishes
-				.Where(x => x.IsActive && x.Id == model.Id).FirstAsync();
+				.Where(x => x.Id == model.Id).FirstAsync();
 
 			oldModel.Id = model.Id;
 			oldModel.Name = model.Name;
@@ -151,7 +151,7 @@
 		public async Task DeleteDishAsync(Guid dishId)
 		{
 			var modelToDelete = await this.dbContext
-				.Dishes.FirstAsync(x => x.IsActive && x.Id == dishId);
+				.Dishes.FirstAsync(x => x.Id == dishId);
 
 			if (modelToDelete.IsActive is false)
 			{
