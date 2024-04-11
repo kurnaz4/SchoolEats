@@ -1,12 +1,18 @@
 ﻿@model ShoppingCartViewModel
 @{
 	int count = 0;
+	decimal totalsum = 0;
+
 }
 <link rel="stylesheet" href="~/css/Products.css">
 @if (Model.Dishes.Any())
 {
+
 	@foreach (var product in Model.Dishes)
 	{
+		decimal sum = 0;
+		sum = @product.Price * (decimal)@product.Quantity;
+		totalsum += @sum;
 		<div class="container">
 			<a class="product-container">
 				<div class="products-container">
@@ -22,7 +28,7 @@
 							<a asp-action="DecreaseCount" asp-controller="ShoppingCart" asp-route-dishId="@product.Id" class="btn btn-primary">-</a>
 						</div>
 						<div class="fs-3 ms-3 mb-3 text-start">Наличност @product.Quantity</div>
-						<div class="fs-2 text-start ms-3 text-danger fw-bold">@product.Price*@product.Quantity</div>
+						<div class="fs-2 text-start ms-3 text-danger fw-bold">@sum лв</div>
 					</div>
 				</div>
 			</a>
@@ -50,6 +56,8 @@
 		@* Delete dish POP UP END*@
 		count++;
 	}
+	<h1 class="text-center ">Общата сума е <span class="text-danger">@totalsum лв</span></h1>
+	
 	<div class="d-flex justify-content-center">
 		<form asp-action="PurchaseWithCode" asp-controller="Purchase" method="post">
 			<button class="btn btn-primary fs-1">Поръчай с код</button>
