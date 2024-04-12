@@ -7,6 +7,7 @@
 
 	public class CategoryService : ICategoryService
 	{
+		//Services- взема данни от базата
 		private readonly SchoolEatsDbContext dbContext;
 		public CategoryService(SchoolEatsDbContext dbContext)
 		{

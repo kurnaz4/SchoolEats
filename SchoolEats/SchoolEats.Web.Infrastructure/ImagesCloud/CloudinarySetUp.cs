@@ -7,7 +7,7 @@
 	public class CloudinarySetUp
 	{
 		private readonly Cloudinary cloudinary;
-
+		//изпращане на снимката от user-a 
 		public CloudinarySetUp()
 		{
 			cloudinary = new Cloudinary(CloudinaryApi);
@@ -36,7 +36,7 @@
 			return generatedUrl;
 		}
 
-		public async Task<JToken> GetImageDetails(string fileName)//it works but here we don't need it
+		public async Task<JToken> GetImageDetails(string fileName)
 		{
 			var getResourceParams = new GetResourceParams(fileName)
 			{

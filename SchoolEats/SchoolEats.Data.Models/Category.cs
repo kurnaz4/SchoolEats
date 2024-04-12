@@ -12,6 +12,7 @@
 		[Unicode(true)]
 		public int Id { get; set; }
 
+		//валидация на категории
 		[Required]
 		[Unicode(true)]
 		[MaxLength(NameMaxLength)]

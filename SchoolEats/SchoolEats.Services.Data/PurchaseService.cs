@@ -15,7 +15,7 @@
 		{
 			this.dbContext = dbContext;
 		}
-		public async Task<List<AllPurchasesViewModel>> GetAllPurchasesByUserIdAsync(Guid userId)//For history
+		public async Task<List<AllPurchasesViewModel>> GetAllPurchasesByUserIdAsync(Guid userId)//За историята
 		{
 			return await this.dbContext
 				.Purchases

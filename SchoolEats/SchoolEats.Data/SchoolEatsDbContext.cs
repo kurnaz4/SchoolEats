@@ -13,7 +13,7 @@
 		{
 			
 		}
-
+		//Таблици в базата данни
         public DbSet<Dish> Dishes { get; set; } = null!;
 
 		public DbSet<Category> Categories { get; set; } = null!;

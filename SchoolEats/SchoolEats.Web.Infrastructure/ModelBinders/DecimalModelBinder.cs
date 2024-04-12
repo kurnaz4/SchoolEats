@@ -5,6 +5,7 @@
 
 	public class DecimalModelBinder : IModelBinder
 	{
+		//решаване на проблем с , и . в цената
 		public Task BindModelAsync(ModelBindingContext? bindingContext)
 		{
 			if (bindingContext == null)
