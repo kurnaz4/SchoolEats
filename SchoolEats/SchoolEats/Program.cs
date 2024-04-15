@@ -14,7 +14,7 @@ using SchoolEats.Web.Infrastructure.ModelBinders;
 using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
-//key za moqta karta 
+//API Key за моята виртуална карта
 StripeConfiguration.ApiKey = "sk_test_51OwLybRo9wWMfFI989Wl9co0guP0vMKV6Cdt6TZ3H0kgFNehUQfubbclBYGx2G8Irk3v14mcRm4MtEihQSmWVvGC00Nj5opGUw";
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");

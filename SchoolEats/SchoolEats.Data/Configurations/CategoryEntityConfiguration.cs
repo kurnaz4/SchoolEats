@@ -55,6 +55,13 @@ namespace SchoolEats.Data.Configurations
 			};
 			categories.Add(category);
 
+			category = new Category()
+			{
+				Id = 6,
+				Name = "Плодове и зеленчуци"
+			};
+			categories.Add(category);
+
 			return categories.ToArray();
 		}
 	}
