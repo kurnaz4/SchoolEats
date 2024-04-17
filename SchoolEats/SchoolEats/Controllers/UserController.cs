@@ -7,6 +7,7 @@ namespace SchoolEats.Controllers
 	using Microsoft.AspNetCore.Identity;
 	using Services.Data.Interfaces;
 	using Services.Messaging;
+	using Web.Infrastructure.Extensions;
 	using Web.ViewModels.User;
 	using static Common.NotificationMessagesConstants;
 	using static Common.ErrorMessages;
@@ -18,18 +19,34 @@ namespace SchoolEats.Controllers
 		private readonly IUserService userService;
 		private readonly IEmailSender emailSender;
 		private readonly UserManager<SchoolEatsUser> userManager;
+		private readonly SignInManager<SchoolEatsUser> signInManager;
 
 		public UserController(IUserService userService, IEmailSender emailSender,
-			UserManager<SchoolEatsUser> userManager)
+			UserManager<SchoolEatsUser> userManager, SignInManager<SchoolEatsUser> signInManager)
 		{
 			this.userService = userService;
 			this.emailSender = emailSender;
 			this.userManager = userManager;
+			this.signInManager = signInManager;
 		}
 
 		[HttpGet]
-		public IActionResult RegisterConfirmation(string returnUrl)
+		public async Task<IActionResult> RegisterConfirmation(string returnUrl)
 		{
+			try
+			{
+				var isApproved = await this.userService.IsUserApproved(this.User.GetId());
+				if (isApproved)
+				{
+					return RedirectToAction("Index", "Home");
+				}
+			}
+			catch (Exception e)
+			{
+				await this.signInManager.SignOutAsync();
+				return LocalRedirect("/Identity/Account/Login");
+			}
+			
 			return View();
 		}
 

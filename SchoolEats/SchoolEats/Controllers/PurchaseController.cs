@@ -70,7 +70,7 @@
 				sessionList.Add(sessionItem);
 			}
 
-			//tursi hosta na komputara
+			//търси хоста на компютъра
 			var location = new Uri($"{Request.Scheme}://{Request.Host}{Request.Path}{Request.QueryString}");
 
 			var url = "https://";
