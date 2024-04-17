@@ -7,15 +7,16 @@
     using static Common.GeneralApplicationConstants;
     public static class WebApplicationBuilderExtensions
     {
-        /// <summary>
-        /// This method seeds admin role if it does not exist.
-        /// Passed email should be valid email of existing user in the application.
+		/// <summary>
+		// Този метод създава роля на администратор,ученик и готвач ако не съществува.
+		//Предаденият имейл трябва да е валиден имейл на съществуващ потребител в приложението.
         /// </summary>
-        /// <param name="app"></param>
-        /// <param name="email"></param>
-        /// <returns></returns>
-        public static IApplicationBuilder SeedAdministrator(this IApplicationBuilder app, string email)
+	    /// <param name="app"></param>
+		/// <param name="email"></param>
+	    /// <returns></returns>
+		public static IApplicationBuilder SeedAdministrator(this IApplicationBuilder app, string email)
         {
+            
             using IServiceScope scopedServices = app.ApplicationServices.CreateScope();
 
             IServiceProvider serviceProvider = scopedServices.ServiceProvider;

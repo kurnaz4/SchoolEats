@@ -5,6 +5,7 @@
 	using static Common.GeneralApplicationConstants;
 	public class EmailSender : IEmailSender
 	{
+		//Изпращане на имейли
 		public Task SendEmailAsync(string email, string subject, string message)
 		{
 			var client = new SmtpClient(SmtpHost, SmtpPort)

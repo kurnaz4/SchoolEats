@@ -14,7 +14,7 @@ namespace SchoolEats.Data.Configurations
 
 		private Category[] SeedCategories()
 		{
-
+			//вкарване на категории като статични данни в база данни
 			ICollection<Category> categories = new HashSet<Category>();
 
 			Category category;
@@ -52,6 +52,13 @@ namespace SchoolEats.Data.Configurations
 			{
 				Id = 5,
 				Name = "Напитки"
+			};
+			categories.Add(category);
+
+			category = new Category()
+			{
+				Id = 6,
+				Name = "Плодове и зеленчуци"
 			};
 			categories.Add(category);
 

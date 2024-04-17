@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolEats.Data;
 
@@ -11,9 +12,10 @@ using SchoolEats.Data;
 namespace SchoolEats.Data.Migrations
 {
     [DbContext(typeof(SchoolEatsDbContext))]
-    partial class SchoolEatsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240415154938_addFruitandVegetablesToCategories")]
+    partial class addFruitandVegetablesToCategories
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -412,25 +414,6 @@ namespace SchoolEats.Data.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("809ec051-8e26-4200-9248-9c4815ff3af2"),
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "4eff5749-8f73-470d-b2b7-fb3c6fd7e6f0",
-                            Email = "administrator@gmail.com",
-                            EmailConfirmed = false,
-                            IsApproved = true,
-                            LockoutEnabled = true,
-                            NormalizedEmail = "ADMINISTRATOR@GMAIL.COM",
-                            NormalizedUserName = "АДМИНАДМИНОВ",
-                            PasswordHash = "AQAAAAEAACcQAAAAEElb00msN19oCULHAmkvl/UaLyHRRVFXXg8PH7/fWIkzXaH2/vaFqyfpIxqiXcRcXg==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "6SMIWUAQOBJRLP7BOERO2MQNLDTVGMPA",
-                            TwoFactorEnabled = false,
-                            UserName = "АдминАдминов"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>

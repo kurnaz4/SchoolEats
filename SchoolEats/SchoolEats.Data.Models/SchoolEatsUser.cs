@@ -5,6 +5,7 @@
 
     public class SchoolEatsUser : IdentityUser<Guid>
 	{
+        //класове за приемане на потребител
 		public SchoolEatsUser()
 		{
 			Id = Guid.NewGuid();

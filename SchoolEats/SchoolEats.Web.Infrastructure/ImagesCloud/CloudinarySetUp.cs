@@ -7,13 +7,13 @@
 	public class CloudinarySetUp
 	{
 		private readonly Cloudinary cloudinary;
-
+		//изпращане на снимката от user-a 
 		public CloudinarySetUp()
 		{
 			cloudinary = new Cloudinary(CloudinaryApi);
 			cloudinary.Api.Secure = true;
 		}
-
+		//изпраща снимка на сървъра и я запазва там
 		public async Task  UploadAsync(string filePath)
 		{
 			var uploadParams = new ImageUploadParams()
@@ -26,7 +26,7 @@
 			};
 			var uploadResult = await this.cloudinary.UploadAsync(uploadParams);
 		}
-
+		//взема изпратената снимка от сървъра и създава нейн линк
 		public string GenerateImageUrl(string fileName)
 		{
 			var myTransformation = cloudinary.Api.UrlImgUp.Add("SchoolEats");
@@ -36,17 +36,6 @@
 			return generatedUrl;
 		}
 
-		public async Task<JToken> GetImageDetails(string fileName)//it works but here we don't need it
-		{
-			var getResourceParams = new GetResourceParams(fileName)
-			{
-				QualityAnalysis = true
-			};
-			var getResourceResult = await cloudinary.GetResourceAsync(getResourceParams);
-			var resultJson = getResourceResult.JsonObj;
-
-			// Log quality analysis score to the console
-			return resultJson["quality_analysis"];
-		}
+		
 	}
 }

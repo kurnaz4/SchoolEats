@@ -4,6 +4,7 @@
 
 	public class CreateFile
 	{
+		//създава копие на снимка в момента
 		public static void CreateImageFile(DishFormViewModel model)//here view Model-a
 		{
 			string fileName = model.ImagePath == null ? model.ProductImage.FileName : model.ImagePath;

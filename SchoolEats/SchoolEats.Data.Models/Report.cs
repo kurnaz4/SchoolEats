@@ -4,6 +4,7 @@
 
 	public class Report
 	{
+		//отчет
 		[Key]
 		public Guid Id { get; set; }
 

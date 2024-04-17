@@ -4,6 +4,7 @@
 
 	public class DecimalModelBinderProvider : IModelBinderProvider
 	{
+		//чрез провайдар използваме DecimalModelBinder
 		public IModelBinder GetBinder(ModelBinderProviderContext context)
 		{
 			if (context == null)

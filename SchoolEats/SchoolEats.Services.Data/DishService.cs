@@ -18,6 +18,7 @@
         }
 		public async Task<List<AllDishesViewModel>> GetAllDishesAsync()
 		{
+			//Services- взема данни от базата
 			List<AllDishesViewModel> all = await  this.dbContext
 				.Dishes
 				.Where(x => x.IsActive)

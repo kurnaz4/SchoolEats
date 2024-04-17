@@ -16,6 +16,7 @@
         //Super User - Cooker
         public const string SuperUserRoleName = "SuperUser";
 
+		//email
 		public const string EmailFrom = "schooleats.contacts@abv.bg";
 		public const string SmtpMail = "kornazov04@gmail.com";
 		public const string SmtpPassword = "bqgC4XsR0t7NwpWS";

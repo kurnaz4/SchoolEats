@@ -3,6 +3,7 @@
 	using System.Security.Claims;
 	public static class ClaimsPrincipalExtensions
 	{
+		// методи за потребитея които са се логнали в момента
 		public static Guid GetId(this ClaimsPrincipal user)
 		{
 			return Guid.Parse(user.FindFirstValue(ClaimTypes.NameIdentifier));
@@ -13,7 +14,7 @@
 		}
 		public static bool IsAdmin(this ClaimsPrincipal user)
 		{
-			return user.IsInRole("AdminRoleName");//TODO:replace with admin roleName
+			return user.IsInRole("AdminRoleName");
 		}
 	}
 }
