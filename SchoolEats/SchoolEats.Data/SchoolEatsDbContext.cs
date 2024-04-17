@@ -28,6 +28,7 @@
 		{
 			builder.ApplyConfiguration(new DishEntityConfiguration());
 			builder.ApplyConfiguration(new CategoryEntityConfiguration());
+			builder.ApplyConfiguration(new SeedAdminEntityConfiguration());
 			base.OnModelCreating(builder);
 		}
 	}
